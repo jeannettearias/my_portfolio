@@ -1,15 +1,25 @@
 header {
   ul li {
     color: #f5f5f5;
-    list-style: none;
-    display: inline-block;
   }
 }
+
+.header {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+}
+
 .header__ul {
-  text-align: center;
-  padding-bottom: 4rem;
+  display: flex;
+  list-style: none;
 }
 
 .header__li {
-  padding-left: 1rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.header__li:hover {
+  color: rgb(255, 196, 0); /* Optional: Add underline on hover */
 }
