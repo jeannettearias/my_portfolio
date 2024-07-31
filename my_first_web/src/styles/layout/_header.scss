@@ -8,18 +8,22 @@ header {
   display: flex;
   padding: 1rem;
   justify-content: center;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
-.header__ul {
+.menu__list {
   display: flex;
   list-style: none;
 }
 
-.header__li {
+.menu__item {
   margin: 1rem;
+  list-style: none;
   cursor: pointer;
 }
 
-.header__li:hover {
+.menu__item:hover {
   color: rgb(255, 196, 0); /* Optional: Add underline on hover */
 }

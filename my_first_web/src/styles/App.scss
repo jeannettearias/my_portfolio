@@ -3,33 +3,28 @@
 //fonts
 $color__title: white;
 
-.darkmode {
+body {
   background-color: rgb(6, 6, 49);
   h1 {
     color: $color__title;
   }
 }
 
-body.light {
-  background-color: #f5f5f5;
-
-  .header__li {
-    color: #333;
-
-    &:hover {
-      color: rgb(255, 196, 0); // Change text color on hover
-    }
-  }
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  margin: 3%;
+  color: white;
+  margin-bottom: 5rem;
 }
 
-body.dark {
-  background-color: rgb(6, 6, 49); // Dark background color
+.header__title {
+  color: white;
+  font-size: 2rem;
+}
 
-  .header__li {
-    color: #ddd; // Light text color for dark mode
-
-    &:hover {
-      color: rgb(255, 196, 0); // Change text color on hover
-    }
-  }
+.main__picture {
+  width: 120px;
+  height: 100px;
 }
