@@ -1,8 +1,12 @@
 import { useState } from 'react';
 import '../styles/App.scss';
 import '../styles/layout/_header.scss'
+import Home from './pages/Home';
+import Experience from './pages/Experience';
 import AboutMe from './pages/AboutMe';
-import Landing from './pages/Landing';
+import Contact from './pages/Contact';
+import Projects from './pages/Projects';
+
 
 function App() {
 
@@ -15,6 +19,20 @@ function App() {
     setPage(ev.currentTarget.getAttribute('href'));
   };
 
+  /*
+  My pages, my routes:
+  / -> <Home />
+  /experience -> <Experience />
+  /projects -> <Projects />
+  /aboutMe -> <AboutMe />
+  /Contact -> <Contact />
+  
+  React library ==> React-router-DOM
+  
+  
+
+  */
+
   return (
     <div className='page darkmode'>
       <header className="header">
@@ -22,7 +40,12 @@ function App() {
           <ul className="menu__list ">
             <li className="menu__item">
               <a onClick={handleClickLink} href="/" className="menu__link">
-                🏠 Home
+                🏠
+              </a>
+            </li>
+            <li className="menu__item">
+              <a onClick={handleClickLink} href="/experience" className="menu__link">
+                Experience
               </a>
             </li>
             <li className="menu__item">
@@ -36,7 +59,9 @@ function App() {
               </a>
             </li>
             <li className="menu__item">
-              <a onClick={handleClickLink} href="/contactPage" className="menu__link">
+              <a onClick={handleClickLink}
+                className="menu__link"
+                href="/contactPage">
                 Contact
               </a>
             </li>
@@ -45,16 +70,13 @@ function App() {
       </header>
       <main className='main'>
         {page}
-        {page === '/' ? (
-          <Landing />
-        ) : null}
-        {page === '/about-me' ?
-          <AboutMe />
-          : null
-        }
+        {page === '/' ? <Home /> : null}
+        {page === '/Projects' && <Projects />}
+        {page === '/experience' ? <Experience /> : null}
+        {page === '/about-me' && <AboutMe />}
+        {page === '/contact' ? <Contact /> : null}
       </main>
     </div>
-
   );
 }
 
