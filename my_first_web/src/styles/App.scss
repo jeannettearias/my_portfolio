@@ -19,12 +19,30 @@ body {
   margin-bottom: 5rem;
 }
 
-.header__title {
-  color: white;
-  font-size: 2rem;
+.header {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
-.main__picture {
-  width: 120px;
-  height: 100px;
+.menu__list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.menu__item {
+  display: flex;
+  margin: 1rem;
+  list-style: none;
+  text-decoration: underline;
+  color: inherit;
+  cursor: pointer;
+}
+
+.menu__item:hover {
+  color: rgb(255, 196, 0); /* Optional: Add underline on hover */
 }
