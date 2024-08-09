@@ -1,23 +1,20 @@
-import { useState } from 'react';
+
 import '../styles/App.scss';
 import '../styles/layout/_header.scss'
+
+import { Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
+import Projects from './pages/Projects';
 import Experience from './pages/Experience';
 import AboutMe from './pages/AboutMe';
 import Contact from './pages/Contact';
-import Projects from './pages/Projects';
 
 
 function App() {
 
-  const [page, setPage] = useState('/');
 
   //EVENTS
-  const handleClickLink = (ev) => {
-    ev.preventDefault();
 
-    setPage(ev.currentTarget.getAttribute('href'));
-  };
 
   /*
   React Router DOME
@@ -28,7 +25,7 @@ function App() {
   /aboutMe -> <AboutMe />
   /Contact -> <Contact />
   React library ==> React-router-DOM
-
+ 
   */
 
   return (
@@ -37,44 +34,57 @@ function App() {
         <nav className="menu">
           <ul className="menu__list ">
             <li className="menu__item">
-              <a onClick={handleClickLink} href="/" className="menu__link">
+              <Link to="/" className="menu__link">
                 🏠
-              </a>
+              </Link>
             </li>
             <li className="menu__item">
-              <a onClick={handleClickLink} href="/experience" className="menu__link">
-                Experience
-              </a>
-            </li>
-            <li className="menu__item">
-              <a onClick={handleClickLink} href="/projects" className="menu__link">
-                Projects
-              </a>
-            </li>
-            <li className="menu__item">
-              <a onClick={handleClickLink} href="/about-me" className="menu__link">
-                About Me
-              </a>
-            </li>
-            <li className="menu__item">
-              <a onClick={handleClickLink}
+              <Link to="/experience"
                 className="menu__link"
-                href="/contactPage">
+              >
+                Experience
+              </Link>
+            </li>
+            <li className="menu__item">
+              <Link to="/projects"
+                className="menu__link"
+              >
+                Projects
+              </Link>
+            </li>
+            <li className="menu__item">
+              <Link to="/about-me"
+                className="menu__link"
+              >
+                About Me
+              </Link>
+            </li>
+            <li className="menu__item">
+              <Link
+                to="/contact"
+                className="menu__link"
+              >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
       </header>
       <main className='main'>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/projects' element={<Projects />} />
+          <Route path='/experience' element={<Experience />} />
+          <Route path='/about-me' element={<AboutMe />} />
+          <Route path='/contact' element={<Contact />} />
 
-        {page === '/' ? <Home /> : null}
+        </Routes>
+
+        {/* {page === '/' ? <Home /> : null}
         {page === '/Projects' && <Projects />}
         {page === '/experience' ? <Experience /> : null}
         {page === '/about-me' && <AboutMe />}
-        {page === '/contact' ? <Contact /> : null}
-
-        {/* React library ==> React-router-DOM */}
+        {page === '/contact' ? <Contact /> : null} */}
 
       </main>
     </div>
