@@ -1,0 +1,61 @@
+.header {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  transition: background-color 0.3s ease; /* Smooth transition for background change */
+  color: white;
+}
+
+.menu {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.064); /* Initial background color */
+  position: fixed;
+  border-radius: 2rem; /* Rounds the corners of the list items */
+  width: 60%; /* Makes the list items occupy a certain percentage of the container's width */
+  height: 8%;
+  box-shadow: 2px 2px 5px rgba(229, 241, 241, 0.2); /* Optional: Adds a slight shadow to the list items */
+  text-align: center; /* Centers the text inside each list item */
+  align-items: center;
+  margin-top: 1em;
+  transition: background-color 0.3s ease; /* Smooth transition for background change */
+}
+
+.menu.transparent {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.396
+  ); /* More transparent background for the menu */
+}
+
+.menu__list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.menu__item {
+  display: flex;
+  margin: 1rem;
+  list-style: none;
+  cursor: pointer;
+}
+
+.menu__item:hover {
+  color: rgb(255, 196, 0); /* Optional: Add color change on hover */
+  text-decoration: underline;
+}
+
+.menu__item:active {
+  color: rgb(255, 196, 0);
+  color: white;
+}
+
+.menu__link {
+  text-decoration: none;
+  color: inherit; /* Ensures the link inherits the color from the parent */
+}

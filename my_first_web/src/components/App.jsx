@@ -1,20 +1,35 @@
 
 import '../styles/App.scss';
-import '../styles/layout/_header.scss'
 
-import { Routes, Route, Link } from 'react-router-dom';
+import Header from './layout/Header';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Experience from './pages/Experience';
 import AboutMe from './pages/AboutMe';
 import Contact from './pages/Contact';
 
+import { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
+  //STATE VARIABLES
+  const [pets, setPets] = useState([]);
 
+
+  //CODE WHEN THE PAGE LOAD
+  useEffect(() => {
+    //code
+
+    fetch('https://igarrido-adalab.github.io/api/pets.json')
+      .then(Response => Response.json())
+      .then(data => {
+
+        console.log(data);
+        setPets(data);
+      })
+  }, []);
 
   //EVENTS
-
 
   /*
   React Router DOME
@@ -24,56 +39,20 @@ function App() {
   /projects -> <Projects />
   /aboutMe -> <AboutMe />
   /Contact -> <Contact />
-  React library ==> React-router-DOM
- 
+  React library ==> React-router-DOM 
   */
+
+  //HTML
+
 
   return (
     <div className='page darkmode'>
-      <header className="header">
-        <nav className="menu">
-          <ul className="menu__list ">
-            <li className="menu__item">
-              <Link to="/" className="menu__link">
-                🏠
-              </Link>
-            </li>
-            <li className="menu__item">
-              <Link to="/experience"
-                className="menu__link"
-              >
-                Experience
-              </Link>
-            </li>
-            <li className="menu__item">
-              <Link to="/projects"
-                className="menu__link"
-              >
-                Projects
-              </Link>
-            </li>
-            <li className="menu__item">
-              <Link to="/about-me"
-                className="menu__link"
-              >
-                About Me
-              </Link>
-            </li>
-            <li className="menu__item">
-              <Link
-                to="/contact"
-                className="menu__link"
-              >
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <Header />
+
       <main className='main'>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/projects' element={<Projects />} />
+          <Route path='/projects' element={<Projects list={pets} />} /> {/* there in the compo = here in the App */}
           <Route path='/experience' element={<Experience />} />
           <Route path='/about-me' element={<AboutMe />} />
           <Route path='/contact' element={<Contact />} />

@@ -40,6 +40,10 @@ function Contact() {
                         }}
                     />
                 </div>
+                <input type="text" name="name" id="name" placeholder="Input your name" />
+                <input type="email" id="email" placeholder="input your email" />
+                <input type="numeric" id="phone" placeholder="e.g. 765897345" />
+
             </fieldset>
 
         </article>
