@@ -1,16 +1,31 @@
+.home__section {
+  font-family: Onest Variable, system-ui, sans-serif;
+  color: rgba(245, 245, 245, 0.799);
+}
+
+.home__content {
+  align-content: center;
+  justify-content: center;
+  font-style: normal;
+  font-size: 16px;
+}
 .home__box {
   display: inline-flex;
-  flex-direction: column;
-  padding-bottom: 2rem;
-  margin-right: 1rem;
+  flex-direction: row;
+  padding-right: 2rem;
+  align-items: center;
+  gap: 1rem;
+  font-style: normal;
+  font-size: 14px;
 }
 
 .home__picture {
-  display: flex;
-  padding-top: 2rem;
-  height: 10rem;
-  width: 10rem;
-  border-radius: 90%;
+  display: block;
+  margin: 1rem;
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  max-width: 100%;
 }
 
 .first__home__btn {
@@ -24,16 +39,23 @@
   align-items: center; /* Center content vertically */
   justify-content: center; /* Center content horizontally */
   transition: background-color 0.3s ease; /* Smooth background color transition */
-  margin-top: 1rem;
+  font-size: 14px;
+}
+
+.home__title {
+  font-size: 32px;
 }
 
 .btn__home__box {
   display: inline-flex;
   flex-direction: row;
+  font-style: normal;
+  font-size: 14px;
 }
 
 .home__btn {
   display: inline-flex; /* Use inline-flex to align items correctly within buttons/links */
+  gap: 1rem;
 }
 
 .contact__btn {
@@ -48,6 +70,7 @@
   justify-content: center; /* Center content horizontally */
   transition: background-color 0.3s ease; /* Smooth background color transition */
   margin-top: 1rem;
+  font-size: 14px;
 }
 
 .linkedin__btn {
@@ -62,4 +85,9 @@
   justify-content: center; /* Center content horizontally */
   transition: background-color 0.3s ease; /* Smooth background color transition */
   margin-top: 1rem;
+}
+
+.prh__text {
+  line-height: 1.5rem;
+  font-size: 16px;
 }

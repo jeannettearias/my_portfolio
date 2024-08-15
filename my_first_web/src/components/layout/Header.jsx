@@ -3,15 +3,14 @@ import '../../styles/layout/_header.scss'
 import { useEffect, useState } from 'react';
 
 function Header() {
-    const [isTransparent, setIsTransparent] = useState(false);
-
+    const [isTransparent, setIsTransparent] = useState(true);
 
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 50) { // Adjust the scroll value as needed
-                setIsTransparent(true);
-            } else {
                 setIsTransparent(false);
+            } else {
+                setIsTransparent(true);
             }
         };
         window.addEventListener('scroll', handleScroll);
@@ -21,12 +20,12 @@ function Header() {
     }, []);
 
     return (
-        <section>
+        <section className='header__section'>
             <header className={`header ${isTransparent ? 'transparent' : ''}`}>
                 <nav className={`menu ${isTransparent ? 'transparent' : ''}`}>
                     <ul className="menu__list ">
                         <li className="menu__item">
-                            <Link to="/" className="menu__link"></Link>
+                            <Link to="/" className="menu__link">Home</Link>
                         </li>
                         <li className="menu__item">
                             <Link to="/experience"
@@ -37,10 +36,6 @@ function Header() {
                                 className="menu__link"> Projects </Link>
                         </li>
                         <li className="menu__item">
-                            <Link to="/about-me"
-                                className="menu__link">About Me</Link>
-                        </li>
-                        <li className="menu__item">
                             <Link to="/contact"
                                 className="menu__link">Contact</Link>
                         </li>
@@ -49,7 +44,6 @@ function Header() {
             </header>
         </section>
     );
-
 }
 
 export default Header;

@@ -1,26 +1,32 @@
+.header__section {
+  font-family: Onest Variable, system-ui, sans-serif;
+}
+
 .header {
   display: flex;
   padding: 1rem;
+  margin-top: 1rem;
   justify-content: center;
   align-items: center;
-  padding-left: 5%;
-  padding-right: 5%;
   transition: background-color 0.3s ease; /* Smooth transition for background change */
   color: white;
 }
 
 .menu {
   display: flex;
-  background-color: rgba(255, 255, 255, 0.064); /* Initial background color */
+  flex-direction: row;
+  background-color: rgba(255, 255, 255, 0.253); /* Initial background color */
   position: fixed;
   border-radius: 2rem; /* Rounds the corners of the list items */
-  width: 60%; /* Makes the list items occupy a certain percentage of the container's width */
-  height: 8%;
   box-shadow: 2px 2px 5px rgba(229, 241, 241, 0.2); /* Optional: Adds a slight shadow to the list items */
-  text-align: center; /* Centers the text inside each list item */
   align-items: center;
-  margin-top: 1em;
+  margin-top: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
   transition: background-color 0.3s ease; /* Smooth transition for background change */
+  max-width: 65rem;
+  height: 2rem;
+  justify-content: center;
 }
 
 .menu.transparent {
@@ -28,7 +34,7 @@
     255,
     255,
     255,
-    0.396
+    0.064
   ); /* More transparent background for the menu */
 }
 
@@ -36,6 +42,11 @@
   display: flex;
   list-style: none;
   align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
 }
 
 .menu__item {
@@ -52,10 +63,11 @@
 
 .menu__item:active {
   color: rgb(255, 196, 0);
-  color: white;
+  color: whitesmoke;
 }
 
 .menu__link {
   text-decoration: none;
+  list-style: none;
   color: inherit; /* Ensures the link inherits the color from the parent */
 }
