@@ -69,5 +69,7 @@
 .menu__link {
   text-decoration: none;
   list-style: none;
-  color: inherit; /* Ensures the link inherits the color from the parent */
+  color: inherit;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
 }

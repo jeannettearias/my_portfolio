@@ -1,0 +1,25 @@
+.proj__section {
+  font-family: Onest Variable, system-ui, sans-serif;
+  color: rgba(245, 245, 245, 0.799);
+}
+
+.article__box {
+  display: flex;
+}
+
+.project-1-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.project-2-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.object-cover {
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+  object-position: top;
+}

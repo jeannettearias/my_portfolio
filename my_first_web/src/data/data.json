@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Harry potter Characters search",
+        "repo": "https://jeannettearias.github.io/harry-potter-movie-characters-search/",
+        "demo": "https://myproject.com/demo",
+        "technologies": [
+            "React",
+            "javaScript",
+            "CSS",
+            "HTML"
+        ],
+        "desc": "Harry Potter characters web site searching",
+        "author": "Jeannette Arias",
+        "job": "Software Developer",
+        "photo": "../image/harry-potter-picture.jpg",
+        "image": "https://example.com/image.jpg"
+    },
+    {
+        "name": "other project name ...",
+        "repo": "https://jeannettearias.github.io/harry-potter-movie-characters-search/",
+        "demo": "https://myproject.com/demo",
+        "technologies": [
+            "React",
+            "javaScript",
+            "CSS",
+            "HTML"
+        ],
+        "desc": "Harry Potter characters web site searching",
+        "author": "Jeannette Arias",
+        "job": "Software Developer",
+        "photo": "../image/harry-potter-picture.jpg",
+        "image": "https://example.com/image.jpg"
+    }
+]

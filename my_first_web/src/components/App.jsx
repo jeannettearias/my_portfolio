@@ -7,35 +7,52 @@ import Projects from './pages/Projects';
 import Experience from './pages/Experience';
 import Contact from './pages/Contact';
 
-
 import { Routes, Route } from 'react-router-dom';
+import NewProject from './pages/NewProject';
+import { useEffect, useState } from 'react';
 
 function App() {
-  //STATE VARIABLES
 
-  //CODE WHEN THE PAGE LOAD
+  //Global state to hold JSON data
+  const [jsonData, setJsonData] = useState([]);
+
+  // Load JSON data on component mount
+  useEffect(() => {
+    fetchData();
+
+  }, []);
+
+  // Function to fetch the JSON data
+  const fetchData = async () => {
+    try {
+      const response = await fetch('/data.json'); // Adjust the path as necessary
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.json();
+      setJsonData(data);
+    } catch (error) {
+      console.error('Error loading JSON data:', error);
+    }
+  };
 
 
-  //EVENTS
 
   //HTML
   return (
     <div className='page darkmode'>
       <Header />
 
-      <main className='main' >
+      <main className='main'>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/projects' element={<Projects />} /> {/* there, in the compo = here in the App */}
+          <Route path='/newproject'
+            element={<NewProject jsonData={jsonData} />} />
+          <Route path='/projects'
+            element={<Projects jsonData={jsonData} />} />
           <Route path='/experience' element={<Experience />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
-
-        {/* {page === '/' ? <Home /> : null}
-        {page === '/Projects' && <Projects />}
-        {page === '/experience' ? <Experience /> : null}
-        {page === '/about-me' && <AboutMe />}
-        {page === '/contact' ? <Contact /> : null} */}
 
       </main>
     </div>
