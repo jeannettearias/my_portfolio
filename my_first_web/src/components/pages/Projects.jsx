@@ -19,7 +19,7 @@ function Projects({ jsonData }) {
 }
 
 Projects.propTypes = {
-    jsonData: PropTypes.array.isRequired
+    jsonData: PropTypes.object
 };
 
 export default Projects;

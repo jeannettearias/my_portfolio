@@ -32,10 +32,10 @@ function NewProject({ jsonData, handleInputValue, handleClickCreate }) {
 
 
 NewProject.propTypes = {
-    jsonData: PropTypes.array.isRequired,
-    handleInputValue: PropTypes.func.isRequired,
-    handleClickCreate: PropTypes.func.isRequired,
-    handleClearForm: PropTypes.func.isRequired,
+    jsonData: PropTypes.object,
+    handleInputValue: PropTypes.func,
+    handleClickCreate: PropTypes.func,
+    handleClearForm: PropTypes.func,
 
 };
 

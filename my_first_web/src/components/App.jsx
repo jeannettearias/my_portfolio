@@ -14,27 +14,62 @@ import { useEffect, useState } from 'react';
 function App() {
 
   //Global state to hold JSON data
-  const [jsonData, setJsonData] = useState([]);
+  const [jsonData, setJsonData] = useState({
+    project_name: '',
+    project_slogan: '',
+    project_repo: '',
+    project_demo: '',
+    project_technologies: '',
+    project_description: '',
+    author_name: '',
+    author_job: '',
+    author_photo: '',
+    project_image: '',
+  });
+
+  //const [messageUrl, setMessageUrl] = useState('');
+  //const [messageError, setMessageError] = useState('');
+  const [projectsArray, setProjectsArray] = useState([]);
 
   // Load JSON data on component mount
   useEffect(() => {
-    fetchData();
 
+
+    // Fetch data
+    const fetchProjects = async () => {
+      try {
+        const app = import.meta.env.DEV ? 'http://localhost:3000/projects' : '/projects';
+        const response = await fetch(app);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        setProjectsArray(data);
+      }
+      catch (error) {
+        console.error('Error loading JSON data:', error);
+      }
+    }
+
+    fetchProjects();
+
+    //import data from LS (new Project)
+    const saveData = localStorage.getItem('formData');
+    if (saveData) {
+      setJsonData(JSON.parse(saveData));
+    }
   }, []);
 
-  // Function to fetch the JSON data
-  const fetchData = async () => {
-    try {
-      const response = await fetch('/data.json'); // Adjust the path as necessary
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      const data = await response.json();
-      setJsonData(data);
-    } catch (error) {
-      console.error('Error loading JSON data:', error);
-    }
-  };
+  //Get input values
+
+
+
+  //Delete (form, LS, messages)
+
+
+
+  //Create project card
+
 
 
 
@@ -45,7 +80,7 @@ function App() {
 
       <main className='main'>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Home fetchProjects={projectsArray} />} />
           <Route path='/newproject'
             element={<NewProject jsonData={jsonData} />} />
           <Route path='/projects'
