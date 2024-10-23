@@ -29,7 +29,7 @@ function ProjectCard({ jsonData }) {
 }
 
 ProjectCard.propTypes = {
-    jsonData: PropTypes.array.isRequired,
+    jsonData: PropTypes.object.isRequired,
 };
 
 export default ProjectCard;

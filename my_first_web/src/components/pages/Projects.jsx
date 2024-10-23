@@ -4,8 +4,6 @@ import PropTypes from 'prop-types'
 
 
 function Projects({ jsonData }) {
-
-
     return (
         <section className="preview">
 
@@ -13,13 +11,12 @@ function Projects({ jsonData }) {
                 style={{ backgroundImage: jsonData.image ? `url(${jsonData.image})` : null }}></div>
             <ProjectCard jsonData={jsonData} />
 
-
         </section>
     );
 }
 
 Projects.propTypes = {
-    jsonData: PropTypes.object
+    jsonData: PropTypes.object.isRequired
 };
 
 export default Projects;

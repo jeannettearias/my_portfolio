@@ -2,6 +2,7 @@
 import '../styles/App.scss';
 
 import Header from './layout/Header';
+import Footer from './layout/Footer';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Experience from './pages/Experience';
@@ -45,13 +46,18 @@ function App() {
         }
         const data = await response.json();
         setProjectsArray(data);
+
+        console.log(data);
+
       }
       catch (error) {
         console.error('Error loading JSON data:', error);
       }
+
     }
 
     fetchProjects();
+
 
     //import data from LS (new Project)
     const saveData = localStorage.getItem('formData');
@@ -75,14 +81,18 @@ function App() {
 
   //HTML
   return (
-    <div className='page darkmode'>
+    <div className='container'>
       <Header />
 
       <main className='main'>
         <Routes>
+
           <Route path='/' element={<Home fetchProjects={projectsArray} />} />
-          <Route path='/newproject'
-            element={<NewProject jsonData={jsonData} />} />
+
+          <Route path='/newproject' element={
+            <NewProject
+              jsonData={jsonData} />} />
+
           <Route path='/projects'
             element={<Projects jsonData={jsonData} />} />
           <Route path='/experience' element={<Experience />} />
@@ -90,6 +100,7 @@ function App() {
         </Routes>
 
       </main>
+      <Footer />
     </div>
   );
 }

@@ -3,15 +3,11 @@ import Projects from "./Projects";
 import PropTypes from 'prop-types';
 
 function NewProject({ jsonData, handleInputValue, handleClickCreate }) {
-
-    //events
-
     return (
         <main className="main">
 
-
             <section className="hero">
-                <h2 className="title" >Project List</h2>
+                <h2 className="title" >Projects List</h2>
                 <p className="hero__text" >
                     Online showcase for gathering ideas through technology
                 </p>
@@ -32,7 +28,7 @@ function NewProject({ jsonData, handleInputValue, handleClickCreate }) {
 
 
 NewProject.propTypes = {
-    jsonData: PropTypes.object,
+    jsonData: PropTypes.object.isRequired,
     handleInputValue: PropTypes.func,
     handleClickCreate: PropTypes.func,
     handleClearForm: PropTypes.func,
