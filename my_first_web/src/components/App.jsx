@@ -58,7 +58,6 @@ function App() {
 
     fetchProjects();
 
-
     //import data from LS (new Project)
     const saveData = localStorage.getItem('formData');
     if (saveData) {
@@ -67,7 +66,11 @@ function App() {
   }, []);
 
   //Get input values
-
+  const handleInputValue = (nameProperty, valueProperty) => {
+    const newValues = { ...jsonData, [nameProperty]: valueProperty };
+    setJsonData(newValues);
+    localStorage.setItem('formData', JSON.stringify(newValues));
+  }
 
 
   //Delete (form, LS, messages)
@@ -83,23 +86,20 @@ function App() {
   return (
     <div className='container'>
       <Header />
+      <Routes>
 
-      <main className='main'>
-        <Routes>
+        <Route path='/' element={<Home fetchProjects={projectsArray} />} />
 
-          <Route path='/' element={<Home fetchProjects={projectsArray} />} />
+        <Route path='/newproject' element={
+          <NewProject
+            handleInputValue={handleInputValue}
+            jsonData={jsonData} />} />
 
-          <Route path='/newproject' element={
-            <NewProject
-              jsonData={jsonData} />} />
-
-          <Route path='/projects'
-            element={<Projects jsonData={jsonData} />} />
-          <Route path='/experience' element={<Experience />} />
-          <Route path='/contact' element={<Contact />} />
-        </Routes>
-
-      </main>
+        <Route path='/projects'
+          element={<Projects jsonData={jsonData} />} />
+        <Route path='/experience' element={<Experience />} />
+        <Route path='/contact' element={<Contact />} />
+      </Routes>
       <Footer />
     </div>
   );
