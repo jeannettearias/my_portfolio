@@ -16,6 +16,7 @@ function Form({ jsonData, handleInputValue, handleClickCreate }) {
     }
 
 
+
     return (
         <>
             <form className="addForm" onSubmit={ev => { ev.preventDefault(); }}>
@@ -27,10 +28,19 @@ function Form({ jsonData, handleInputValue, handleClickCreate }) {
                     <input
                         className="addForm__input"
                         type="text"
-                        name="name"
-                        id="name"
-                        value={jsonData.name}
+                        name="project_name"
+                        id="project_name"
+                        value={jsonData.project_name}
                         placeholder="Project name"
+                        onChange={handleInput}
+                    />
+
+                    <input className="addForm__input"
+                        type="text"
+                        name="project_slogan"
+                        id="project_slogan"
+                        value={jsonData.project_slogan}
+                        placeholder="Slogan"
                         onChange={handleInput}
                     />
 
@@ -38,18 +48,18 @@ function Form({ jsonData, handleInputValue, handleClickCreate }) {
                         <input
                             className="addForm__input"
                             type="url"
-                            name="repo"
-                            id="repo"
-                            value={jsonData.repo}
+                            name="project_repo"
+                            id="rproject_epo"
+                            value={jsonData.project_repo}
                             placeholder="Repository"
                             onChange={handleInput}
                         />
                         <input
                             className="addForm__input"
                             type="url"
-                            name="demo"
-                            id="demo"
-                            value={jsonData.demo}
+                            name="project_demo"
+                            id="project_demo"
+                            value={jsonData.project_demo}
                             placeholder="Demo"
                             onChange={handleInput}
                         />
@@ -57,18 +67,18 @@ function Form({ jsonData, handleInputValue, handleClickCreate }) {
                     <input
                         className="addForm__input"
                         type="text"
-                        name="technologies"
-                        id="technologies"
-                        value={jsonData.technologies}
+                        name="project_technologies"
+                        id="project_technologies"
+                        value={jsonData.project_technologies}
                         placeholder="Technology"
                         onChange={handleInput}
                     />
                     <textarea
                         className="addForm__input"
                         type="text"
-                        name="desc"
-                        id="desc"
-                        value={jsonData.desc}
+                        name="project_description"
+                        id="project_description"
+                        value={jsonData.project_description}
                         placeholder="Project Description"
                         rows="5"
                         onChange={handleInput}
@@ -79,19 +89,19 @@ function Form({ jsonData, handleInputValue, handleClickCreate }) {
                     <input
                         className="addForm__input"
                         type="text"
-                        name="author"
-                        id="author"
-                        value={jsonData.author}
+                        name="author_name"
+                        id="author_name"
+                        value={jsonData.author_name}
                         placeholder="Name"
                         onChange={handleInput}
                     />
                     <input
                         className="addForm__input"
                         type="text"
-                        name="job"
-                        id="job"
-                        value={jsonData.job}
-                        placeholder="Trabajo"
+                        name="author_job"
+                        id="author_job"
+                        value={jsonData.author_job}
+                        placeholder="Job"
                         onChange={handleInput}
                     />
                 </fieldset>

@@ -1,6 +1,6 @@
-import '../../styles/layout/_project.scss';
 import ProjectCard from './ProjectCard';
 import PropTypes from 'prop-types'
+import '../../styles/App.scss';
 
 
 function Projects({ jsonData }) {
@@ -8,7 +8,7 @@ function Projects({ jsonData }) {
         <section className="preview">
 
             <div className='projectImage'
-                style={{ backgroundImage: jsonData.image ? `url(${jsonData.image})` : null }}></div>
+                style={{ backgroundImage: jsonData.project_image ? `url(${jsonData.project_image})` : null }}></div>
             <ProjectCard jsonData={jsonData} />
 
         </section>

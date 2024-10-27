@@ -64,13 +64,14 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .main {
+  .main__lading {
     max-width: 980px;
     margin-inline: auto;
     display: grid;
-    //grid-template-columns: 6fr 5fr;
-    gap: 2rem;
+    grid-template-columns: 6fr 5fr;
+    gap: 1rem;
     text-align: center;
+    align-content: center;
   }
 }
 
@@ -145,18 +146,21 @@ body {
   border-image-slice: 1;
   background-image: linear-gradient(
       to bottom,
-      var(--color-white),
-      var(--color-white)
+      var(--color-white-50),
+      var(--color-white-50)
     ),
     linear-gradient(to bottom, var(--color-white) 0%, rgba(0, 0, 0, 0));
   background-origin: border-box;
   background-clip: content-box, border-box;
+
+  width: 40rem;
+  height: 25rem;
 }
 
 .card .card__projectTitle {
   grid-column: 2;
   position: relative;
-  margin: 15px 10px 1rem 0;
+  margin: 15px 10px 0 0;
   text-align: center;
   text-transform: capitalize;
 
@@ -203,7 +207,7 @@ body {
   background-image: url("../images/avatar.webp");
   background-position: center;
   background-size: cover;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
 }
 
 .card .card__job {
@@ -215,12 +219,12 @@ body {
 
 .card .card__name {
   font: var(--font-card-title);
-  text-align: center;
-  margin-bottom: 0.2rem;
+  text-align: left;
+  margin-bottom: -0.5rem;
 }
 
-.card .card_name {
-  text-align: left;
+.card .card__name .card_name {
+  font: var(--font-card-title);
 }
 
 .card .card__project {
@@ -230,13 +234,18 @@ body {
 
 .card .card__slogan {
   font: var(--font-card-subtitle);
-  margin-top: -0.2rem;
-  margin-bottom: 0.8rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .card .card__descriptionTitle {
   font-weight: inherit;
   text-transform: capitalize;
+}
+
+.card .card__description {
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
 }
 
 .card .card__technicalInfo {
@@ -501,6 +510,7 @@ body {
 .main__landing {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .button__landing {

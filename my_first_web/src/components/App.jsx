@@ -40,7 +40,7 @@ function App() {
     // Fetch data
     const fetchProjects = async () => {
       try {
-        const app = import.meta.env.DEV ? 'http://localhost:3000/projects' : '/projects';
+        const app = import.meta.env.DEV ? 'http://localhost:4000/projects' : '/projects';
         const response = await fetch(app);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);

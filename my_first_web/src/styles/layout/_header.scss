@@ -63,13 +63,13 @@
 
 .menu__item:active {
   color: rgb(255, 196, 0);
-  color: whitesmoke;
+  color: rgba(117, 116, 121, 0.947);
 }
 
 .menu__link {
   text-decoration: none;
   list-style: none;
   color: inherit;
-  font-size: 0.75rem;
+  font-size: 1rem;
   line-height: 1.25rem;
 }
