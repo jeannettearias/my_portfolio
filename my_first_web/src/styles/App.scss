@@ -75,7 +75,7 @@ body {
 }
 
 .hero {
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -85,15 +85,11 @@ body {
 }
 
 .hero .title {
-  font: var(--font-title-big);
-  margin-bottom: 8px;
-}
-
-.hero .hero__text {
   font: var(--font-text-big);
   text-align: center;
-  margin-inline: 4rem;
-  margin-bottom: 1.8rem;
+  font-style: bold;
+  margin-bottom: 1rem;
+  color: white;
 }
 
 .preview .projectImage {

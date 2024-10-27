@@ -3,14 +3,15 @@ import '../styles/App.scss';
 
 import Header from './layout/Header';
 import Footer from './layout/Footer';
-import Home from './pages/Home';
-import Projects from './pages/Projects';
-import Experience from './pages/Experience';
-import Contact from './pages/Contact';
+import Projects from './projects/Projects';
+import Experience from './layout/Experience';
+import Contact from './layout/Contact';
 
 import { Routes, Route } from 'react-router-dom';
-import NewProject from './pages/NewProject';
+import NewProject from './projects/NewProject';
 import { useEffect, useState } from 'react';
+import Landing from './Landing';
+import Home from './layout/Home';
 
 function App() {
 
@@ -86,9 +87,12 @@ function App() {
   return (
     <div className='container'>
       <Header />
-      <Routes>
 
-        <Route path='/' element={<Home fetchProjects={projectsArray} />} />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/projects' element={<Landing
+          showNewProjectButton={false}
+          projectsArray={projectsArray} />} />
 
         <Route path='/newproject' element={
           <NewProject
