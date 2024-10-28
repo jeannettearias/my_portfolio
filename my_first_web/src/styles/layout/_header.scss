@@ -5,11 +5,16 @@
 .header {
   display: flex;
   padding: 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
   justify-content: center;
   align-items: center;
   transition: background-color 0.3s ease; /* Smooth transition for background change */
   color: white;
+
+  position: fixed; /* Keeps the header fixed at the top */
+  top: 0;
+  width: 100%;
+  z-index: 100; /* Ensures it layers above content like cards */
 }
 
 .menu {
@@ -34,7 +39,7 @@
     255,
     255,
     255,
-    0.064
+    0.116
   ); /* More transparent background for the menu */
 }
 

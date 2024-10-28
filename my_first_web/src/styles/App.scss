@@ -155,6 +155,8 @@ body {
 
   width: 40rem;
   height: 25rem;
+
+  margin-top: 6rem;
 }
 
 .card .card__projectTitle {
@@ -511,6 +513,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .button__landing {
