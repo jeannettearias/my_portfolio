@@ -1,14 +1,11 @@
-
 import '../styles/App.scss';
 
 import Header from './layout/Header';
 import Footer from './layout/Footer';
-import Projects from './projects/Projects';
 import Experience from './layout/Experience';
 import Contact from './layout/Contact';
 
 import { Routes, Route } from 'react-router-dom';
-import NewProject from './projects/NewProject';
 import { useEffect, useState } from 'react';
 import Landing from './Landing';
 import Home from './layout/Home';
@@ -54,7 +51,6 @@ function App() {
       catch (error) {
         console.error('Error loading JSON data:', error);
       }
-
     }
 
     fetchProjects();
@@ -67,11 +63,7 @@ function App() {
   }, []);
 
   //Get input values
-  const handleInputValue = (nameProperty, valueProperty) => {
-    const newValues = { ...jsonData, [nameProperty]: valueProperty };
-    setJsonData(newValues);
-    localStorage.setItem('formData', JSON.stringify(newValues));
-  }
+
 
 
   //Delete (form, LS, messages)
@@ -85,24 +77,22 @@ function App() {
 
   //HTML
   return (
-    <div className='container'>
+    <div className="container">
       <Header />
 
       <Routes>
         <Route path='/' element={<Home />} />
+
         <Route path='/projects' element={<Landing
           showNewProjectButton={false}
-          projectsArray={projectsArray} />} />
+          projectsArray={projectsArray}
+          jsonData={jsonData} />} />
 
-        <Route path='/newproject' element={
-          <NewProject
-            handleInputValue={handleInputValue}
-            jsonData={jsonData} />} />
-
-        <Route path='/projects'
-          element={<Projects jsonData={jsonData} />} />
         <Route path='/experience' element={<Experience />} />
-        <Route path='/contact' element={<Contact />} />
+        <Route path='/contact' element={<Contact />}
+        />
+
+
       </Routes>
       <Footer />
     </div>

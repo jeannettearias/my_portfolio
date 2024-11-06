@@ -1,6 +1,7 @@
 .home__section {
   font-family: Onest Variable, system-ui, sans-serif;
   color: rgba(245, 245, 245, 0.799);
+  padding: 5%;
 }
 
 .home__content {
@@ -17,6 +18,9 @@
   gap: 1rem;
   font-style: normal;
   font-size: 14px;
+
+  margin-top: 3rem;
+  margin-bottom: 2rem;
 }
 
 .home__picture {
@@ -44,6 +48,9 @@
 
 .home__title {
   font-size: 32px;
+
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .btn__home__box {
@@ -90,4 +97,7 @@
 .prh__text {
   line-height: 1.5rem;
   font-size: 16px;
+
+  margin-top: 2rem;
+  margin-bottom: 3rem;
 }

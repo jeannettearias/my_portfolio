@@ -33,11 +33,6 @@ body {
   }
 }
 
-.container {
-  padding: 22px 22px 0 22px;
-  background-color: var(--color-dark);
-}
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -72,11 +67,18 @@ body {
     gap: 1rem;
     text-align: center;
     align-content: center;
+
+    .projectImage {
+      max-width: 60%;
+    }
   }
 }
 
 .hero {
-  margin-bottom: 1rem;
+  display: flex;
+  width: 100%;
+
+  flex-direction: column;
 }
 
 @media screen and (max-width: 768px) {
@@ -89,24 +91,30 @@ body {
   font: var(--font-text-big);
   text-align: center;
   font-style: bold;
-  margin-bottom: 1rem;
+  margin-top: 8rem;
+  margin-bottom: 2rem;
   color: white;
 }
 
 .preview .projectImage {
   width: 100%;
+
   aspect-ratio: 1 / 1;
   outline: solid 1px pink;
 
   background-image: url("../images/ebook-example.jpg");
   background-position: top center;
-  background-size: cover;
+  margin-bottom: 5rem;
+}
+
+.projectImage {
+  width: 680px;
+  height: 400px;
 }
 
 .preview .card {
   margin-inline: 20px;
-
-  transform: translateY(-45px);
+  transform: translateY(180%);
 }
 
 .card__wrap {
@@ -156,7 +164,7 @@ body {
   width: 40rem;
   height: 25rem;
 
-  margin-top: 6rem;
+  margin-top: 2rem;
 }
 
 .card .card__projectTitle {
@@ -199,7 +207,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 10px;
 }
 
 .card .card__authorPhoto {
@@ -220,13 +227,15 @@ body {
 }
 
 .card .card__name {
+  font: var(--font-card-subtitle);
+  text-align: center;
+  justify-content: center;
+}
+
+.card .card__projectName {
   font: var(--font-card-title);
   text-align: left;
   margin-bottom: -0.5rem;
-}
-
-.card .card__name .card_name {
-  font: var(--font-card-title);
 }
 
 .card .card__project {
@@ -236,8 +245,10 @@ body {
 
 .card .card__slogan {
   font: var(--font-card-subtitle);
+  font-size: 1rem;
+  font-style: normal;
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .card .card__descriptionTitle {
@@ -247,7 +258,7 @@ body {
 
 .card .card__description {
   margin-top: 0.2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 5rem;
 }
 
 .card .card__technicalInfo {
@@ -255,8 +266,6 @@ body {
   grid-template-columns: 1fr 2rem 2rem;
   gap: 0.5em;
   align-items: center;
-
-  margin-block: 1.8rem;
 }
 
 .card .card__technologies {

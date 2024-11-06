@@ -16,7 +16,7 @@ function ProjectCard({ jsonData }) {
             </div>
 
             <div className="card__project">
-                <h3 className="card__name card_name">{jsonData.project_name || "Elegant Workspace"}</h3>
+                <h3 className="card__projectName">{jsonData.project_name || "Elegant Workspace"}</h3>
                 <h3 className="card__descriptionTitle">Product description</h3>
                 <p className="card__description">{jsonData.project_description || "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, quos? Itaque, molestias eveniet laudantium adipisci vitae ratione"} </p>
                 <div className="card__technicalInfo">
@@ -28,9 +28,8 @@ function ProjectCard({ jsonData }) {
         </article>
     );
 }
-
 ProjectCard.propTypes = {
-    jsonData: PropTypes.array.isRequired,
+    jsonData: PropTypes.object.isRequired,
 };
 
 export default ProjectCard;

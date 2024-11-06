@@ -1,4 +1,5 @@
 import codeLogo from '../../images/coding_logo.png';
+import '../../styles/layout/_footer.scss';
 
 
 function Footer() {
