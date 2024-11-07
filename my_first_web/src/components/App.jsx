@@ -84,7 +84,6 @@ function App() {
         <Route path='/' element={<Home />} />
 
         <Route path='/projects' element={<Landing
-          showNewProjectButton={false}
           projectsArray={projectsArray}
           jsonData={jsonData} />} />
 

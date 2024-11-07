@@ -1,23 +1,18 @@
-import { Link } from "react-router-dom";
 import '../styles/App.scss';
 import PropTypes from 'prop-types';
-import ProjectCard from "./projects/ProjectCard";
 
-function Landing({ jsonData, projectsArray, showNewProjectButton }) {
+function Landing({ jsonData, projectsArray }) {
     return (
 
         <main className="main__landing">
             <section className="hero">
-
                 <h2 className='title' >MAIN PROJECTS LIST</h2>
-                {showNewProjectButton && (
-                    <Link to='/newproject' className="button__landing" >NEW PROJECT</Link>)}
+
             </section>
 
             <section className="preview">
                 <div className='projectImage'>
                     <div style={{ backgroundImage: jsonData.project_image ? `url(${jsonData.project_image})` : null }}></div>
-                    <ProjectCard jsonData={jsonData} />
 
                     {projectsArray.map((project) => {
                         return (
