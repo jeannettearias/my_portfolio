@@ -77,7 +77,8 @@ function App() {
 
   //HTML
   return (
-    <div className="container">
+    <main className="main">
+
       <Header />
 
       <Routes>
@@ -91,10 +92,9 @@ function App() {
         <Route path='/contact' element={<Contact />}
         />
 
-
       </Routes>
       <Footer />
-    </div>
+    </main>
   );
 }
 

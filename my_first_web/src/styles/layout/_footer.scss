@@ -1,6 +1,22 @@
+@import "../core/variables";
+@import "../core/reset";
+
 .footer {
   position: relative;
   bottom: 0;
   text-align: center;
   padding-block: 30px 20px;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.copy {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-card-tech);
+  color: var(--color-white);
+  margin-right: 1rem;
+  margin-left: 1rem;
 }

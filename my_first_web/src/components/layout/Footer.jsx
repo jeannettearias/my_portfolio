@@ -6,14 +6,17 @@ function Footer() {
     return (
         <>
             <footer className='footer'>
-                <img
-                    className='logoSponsor'
-                    src={codeLogo}
-                    alt="Jeannette's Logo"
-                />
+                <div className='copy'>
+                    <span>&copy;2024 Jeannette Arias. All rights reserved.  </span>
+                    <img
+                        className='logoSponsor'
+                        src={codeLogo}
+                        alt="Jeannette's Logo"
+                    />
+                </div>
             </footer>
         </>
     );
 }
 
-export default Footer;
+export default Footer; 
