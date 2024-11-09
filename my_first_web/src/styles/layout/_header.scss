@@ -1,7 +1,9 @@
 .header__section {
+  display: flex;
   font-family: Onest Variable, system-ui, sans-serif;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  margin-top: 2rem;
   margin-bottom: 3rem;
 }
 

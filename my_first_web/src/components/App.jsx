@@ -77,24 +77,27 @@ function App() {
 
   //HTML
   return (
-    <main className="main">
-
+    <>
       <Header />
 
-      <Routes>
-        <Route path='/' element={<Home />} />
+      <main className="main">
 
-        <Route path='/projects' element={<Landing
-          projectsArray={projectsArray}
-          jsonData={jsonData} />} />
+        <Routes>
+          <Route path='/' element={<Home />} />
 
-        <Route path='/experience' element={<Experience />} />
-        <Route path='/contact' element={<Contact />}
-        />
+          <Route path='/projects' element={<Landing
+            projectsArray={projectsArray}
+            jsonData={jsonData} />} />
 
-      </Routes>
+          <Route path='/experience' element={<Experience />} />
+          <Route path='/contact' element={<Contact />}
+          />
+
+        </Routes>
+
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }
 
