@@ -2,21 +2,17 @@
   display: flex;
   font-family: Onest Variable, system-ui, sans-serif;
   justify-content: space-between;
-  align-items: center;
+
   margin-top: 2rem;
-  margin-bottom: 3rem;
 }
 
 .header {
   display: flex;
-  padding: 1rem;
-  margin-top: 2rem;
+  margin: 2rem;
   justify-content: center;
   align-items: center;
   transition: background-color 0.3s ease; /* Smooth transition for background change */
   color: white;
-
-  position: fixed; /* Keeps the header fixed at the top */
   top: 0;
   width: 100%;
   z-index: 100; /* Ensures it layers above content like cards */
@@ -60,7 +56,6 @@
 }
 
 .menu__item {
-  display: flex;
   margin: 1rem;
   list-style: none;
   cursor: pointer;
@@ -80,6 +75,5 @@
   text-decoration: none;
   list-style: none;
   color: inherit;
-  font-size: 1rem;
   line-height: 1.25rem;
 }

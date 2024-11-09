@@ -12,14 +12,12 @@ function Landing({ jsonData, projectsArray }) {
 
                         {projectsArray.map((project) => {
                             return (
-
-                                < a href={project.idproject} key={project.idproject} className="detail-link" >
+                                <>
                                     <div style={{ backgroundImage: jsonData.project_image ? `url(${jsonData.project_image})` : null }}></div>
                                     <article className="card" key={project.idproject} >
                                         <h2 className="card__projectTitle">
                                             <span className="card__projectTitle--text">Personal project card</span>
                                         </h2>
-
                                         <div className="card__author" >
                                             <div className="card__authorPhoto" style={{ background: project.author_photo ? `url(${project.author_photo})` : null }} ></div>
                                             <p className="card__job">{project.author_job || 'Full Stack Developer'} </p>
@@ -38,7 +36,7 @@ function Landing({ jsonData, projectsArray }) {
                                             </div>
                                         </div>
                                     </article>
-                                </a>
+                                </>
                             );
                         })}
                     </div>

@@ -1,10 +1,18 @@
 //aqui debe ir los archivos sass IMPORT
 @import "./core/reset";
 @import "./core/variables";
-@import "./layout/_footer";
+@import "./layout/footer";
+@import "./layout/header";
 
 //fonts
 $color__title: white;
+
+/* Set the layout container to full height */
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
 
 body {
   background-color: rgb(3, 3, 33);
@@ -21,55 +29,46 @@ body {
   color: white;
 }
 
-@media screen and (min-width: 420px) {
+@media screen and (min-width: 768px) {
   :root {
-    font-size: 12px;
+    font-size: 14px; // Equivalent to 16px, depending on your base font size
   }
 }
 
-@media screen and (min-width: 560px) {
+@media screen and (max-width: 767px) {
   :root {
-    font-size: 14px;
+    font-size: 12px; // Scales down to a smaller font on narrower screens
   }
 }
 
-@media screen and (max-width: 768px) {
-  .main__lading {
-    max-width: 980px;
-    margin-inline: auto;
-    display: grid;
-    grid-template-columns: 6fr 5fr;
-    gap: 1rem;
-    text-align: center;
-    align-content: center;
+/* Container adjustments for responsive layout */
+.main__lading {
+  max-width: 980px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 6fr 5fr;
+  gap: 1rem;
+  text-align: center;
+  align-content: center;
 
-    .projectImage {
-      max-width: 60%;
-    }
+  .projectImage {
+    max-width: 60%;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .hero {
-    grid-column: span 2;
-  }
+/* Main content flexes to push footer to the bottom */
+.main__lading {
+  flex: 1;
 }
 
 .preview .projectImage {
-  font: var(--font-text-big);
-  text-align: center;
-  font-style: bold;
-  margin-top: 3rem;
-  margin-bottom: 2rem;
-  color: white;
-  width: 100%;
+  display: grid;
 
-  aspect-ratio: 1 / 1;
-  outline: solid 1px pink;
-
+  margin: 2rem;
   background-image: url("../images/ebook-example.jpg");
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .preview .card {
@@ -80,7 +79,6 @@ body {
 .preview .card {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 10px;
 
   @media (min-width: 360px) {
     max-width: 550px;
@@ -95,7 +93,7 @@ body {
 
 .card {
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 30% 70%;
 
   color: var(--color-black);
   font: var(--font-card-text);
@@ -121,8 +119,8 @@ body {
   background-clip: content-box, border-box;
 
   margin: 6rem;
-  margin-top: 2rem;
-  width: 80%;
+
+  width: 60%;
   justify-content: center;
 }
 

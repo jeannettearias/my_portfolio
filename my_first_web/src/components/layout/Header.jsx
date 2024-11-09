@@ -20,7 +20,7 @@ function Header() {
     }, []);
 
     return (
-        <section className='header__section'>
+        <div className='header__section'>
             <header className={`header ${isTransparent ? 'transparent' : ''}`}>
                 <nav className={`menu ${isTransparent ? 'transparent' : ''}`}>
                     <ul className="menu__list ">
@@ -42,7 +42,7 @@ function Header() {
                     </ul>
                 </nav>
             </header>
-        </section>
+        </div>
     );
 }
 
