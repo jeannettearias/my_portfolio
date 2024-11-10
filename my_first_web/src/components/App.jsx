@@ -62,7 +62,14 @@ function App() {
     }
   }, []);
 
-  //Get input values
+  //Get experience
+  const [experience, setExperience] = useState({
+    Company: '',
+    Role: '',
+    Time: '',
+    Description: ''
+
+  });
 
 
 
@@ -89,10 +96,10 @@ function App() {
             projectsArray={projectsArray}
             jsonData={jsonData} />} />
 
-          <Route path='/experience' element={<Experience />} />
+          <Route path='/experience' element={<Experience
+            experience={experience} />} />
           <Route path='/contact' element={<Contact />}
           />
-
         </Routes>
 
       </main>

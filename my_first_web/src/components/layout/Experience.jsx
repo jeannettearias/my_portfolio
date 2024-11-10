@@ -1,22 +1,35 @@
 
-import '../../styles/layout/_experience.scss'
+import '../../styles/layout/_experience.scss';
+import PropTypes from 'prop-types';
 
-function Experience() {
+function Experience({ experience }) {
+    //code
+
+
 
     return (
-        <article className="exp__box">
-            <h3 className="title__h3">
-                Product Owner</h3>
-            <h4 className="title__h4">
-                Entelgy</h4>
-            <time className="datetime" >
-                Currently</time>
-            <div className="text__box">
-                <p className="prh__text">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus ex minus quae enim. Ullam repellat error aliquam ea doloribus id sapiente fuga, eaque voluptatum enim delectus iure necessitatibus nulla veniam?</p>
-            </div>
-        </article>
+        <section className='exp__section'>
+            <form>
+                <fieldset className='project__data'>
+                    <legend>{experience}</legend>
+                    <p className="text">Product Owner</p>
+                    <p className="text">Entelgy</p>
+                    <time className="datetime" >Currently</time>
+                </fieldset>
+
+                <fieldset className="description__container">
+                    <legend>Job Description</legend>
+                    <p className="text">
+                        Working at OpenBank by Entelgy.</p>
+                </fieldset>
+            </form>
+        </section>
     );
 }
+
+Experience.propTypes = {
+    experience: PropTypes.object.isRequired
+}
+
 export default Experience;
 

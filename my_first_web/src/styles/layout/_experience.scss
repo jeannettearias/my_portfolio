@@ -1,0 +1,25 @@
+.exp__section {
+  padding: 1rem;
+}
+
+.project__data,
+.description__container {
+  border: 1px solid var(--color-greyish-brown);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project__data legend,
+.description__container legend {
+  font-weight: bold;
+  color: var(--color-white-60);
+}
+
+.text {
+  color: var(--color-white-50);
+}
+
+.datetime {
+  font-style: italic;
+  color: var(--color-white-50);
+}
