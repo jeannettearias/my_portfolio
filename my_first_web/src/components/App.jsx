@@ -45,7 +45,7 @@ function App() {
         const data = await response.json();
         setProjectsArray(data);
 
-        console.log(data);
+
 
       }
       catch (error) {
@@ -62,24 +62,8 @@ function App() {
     }
   }, []);
 
-  //Get experience
-  const [experience, setExperience] = useState({
-    Company: '',
-    Role: '',
-    Time: '',
-    Description: ''
-
-  });
-
-
-
-  //Delete (form, LS, messages)
-
-
-
-  //Create project card
-
-
+  // experence 
+  const [exp, setExp] = useState([]);
 
 
   //HTML
@@ -97,7 +81,8 @@ function App() {
             jsonData={jsonData} />} />
 
           <Route path='/experience' element={<Experience
-            experience={experience} />} />
+            exp={exp}
+            expJson={expJson} />} />
           <Route path='/contact' element={<Contact />}
           />
         </Routes>
