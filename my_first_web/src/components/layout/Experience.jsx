@@ -11,12 +11,29 @@ function Experience({ exp }) {
                     <fieldset className='project__data' >
                         <legend className='legend'>{expJson.Company}</legend>
                         <p className="text">{expJson.Role}</p>
+                        <p className='text'>{expJson.Employment_type}</p>
                         <time className="datetime" >{expJson.Time}</time>
-                        <ul className="description-list">
-                            {expJson.Description.split('. ').map((point, idx) =>
-                                point.trim() ? <li className='item__list' key={idx}>{point.trim()}.</li> : null
-                            )}
-                        </ul>
+                        {Array.isArray(expJson.Description) ? (
+                            <ul className='description__list'>
+                                {expJson.Description.map((item, idx) => (
+                                    <li className='item__list' key={idx}>{item}</li>
+                                ))}
+                            </ul>
+                        ) : (
+                            <ul className='description__list'>
+                                {expJson.Description.split('. ').map((item, idx) => (
+                                    item.trim() && <li className='item__list' key={idx}>{item.trim()}</li>
+                                ))}
+                            </ul>
+                        )}
+
+                        {expJson.Projects && expJson.Projects.map((project, idx) => (
+                            <li key={idx} className='project__list'>
+                                <h4>{project.Title} | {project.Year}</h4>
+                                <p>{project.Description}</p>
+                                <a href="{project.link}" target='_blank' rel='noopener noreferrer'>{project.Link}</a>
+                            </li>
+                        ))}
                     </fieldset>
                 </form>
             ))}
@@ -25,7 +42,27 @@ function Experience({ exp }) {
 }
 
 Experience.propTypes = {
-    exp: PropTypes.array.isRequired
+    exp: PropTypes.arrayOf(
+        PropTypes.shape({
+            Company: PropTypes.string.isRequired,
+            Role: PropTypes.string.isRequired,
+            Employment_type: PropTypes.string,
+            Time: PropTypes.string.isRequired,
+            Description: PropTypes.oneOfType([
+                PropTypes.string,
+                PropTypes.arrayOf(PropTypes.string)
+            ]),
+            Projects: PropTypes.arrayOf(
+                PropTypes.shape({
+                    Title: PropTypes.string.isRequired,
+                    Year: PropTypes.number.isRequired,
+                    Description: PropTypes.string.isRequired,
+                    Link: PropTypes.string.isRequired
+                })
+            )
+        })
+
+    ).isRequired
 };
 export default Experience;
 

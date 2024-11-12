@@ -25,12 +25,14 @@
   color: var(--color-white-50);
 }
 
-.description-list {
+.description__list .project__list {
   color: var(--color-white-50);
   border: solid var(--color-greyish-brown);
   padding: 0.5rem;
 }
 
-.description-list .item__list {
-  margin-left: 1rem;
+.description__list .item__list {
+  margin-left: 1.2rem;
+}
+.project__list {
 }
