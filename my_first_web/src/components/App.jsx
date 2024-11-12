@@ -67,6 +67,7 @@ function App() {
   const [exp, setExp] = useState([]);
 
   useEffect(() => {
+    // Set experience data from JSON file
     setExp(expJson);
   }, []);
 
