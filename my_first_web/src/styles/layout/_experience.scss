@@ -1,25 +1,36 @@
 .exp__section {
   padding: 1rem;
 }
+.legend {
+  padding: 1rem;
+}
 
-.project__data,
-.description__container {
+.project__data {
+  display: grid;
+  grid-template-columns: 1fr;
   border: 1px solid var(--color-greyish-brown);
   padding: 1rem;
   margin-bottom: 1rem;
-}
-
-.project__data legend,
-.description__container legend {
-  font-weight: bold;
-  color: var(--color-white-60);
+  margin: 1rem;
+  gap: 1rem;
 }
 
 .text {
   color: var(--color-white-50);
+  font-style: bold;
 }
 
 .datetime {
   font-style: italic;
   color: var(--color-white-50);
+}
+
+.description-list {
+  color: var(--color-white-50);
+  border: solid var(--color-greyish-brown);
+  padding: 0.5rem;
+}
+
+.description-list .item__list {
+  margin-left: 1rem;
 }

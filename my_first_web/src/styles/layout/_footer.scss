@@ -7,10 +7,9 @@
   justify-content: center;
   align-items: center;
   font-family: var(--font-card-tech);
-  color: var(--color-white);
   position: relative;
 
-  min-height: 100px; // Optional: Set a smaller minimum height
+  min-height: 50px; // Optional: Set a smaller minimum height
 }
 
 .copy {
@@ -18,5 +17,5 @@
   justify-content: space-between;
   align-items: center;
   font-family: var(--font-card-tech);
-  color: var(--color-white);
+  color: var(--color-white-50);
 }
