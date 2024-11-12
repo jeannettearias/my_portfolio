@@ -9,6 +9,7 @@ import { Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Landing from './Landing';
 import Home from './layout/Home';
+import expJson from '../data/exp.json';
 
 function App() {
 
@@ -62,9 +63,12 @@ function App() {
     }
   }, []);
 
-  // experence 
+  // Get the experence from json data 
   const [exp, setExp] = useState([]);
 
+  useEffect(() => {
+    setExp(expJson);
+  }, []);
 
   //HTML
   return (
@@ -81,8 +85,7 @@ function App() {
             jsonData={jsonData} />} />
 
           <Route path='/experience' element={<Experience
-            exp={exp}
-            expJson={expJson} />} />
+            exp={exp} />} />
           <Route path='/contact' element={<Contact />}
           />
         </Routes>
