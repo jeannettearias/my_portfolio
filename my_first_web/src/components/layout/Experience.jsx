@@ -27,13 +27,21 @@ function Experience({ exp }) {
                             </ul>
                         )}
 
-                        {expJson.Projects && expJson.Projects.map((project, idx) => (
-                            <li key={idx} className='project__list'>
-                                <h4>{project.Title} | {project.Year}</h4>
-                                <p>{project.Description}</p>
-                                <a href="{project.link}" target='_blank' rel='noopener noreferrer'>{project.Link}</a>
-                            </li>
-                        ))}
+                        {expJson.Projects && (
+                            <ul className='description__list'>
+                                {expJson.Projects.map((project, idx) => (
+                                    <li key={idx} className='project__item'>
+                                        <ul>
+                                            <h4 className='project__title'>{project.Title} | {project.Year}</h4>
+                                            <li className='item__link'><p>{project.Description}</p></li>
+                                            <li className='item__link'>
+                                                <a href={project.Link} target='_blank' rel='noopener noreferrer'>{project.Link}</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
                     </fieldset>
                 </form>
             ))}
