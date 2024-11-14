@@ -1,14 +1,12 @@
 import '../styles/App.scss';
 import PropTypes from 'prop-types';
 
-function Landing({ jsonData, projectsArray }) {
+function Landing({ projectsArray }) {
     return (
 
         <section className="main__landing">
 
-            <div className='projectImage'
-                style={{ backgroundImage: jsonData.project_image ? `url(${jsonData.project_image})` : null }}>
-
+            <div>
                 {projectsArray.map((project) => {
                     return (
                         <>
@@ -38,12 +36,10 @@ function Landing({ jsonData, projectsArray }) {
                     );
                 })}
             </div>
-
         </section >
     );
 }
 Landing.propTypes = {
-    projectsArray: PropTypes.array.isRequired,
-    jsonData: PropTypes.object.isRequired
+    projectsArray: PropTypes.array.isRequired
 };
 export default Landing; 

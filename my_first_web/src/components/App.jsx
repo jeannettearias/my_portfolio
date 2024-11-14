@@ -13,19 +13,7 @@ import expJson from '../data/exp.json';
 
 function App() {
 
-  //Global state to hold JSON data
-  const [jsonData, setJsonData] = useState({
-    project_name: '',
-    project_slogan: '',
-    project_repo: '',
-    project_demo: '',
-    project_technologies: '',
-    project_description: '',
-    author_name: '',
-    author_job: '',
-    author_photo: '',
-    project_image: '',
-  });
+
 
   //const [messageUrl, setMessageUrl] = useState('');
   //const [messageError, setMessageError] = useState('');
@@ -56,11 +44,7 @@ function App() {
 
     fetchProjects();
 
-    //import data from LS (new Project)
-    const saveData = localStorage.getItem('formData');
-    if (saveData) {
-      setJsonData(JSON.parse(saveData));
-    }
+
   }, []);
 
   // Get the experence from json data 
@@ -76,22 +60,20 @@ function App() {
     <>
       <Header />
 
-      <main className="main">
 
-        <Routes>
-          <Route path='/' element={<Home />} />
+      <Routes>
+        <Route path='/' element={<Home />} />
 
-          <Route path='/projects' element={<Landing
-            projectsArray={projectsArray}
-            jsonData={jsonData} />} />
+        <Route path='/projects' element={<Landing
+          projectsArray={projectsArray}
+        />} />
 
-          <Route path='/experience' element={<Experience
-            exp={exp} />} />
-          <Route path='/contact' element={<Contact />}
-          />
-        </Routes>
+        <Route path='/experience' element={<Experience
+          exp={exp} />} />
+        <Route path='/contact' element={<Contact />}
+        />
+      </Routes>
 
-      </main>
       <Footer />
     </>
   );

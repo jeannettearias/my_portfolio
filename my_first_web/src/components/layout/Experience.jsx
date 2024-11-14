@@ -26,7 +26,6 @@ function Experience({ exp }) {
                                 ))}
                             </ul>
                         )}
-
                         {expJson.Projects && (
                             <ul className='description__list'>
                                 {expJson.Projects.map((project, idx) => (
