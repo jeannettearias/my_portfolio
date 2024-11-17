@@ -1,13 +1,19 @@
 import '../styles/App.scss';
 import PropTypes from 'prop-types';
+import ProjectImage from './projects/ProjectImage';
 
 function Landing({ projectsArray }) {
+
     return (
 
+
         <section className="main__landing">
+            <ProjectImage projectsArray={projectsArray} />
 
             <div>
                 {projectsArray.map((project) => {
+
+
                     return (
                         <>
                             <article className="card" key={project.idproject} >
@@ -36,7 +42,9 @@ function Landing({ projectsArray }) {
                     );
                 })}
             </div>
+
         </section >
+
     );
 }
 Landing.propTypes = {

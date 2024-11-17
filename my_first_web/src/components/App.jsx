@@ -35,7 +35,6 @@ function App() {
         setProjectsArray(data);
 
 
-
       }
       catch (error) {
         console.error('Error loading JSON data:', error);
