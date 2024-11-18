@@ -1,0 +1,14 @@
+.project__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.projectImage {
+  display: flex;
+  margin-top: 8rem;
+  width: 400px;
+  height: 400px; /* Or any other height */
+  background-size: cover; /* Cover the entire div */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent image repeat */
+}
