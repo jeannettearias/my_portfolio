@@ -7,10 +7,12 @@ import ProjectCard from './projects/ProjectCard';
 function Landing({ projectsArray }) {
 
     return (
-        <main className="main__landing">
-            <ProjectImage projectsArray={projectsArray} />
+        <section className="preview">
+            <div className='projectImage'>
+                <ProjectImage projectsArray={projectsArray} /></div>
             <ProjectCard projectsArray={projectsArray} />
-        </main>
+
+        </section>
 
     );
 }

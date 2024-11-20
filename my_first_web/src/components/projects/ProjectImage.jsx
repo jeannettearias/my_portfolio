@@ -5,7 +5,7 @@ import '../../styles/App.scss'
 function ProjectImage({ projectsArray }) {
 
     return (
-        <div className='project__container'>
+        <div className='preview'>
             {projectsArray.map((projectimg) => (
 
                 <div

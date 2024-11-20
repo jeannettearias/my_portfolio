@@ -1,14 +1,31 @@
-.project__container {
-  display: flex;
-  flex-direction: row;
-}
-
 .projectImage {
-  display: flex;
-  margin-top: 8rem;
-  width: 400px;
+  width: 300px;
   height: 400px; /* Or any other height */
   background-size: cover; /* Cover the entire div */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Prevent image repeat */
+}
+
+.preview .projectImage {
+  display: grid;
+  grid-template-rows: 2fr;
+  margin: 5%;
+
+  outline: solid 1px pink;
+}
+
+.preview .projectImage {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  outline: solid 1px pink;
+
+  background-image: url("../images/ebook-example.jpg");
+  background-position: top center;
+  background-size: cover;
+}
+
+.preview .card {
+  margin-inline: 20px;
+
+  transform: translateY(-45px);
 }

@@ -34,7 +34,6 @@ function App() {
         const data = await response.json();
         setProjectsArray(data);
 
-
       }
       catch (error) {
         console.error('Error loading JSON data:', error);
@@ -56,7 +55,7 @@ function App() {
 
   //HTML
   return (
-    <>
+    <div className="container">
       <Header />
 
 
@@ -74,7 +73,7 @@ function App() {
       </Routes>
 
       <Footer />
-    </>
+    </div>
   );
 }
 

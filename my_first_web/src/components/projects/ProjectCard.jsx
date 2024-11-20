@@ -5,11 +5,12 @@ import '../../styles/App.scss'
 function ProjectCard({ projectsArray }) {
 
     return (
-        <div className='project__container'>
+        <div >
             {projectsArray.map((project) => {
 
                 return (
                     <article className="card" key={project.idproject} >
+
                         <h2 className="card__projectTitle">
                             <span className="card__projectTitle--text">Personal project card</span>
                         </h2>
@@ -31,7 +32,6 @@ function ProjectCard({ projectsArray }) {
                             </div>
                         </div>
                     </article>
-
                 );
             })}
         </div>
