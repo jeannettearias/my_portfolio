@@ -14,7 +14,6 @@ import expJson from '../data/exp.json';
 function App() {
 
 
-
   //const [messageUrl, setMessageUrl] = useState('');
   //const [messageError, setMessageError] = useState('');
   const [projectsArray, setProjectsArray] = useState([]);
@@ -41,7 +40,6 @@ function App() {
     }
 
     fetchProjects();
-
 
   }, []);
 

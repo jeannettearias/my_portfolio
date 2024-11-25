@@ -2,28 +2,23 @@ import PropTypes from 'prop-types';
 import '../../styles/project/_project.scss'
 import '../../styles/App.scss'
 
-function ProjectImage({ projectsArray }) {
+function ProjectImage({ project }) {
 
     return (
-        <div className='preview'>
-            {projectsArray.map((projectimg) => (
-
-                <div
-                    key={projectimg.idproject}
-                    className='projectImage'
-                    style={{
-                        backgroundImage: projectimg.project_image ? `url(${projectimg.project_image})` : 'none',
-                    }}
-
-                ></div>
-            ))}
-        </div>
-    );
+        <div
+            className='projectImage'
+            style={{
+                backgroundImage: project.project_image ? `url(${project.project_image})` : 'none',
+            }}
+        ></div>
+    )
 }
 
 ProjectImage.propTypes = {
-    projectsArray: PropTypes.array.isRequired
-
+    project: PropTypes.shape({
+        idproject: PropTypes.number.isRequired,
+        project_image: PropTypes.string,
+    }).isRequired,
 };
 
 export default ProjectImage;
