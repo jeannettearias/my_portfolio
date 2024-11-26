@@ -14,9 +14,9 @@
 }
 
 .projectImage {
-  flex: 0 0 60%; // Image takes 60% of the row width
+  flex: 0 0 70%; // Image takes 60% of the row width
   position: relative;
-  height: 250px; // Customize height as needed
+  height: 500px; // Customize height as needed
   background: #eee; // Placeholder for image
   border-radius: 8px; // Optional: rounded corners
   overflow: hidden;
@@ -29,7 +29,7 @@
 }
 
 .card {
-  flex: 0 0 40%; // Card takes 40% of the row width
+  flex: 0 0 30%; // Card takes 40% of the row width
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 8px;
