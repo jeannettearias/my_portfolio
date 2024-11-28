@@ -7,10 +7,15 @@ function Landing({ projectsArray }) {
     return (
         <main className="preview">
             {projectsArray.map((project) => (
-                <article key={project.idproject} className="project">
-                    <ProjectImage project={project} />
-                    <ProjectCard project={project} />
-                </article>
+                <div key={project.idproject} className="project-container">
+                    <div className='project-image'>
+                        <ProjectImage project={project} />
+                    </div>
+                    <div className='project-card'>
+                        <ProjectCard project={project} />
+                    </div>
+
+                </div>
             ))}
         </main>
     );
