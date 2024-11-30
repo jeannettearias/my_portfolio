@@ -1,22 +1,24 @@
 .preview {
   display: flex;
   flex-direction: column;
-  gap: 5%; // Space between project rows
   align-items: center; // Center the entire content horizontally
+  padding: 2rem; // add margin to the preview
+  margin: 1rem;
 }
 
 .project {
   display: flex;
-  width: 100%;
+  flex-direction: column;
+  position: relative;
+
   max-width: 1000px; // Optional: limit the row width
-  gap: 20px; // Space between the image and the card
   align-items: center; // Center the card and image vertically
+  margin-bottom: 5rem;
 }
 
 .projectImage {
-  flex: 0 0 70%; // Image takes 60% of the row width
-  position: relative;
-  height: 500px; // Customize height as needed
+  max-width: 1000px;
+  max-height: 700px; // Customize height as needed
   background: #eee; // Placeholder for image
   border-radius: 8px; // Optional: rounded corners
   overflow: hidden;
@@ -24,42 +26,13 @@
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    background-position: center;
   }
 }
 
-.preview .projectImage {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  outline: solid 1px pink;
-
-  background-image: url("../images/ebook-example.jpg");
-  background-position: top center;
-  background-size: cover;
-}
-
-.preview .card {
+.project .card {
   margin-inline: 20px;
-
   transform: translateY(-45px);
-}
-
-.card__wrap {
-  display: grid;
-  grid-template-columns: 1fr;
-  row-gap: 10px;
-
-  @media (min-width: 360px) {
-    max-width: 550px;
-
-    margin-inline: auto;
-  }
-
-  @media (min-width: 768px) {
-    //grid-template-columns: 1fr 1fr;
-    column-gap: 10px;
-    //max-width: 100%;
-  }
 }
 
 .card {
