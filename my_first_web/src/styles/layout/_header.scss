@@ -18,6 +18,12 @@
   top: 0;
   width: 100%;
   z-index: 100; /* Ensures it layers above content like cards */
+  font: var(--font-normal);
+  font-size: 14px;
+
+  @media (max-width: 680px) {
+    font: var(--font-normal);
+  }
 }
 
 .menu {
