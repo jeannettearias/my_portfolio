@@ -25,16 +25,24 @@ function ProjectCard({ project }) {
                 <h3 className="card__descriptionTitle">Project Description</h3>
                 <p className="card__description">{project.project_description || 'No description provided.'}</p>
                 <div className="card__technicalInfo">
-                    <p className="card__technologies">{project.project_technologies || 'React JS - HTML - CSS'}</p>
-                    <a className="icon icon__www" href={project.project_demo} target="_blank" rel="noopener noreferrer">
-                        Web Link
-                    </a>
-                    <a className="icon icon__github" href={project.project_repo} target="_blank" rel="noopener noreferrer">
-                        GitHub Link
-                    </a>
+                    <ul className="card__technologies">
+                        {project.project_technologies
+                            ? project.project_technologies.split(',').map((tech, index) => (
+                                <li key={index}>
+                                    <a className={`tech__icon icon__${tech.trim().toLowerCase()}`} title={tech.trim()}></a>
+                                </li>
+                            ))
+                            : 'No technologies listed'}
+                    </ul>
                 </div>
+                <a className="icon icon__www" href={project.project_demo} target="_blank" rel="noopener noreferrer">
+                    Web Link
+                </a>
+                <a className="icon icon__github" href={project.project_repo} target="_blank" rel="noopener noreferrer">
+                    GitHub Link
+                </a>
             </div>
-        </div>
+        </div >
     );
 }
 

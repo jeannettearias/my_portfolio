@@ -10,7 +10,7 @@ function Landing({ projectsArray }) {
                 <div key={project.idproject} className="project">
                     <div>
                         <ProjectImage project={project} />
-                        <ProjectCard project={project} />
+                        <ProjectCard project={project} className='card__wrap' />
                     </div>
 
                 </div>
