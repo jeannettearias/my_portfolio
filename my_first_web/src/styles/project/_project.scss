@@ -175,6 +175,7 @@
   list-style: none;
   column-gap: 0.5rem;
   justify-content: left;
+  justify-content: space-between;
 
   font: var(--font-card-tech);
   font-size: smaller;
@@ -200,7 +201,7 @@
       background-image: url("../../images/icons/express.svg");
     }
     &.icon__html {
-      background-image: url("../../images/icons/html.svg");
+      background-image: url("../../images/icons/html5.svg");
     }
     &.icon__css {
       background-image: url("../../images/icons/css.svg");
