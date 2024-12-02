@@ -19,11 +19,10 @@ function ProjectCard({ project }) {
                 <p className="card__job">{project.author_job || 'Full Stack Developer'}</p>
                 <h3 className="card__name">{project.author_name || 'Author Name'}</h3>
             </div>
+
             <div className="card__project">
                 <h3 className="card__projectName">{project.project_name || 'Elegant Workspace'}</h3>
                 <p className="card__slogan">{project.project_slogan || 'Exclusive Design'}</p>
-                <h3 className="card__descriptionTitle">Project Description</h3>
-                <p className="card__description">{project.project_description || 'No description provided.'}</p>
                 <div className="card__technicalInfo">
                     <ul className="card__technologies">
                         {project.project_technologies
@@ -35,6 +34,9 @@ function ProjectCard({ project }) {
                             : 'No technologies listed'}
                     </ul>
                 </div>
+                <h3 className="card__descriptionTitle">Project Description</h3>
+                <p className="card__description">{project.project_description || 'No description provided.'}</p>
+
                 <footer className='card__footer'>
                     <ul className='icon'>
                         <li className='icon__link'>
