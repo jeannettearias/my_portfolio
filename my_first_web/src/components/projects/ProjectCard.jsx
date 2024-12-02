@@ -35,12 +35,20 @@ function ProjectCard({ project }) {
                             : 'No technologies listed'}
                     </ul>
                 </div>
-                <a className="icon icon__www" href={project.project_demo} target="_blank" rel="noopener noreferrer">
-                    Web Link
-                </a>
-                <a className="icon icon__github" href={project.project_repo} target="_blank" rel="noopener noreferrer">
-                    GitHub Link
-                </a>
+                <footer className='card__footer'>
+                    <ul className='icon'>
+                        <li className='icon__link'>
+                            <a className="icon icon__www" href={project.project_demo} target="_blank" rel="noopener noreferrer">
+                                Web Link
+                            </a>
+                        </li>
+                        <li className='icon__link'>
+                            <a className="icon icon__github" href={project.project_repo} target="_blank" rel="noopener noreferrer">
+                                GitHub Link
+                            </a>
+                        </li>
+                    </ul>
+                </footer>
             </div>
         </div >
     );
