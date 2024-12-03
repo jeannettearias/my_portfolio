@@ -1,11 +1,14 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/', // Replace with your repo name
-  build: {
-    outDir: 'docs',
-    emptyOutDir: true,
-  },
+  base: "./",
+  server: {
+    open: "/",
+    watch: {
+      usePolling: true
+    }
+  }
 });
