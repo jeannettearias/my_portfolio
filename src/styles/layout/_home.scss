@@ -46,7 +46,14 @@
   align-items: center; /* Center content vertically */
   justify-content: center; /* Center content horizontally */
   transition: background-color 0.3s ease; /* Smooth background color transition */
-  font-size: 14px;
+
+  font: var(--font-normal);
+  font-size: 1rem;
+
+  @media (max-width: 680px) {
+    font: var(--font-normal);
+    font-size: 0.8rem;
+  }
 }
 
 .home__title {
@@ -61,11 +68,29 @@
   flex-direction: row;
   font-style: normal;
   font-size: 14px;
+
+  font: var(--font-normal);
+  font-size: 1rem;
+
+  @media (max-width: 680px) {
+    font: var(--font-normal);
+    font-size: 0.8rem;
+  }
 }
 
 .home__btn {
   display: inline-flex; /* Use inline-flex to align items correctly within buttons/links */
+  justify-content: center;
+
   gap: 1rem;
+
+  font: var(--font-normal);
+  font-size: 1rem;
+
+  @media (max-width: 680px) {
+    font: var(--font-normal);
+    font-size: 0.8rem;
+  }
 }
 
 .contact__btn {
@@ -81,6 +106,14 @@
   transition: background-color 0.3s ease; /* Smooth background color transition */
   margin-top: 1rem;
   font-size: 14px;
+
+  font: var(--font-normal);
+  font-size: 1rem;
+
+  @media (max-width: 680px) {
+    font: var(--font-normal);
+    font-size: 0.8rem;
+  }
 }
 
 .linkedin__btn {
@@ -95,6 +128,14 @@
   justify-content: center; /* Center content horizontally */
   transition: background-color 0.3s ease; /* Smooth background color transition */
   margin-top: 1rem;
+
+  font: var(--font-normal);
+  font-size: 1rem;
+
+  @media (max-width: 680px) {
+    font: var(--font-normal);
+    font-size: 0.8rem;
+  }
 }
 
 .prh__text {
@@ -103,4 +144,12 @@
 
   margin-top: 2rem;
   margin-bottom: 3rem;
+
+  font: var(--font-normal);
+  font-size: 1.2rem;
+
+  @media (max-width: 680px) {
+    font: var(--font-normal);
+    font-size: 1rem;
+  }
 }
