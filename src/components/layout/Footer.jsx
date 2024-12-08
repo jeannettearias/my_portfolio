@@ -1,4 +1,4 @@
-import codeLogo from '../../images/coding_logo.png';
+import JeannetteLogo from '../../images/Jeannette_logo.svg';
 import '../../styles/layout/_footer.scss';
 
 
@@ -13,7 +13,7 @@ function Footer() {
             <div>
                 <img
                     className='logoSponsor'
-                    src={codeLogo}
+                    src={JeannetteLogo}
                     alt="Jeannette's Logo"
                 />
             </div>
