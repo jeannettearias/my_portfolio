@@ -7,7 +7,7 @@ function Footer() {
         <footer className='footer'>
             <div className='copy'>
                 <span>© 2024 Designed by Jeannette Arias</span>
-                <span>All Rights Reserved</span>
+                <span className='additional-text'>All Rights Reserved</span>
             </div>
             <div className="additional-text"></div>
             <div>

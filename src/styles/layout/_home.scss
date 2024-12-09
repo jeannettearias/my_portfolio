@@ -1,10 +1,11 @@
 .home__section {
-  font-family: Onest Variable, system-ui, sans-serif;
-  color: rgba(245, 245, 245, 0.799);
+  display: flex;
+  flex-direction: row;
   padding: 5%;
 }
 
 .home__content {
+  display: flex;
   align-content: center;
   justify-content: center;
   font-style: normal;
@@ -12,22 +13,15 @@
 }
 .home__box {
   display: inline-flex;
-  flex-direction: row;
-  padding-right: 2rem;
-  align-items: center;
-  gap: 1rem;
-  font-style: normal;
-  font-size: 14px;
-
-  margin-top: 3rem;
-  margin-bottom: 2rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 2rem;
 }
 
 .home__picture {
-  display: block;
   margin: 1rem;
-  height: 8rem;
-  width: 8rem;
+  height: 12rem;
+  width: 12rem;
   border-radius: 50%;
   max-width: 100%;
   background-image: url("../../images/me.jpeg");
@@ -35,31 +29,9 @@
   background-size: cover;
 }
 
-.first__home__btn {
-  display: inline-flex; /* Use inline-flex to align items correctly within buttons/links */
-  padding: 0.5rem 3.5rem; /* Adjust padding as needed */
-  background-color: #ecf3f52a; /* Example background color */
-  color: white; /* Text color */
-  border: none; /* Remove default border for button */
-  border-radius: 0.7rem; /* Rounded corners (optional) */
-  cursor: pointer; /* Pointer cursor on hover */
-  align-items: center; /* Center content vertically */
-  justify-content: center; /* Center content horizontally */
-  transition: background-color 0.3s ease; /* Smooth background color transition */
-
-  font: var(--font-normal);
-  font-size: 1rem;
-
-  @media (max-width: 680px) {
-    font: var(--font-normal);
-    font-size: 0.8rem;
-  }
-}
-
 .home__title {
-  font-size: 32px;
-
-  margin-top: 2rem;
+  color: var(--Colors-Neutral-100, #fff);
+  font: var(--font-headings-H-1);
   margin-bottom: 1rem;
 }
 
@@ -69,12 +41,9 @@
   font-style: normal;
   font-size: 14px;
 
-  font: var(--font-normal);
   font-size: 1rem;
 
   @media (max-width: 680px) {
-    font: var(--font-normal);
-    font-size: 0.8rem;
   }
 }
 
@@ -117,39 +86,23 @@
 }
 
 .linkedin__btn {
-  display: inline-flex; /* Use inline-flex to align items correctly within buttons/links */
-  padding: 0.5rem 3.5rem; /* Adjust padding as needed */
-  background-color: #ecf3f52a; /* Example background color */
-  color: white; /* Text color */
-  border: none; /* Remove default border for button */
-  border-radius: 0.7rem; /* Rounded corners (optional) */
-  cursor: pointer; /* Pointer cursor on hover */
-  align-items: center; /* Center content vertically */
-  justify-content: center; /* Center content horizontally */
-  transition: background-color 0.3s ease; /* Smooth background color transition */
-  margin-top: 1rem;
-
-  font: var(--font-normal);
-  font-size: 1rem;
-
-  @media (max-width: 680px) {
-    font: var(--font-normal);
-    font-size: 0.8rem;
-  }
+  display: inline-flex;
+  min-width: 120px;
+  padding: var(--size-125, 12px) var(--size-25, 20px);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--components-button-border-radius, 24px);
+  background: var(--Colors-Pink-500, #742488);
+  font: var(--font-Body-B-2);
+  color: var(--color-neutral-100);
 }
 
 .prh__text {
-  line-height: 1.5rem;
-  font-size: 16px;
-
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-
-  font: var(--font-normal);
-  font-size: 1.2rem;
+  color: var(--color-neutral-100);
+  font: var(--font-Body-B-2);
 
   @media (max-width: 680px) {
-    font: var(--font-normal);
-    font-size: 1rem;
+    color: var(--color-neutral-100);
+    font: var(--font-Body-B-3);
   }
 }

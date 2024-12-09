@@ -3,19 +3,21 @@
 
 .footer {
   display: flex;
-  flex-direction: column; // Keep items stacked vertically
-  justify-content: center;
+  flex-direction: row-reverse; // Keep items stacked vertically
+  justify-content: right;
   align-items: center;
-  font-family: var(--font-card-tech);
+  font-family: var(--color-neutral-100);
   position: relative;
 
   min-height: 50px; // Optional: Set a smaller minimum height
+  margin: 6%;
 
   .copy {
     display: flex;
+    flex-direction: column;
     align-items: center;
     font: var(--font-card-text);
-    color: var(--color-white);
+    color: var(--color-neutral-100);
     font-size: 0.8rem;
     gap: 0.5rem; // Add spacing between inline elements (e.g., text or icons)
     text-align: center; // Ensure the text is centered
@@ -26,8 +28,12 @@
     // Example for another row of text
     font-size: 0.8rem;
     font: var(--font-card-text);
-    color: var(--color-white-50);
+    color: var(--color-neutral-100);
     margin-top: 0.5rem; // Add vertical spacing
     margin-bottom: 0.5rem;
   }
+}
+
+.logoSponsor {
+  height: 10rem;
 }

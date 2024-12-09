@@ -3,6 +3,11 @@ import '../../styles/layout/_header.scss'
 import { useEffect, useState } from 'react';
 
 function Header() {
+    const handleContactMeClick = (ev) => {
+        ev.preventDefault();
+        window.location.href = 'mailto:example@example.com?subject=Contact&body=Hello,';
+    };
+
     const [isTransparent, setIsTransparent] = useState(true);
 
     useEffect(() => {
@@ -20,6 +25,7 @@ function Header() {
     }, []);
 
     return (
+
         <div className='header__section'>
             <header className={`header ${isTransparent ? 'transparent' : ''}`}>
                 <nav className={`menu ${isTransparent ? 'transparent' : ''}`}>
@@ -41,6 +47,9 @@ function Header() {
                         </li>
                     </ul>
                 </nav>
+                <div>
+                    <Link to='/contact' className='contact__btn' onClick={handleContactMeClick}>Contact</Link>
+                </div>
             </header>
         </div>
     );

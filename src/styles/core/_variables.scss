@@ -1,31 +1,58 @@
 body {
-  /* COLORS */
+  /*PRIMARY */
+  --color-primary-100: #99c6ff;
+  --color-primary-200: #67a9ff;
+  --color-primary-300: #348cff;
+  --color-primary-400: #016fff;
+  --color-primary-500: #0059cd;
+  --color-primary-600: #00439b;
+  --color-primary-700: #002d68;
+  --color-primary-800: #001735;
+  --primary-Alpha-10: #001735;
 
-  --color-black: #000000;
-  --color-black-80: rgba(0, 0, 0, 0.8);
-  --color-greyish-brown: #505050;
-  --color-greyish-brown-88: rgba(62, 62, 62, 0.88);
-  --color-dusk: #403a5f;
-  --color-greyish-brown-two: #575757;
-  --color-dark: #302c42;
-  --color-warm-grey: #909090;
-  --color-white: #ffffff;
-  --color-dark-lilac: #8176af;
-  --color-light-blue: #3195f268;
-  --color-white-50: rgba(255, 255, 255, 0.5);
+  /* PINK */
+  --color-pink-100: #ebd0f3;
+  --color-pink-200: #d8a0e6;
+  --color-pink-300: #c97cdd;
+  --color-pink-400: #ba58d3;
+  --color-pink-500: #ab35c9;
+  --color-pink-600: #8c2ba4;
+  --color-pink-700: #6d2280;
+  --color-pink-800: #4f185c;
+  --pink-Alpha-10: #d8a0e6;
 
-  /* FONTS */
+  /* NEUTRAL*/
+  --color-neutral-100: #f9fafb;
+  --color-neutral-200: #dbe1e7;
+  --color-neutral-300: #bdc8d3;
+  --color-neutral-400: #9fafbf;
+  --color-neutral-500: #8297ab;
+  --color-neutral-600: #657e96;
+  --color-neutral-700: #516678;
+  --color-neutral-800: #3d4d5a;
+  --color-neutral-900: #29343c;
+  --color-neutral-1000: #151c1f;
+  --color-neutral-10: #151c1f;
 
-  --font-title-brand: 300 1.4rem "Poppins", sans-serif;
-  --font-title-biggest: bold 3rem "Montserrat", sans-serif;
-  --font-title-big: bold 2rem "Montserrat", sans-serif;
-  --font-title-medium: 300 1.5rem "Montserrat", sans-serif;
-  --font-text-big: normal 1.2rem "Montserrat", sans-serif;
-  --font-normal: normal 10px "Montserrat", sans-serif;
-  --font-button: bold 1rem "Montserrat", sans-serif;
-  --font-card-text: 300 0.8rem "Poppins", sans-serif;
-  --font-card-section: 300 0.8rem "Poppins", sans-serif;
-  --font-card-title: 500 1.2rem "Poppins", sans-serif;
-  --font-card-subtitle: 400 1.1rem "Poppins", sans-serif;
-  --font-card-tech: 500 1rem "Catamaran", sans-serif;
+  /* LIGHT BLUE */
+  --color-light-blue-100: #b7def5;
+  --color-light-blue-200: #6fbeeb;
+  --color-light-blue-300: #40a9e4;
+  --color-light-blue-400: #1d90d2;
+  --color-light-blue-500: #1770a3;
+  --color-light-blue-600: #105074;
+  --lightBlue-Alpha-10: #6fbeeb;
+  --lightBlue-Alpha-50: #6fbeeb;
+
+  //* NEW FONTS*//
+  --font-headings-H-1: 900 normal 38px/57px "Lato Black", sans-serif;
+  --font-headings-H-2: 900 normal 24px/48px "Lato", sans-serif;
+  --font-headings-H-3: 900 normal 20px/39px "Lato", sans-serif;
+  --font-headings-H-4: 900 normal 18px/33px "Lato", sans-serif;
+
+  --font-Body-B-1: 400 normal 18px/27px "Roboto", sans-serif;
+  --font-Body-B-2: 400 normal 16px/24px "Roboto", sans-serif;
+  --font-Body-B-3: 400 normal 14px/21px "Roboto", sans-serif;
+  --font-Body-B-4: 400 normal 12px/18px "Roboto", sans-serif;
+  --font-Body-B-5: 400 normal 10px/15px "Roboto", sans-serif;
 }
