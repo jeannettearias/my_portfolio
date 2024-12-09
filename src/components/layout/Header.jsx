@@ -48,7 +48,8 @@ function Header() {
                     </ul>
                 </nav>
                 <div>
-                    <Link to='/contact' className='contact__btn' onClick={handleContactMeClick}>Contact</Link>
+                    <Link to='/contact' className='contact__btn'
+                        onClick={handleContactMeClick}>Contact</Link>
                 </div>
             </header>
         </div>

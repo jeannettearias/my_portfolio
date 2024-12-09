@@ -87,3 +87,24 @@
     font-size: 0.8rem;
   }
 }
+
+.contact__btn {
+  display: inline-flex; /* Use inline-flex to align items correctly within buttons/links */
+  padding: 0.5rem 3.5rem; /* Adjust padding as needed */
+  background-color: #ecf3f52a; /* Example background color */
+  color: white; /* Text color */
+  border: none; /* Remove default border for button */
+  border-radius: 0.7rem; /* Rounded corners (optional) */
+  cursor: pointer; /* Pointer cursor on hover */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+  margin-top: 1rem;
+  color: var(--color-neutral-100);
+  font: var(--font-Body-B-2);
+
+  @media (max-width: 680px) {
+    color: var(--color-neutral-100);
+    font: var(--font-Body-B-3);
+  }
+}
