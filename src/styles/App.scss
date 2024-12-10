@@ -1,9 +1,6 @@
 @import "./core/reset";
 @import "./core/variables";
 
-//fonts
-$color__title: white;
-
 /* Set the layout container to full height */
 body,
 html {
@@ -12,8 +9,8 @@ html {
 }
 
 body {
-  background-color: rgb(3, 3, 33);
+  background-color: var(--color-primary-800);
   h1 {
-    color: $color__title;
+    color: var(--color-neutral-100);
   }
 }

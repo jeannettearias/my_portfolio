@@ -2,10 +2,17 @@
 
 .header__section {
   display: flex;
-  font-family: Onest Variable, system-ui, sans-serif;
-  justify-content: space-between;
-
+  justify-content: last baseline;
+  align-items: right;
   margin: 2%;
+
+  color: var(--color-neutral-100);
+  font: var(--font-Body-B-2);
+
+  @media (max-width: 680px) {
+    color: var(--color-neutral-100);
+    font: var(--font-Body-B-3);
+  }
 }
 
 .header {
@@ -96,7 +103,7 @@
   border: none; /* Remove default border for button */
   border-radius: 0.7rem; /* Rounded corners (optional) */
   cursor: pointer; /* Pointer cursor on hover */
-  align-items: center; /* Center content vertically */
+  align-items: right; /* Center content vertically */
   justify-content: center; /* Center content horizontally */
   transition: background-color 0.3s ease; /* Smooth background color transition */
   margin-top: 1rem;

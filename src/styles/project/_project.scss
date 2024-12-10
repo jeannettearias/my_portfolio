@@ -40,8 +40,8 @@
   display: grid;
   grid-template-columns: 40% 60%;
 
-  color: var(--color-white);
-  font: var(--font-card-text);
+  color: var(--color-neutral-100);
+  font: var(--font-Body-B-3);
 
   border-radius: 20px;
   -webkit-backdrop-filter: blur(10px);
@@ -50,7 +50,7 @@
   border-width: 2px;
   border-image-source: linear-gradient(
     to bottom,
-    var(--color-white) 0%,
+    var(--color-neutral-100) 0%,
     rgba(0, 0, 0, 0)
   );
   border-image-slice: 1;
@@ -69,7 +69,7 @@
   text-transform: capitalize;
   margin-bottom: 1rem;
 
-  font: var(--font-card-section);
+  font: var(---font-headings-H-4);
 }
 
 .card .card__projectTitle::before {
@@ -95,7 +95,7 @@
   position: relative;
   padding-inline: 0.1em;
   z-index: 1;
-  color: var(--color-white);
+  color: var(--color-neutral-100);
 }
 
 .card .card__author {
@@ -124,13 +124,13 @@
 }
 
 .card .card__name {
-  font: var(--font-card-subtitle);
+  font: var(--font-headings-H-3);
   text-align: center;
   justify-content: center;
 }
 
 .card .card__projectName {
-  font: var(--font-card-title);
+  font: var(--font-headings-H-2);
   text-align: left;
   margin-bottom: -0.5rem;
 }
@@ -144,7 +144,7 @@
 }
 
 .card .card__slogan {
-  font: var(--font-card-subtitle);
+  font: var(--font-headings-H-3);
   font-size: 1rem;
   font-style: normal;
   margin-top: 1rem;
@@ -224,8 +224,8 @@
   color: transparent;
   cursor: pointer;
   border-radius: 50%;
-  box-shadow: 0 0 10px 0 var(--color-white);
-  background-color: var(--color-white);
+  box-shadow: 0 0 10px 0 var(--color-neutral-100);
+  background-color: var(--color-neutral-100);
 
   display: flex;
   flex-direction: row;
