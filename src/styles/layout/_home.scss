@@ -1,8 +1,7 @@
 .home__section {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 5rem;
-  padding: 32px;
+  margin: 5rem;
   gap: 44px;
   align-items: flex-start;
   align-self: stretch;
@@ -57,8 +56,14 @@
     border-radius: var(--components-button-border-radius, 24px);
     border: var(--components-button-border-width, 2px) solid
       var(--Colors-LightBlue-600, #105074);
-    background: var(--Colors-Primary-100, #99c6ff); /* Pressed background */
-    color: var(--color-neutral-100, #fff); /* Optional: Change text color */
+    background: var(--Colors-Primary-100, #99c6ff);
+  }
+
+  &:disabled {
+    border-radius: var(--components-button-border-radius, 24px);
+    border: var(--components-button-border-width, 2px) solid
+      var(--Colors-Neutral-600, #59616e);
+    background: rgba(255, 255, 255, 0);
   }
 }
 
