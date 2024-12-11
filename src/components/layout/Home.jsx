@@ -10,25 +10,31 @@ function Home() {
     }
 
     return (
-        <section className='home__section'>
-            <div className='photo__layout'>
-                <img className='home__picture' src="/img/me.jpeg" alt="" />
-            </div>
-            <div className='home__box'>
-                <h1 className='home__title' >Hi, I am Jeannette! 👋</h1>
-                <div className='home__content'>
-                    <p className="prh__text">
-                        With 16+ years in tech and a decade in agile environments, I excel in IT project management, financial planning, and vendor coordination. Certified in PMBOK, SAFe® 4 PM/PO, and PSM I, I deliver results with strategic focus and hands-on expertise.
-                    </p>
+        <>
+            <section className='home__section'>
+                <div className='photo__layout'>
+                    <img className='home__picture' src="/img/me.jpeg" alt="" />
                 </div>
-                <nav className='btn__home__box'>
-                    <div className='home__btn'>
-                        <button className='linkedin__btn' href='https://www.linkedin.com/in/jeannettearias/'
-                            onClick={handleLinkedinClick}>Go to LinkedIn</button>
+                <div className='home__box'>
+                    <h1 className='home__title' >Hi, I am Jeannette!👋</h1>
+                    <div className='home__content'>
+                        <p className="prh__text">
+                            With 16+ years in tech and a decade in agile environments, I excel in IT project management, financial planning, and vendor coordination. Certified in PMBOK, SAFe® 4 PM/PO, and PSM I, I deliver results with strategic focus and hands-on expertise.
+                        </p>
                     </div>
-                </nav>
-            </div>
-        </section >
+                </div>
+
+            </section >
+            <nav className='btn__home__box'>
+                <div className='home__btn'>
+                    <a
+                        className='linkedin__btn'
+                        href='https://www.linkedin.com/in/jeannettearias/'
+                        onClick={handleLinkedinClick}>LinkedIn
+                    </a>
+                </div>
+            </nav>
+        </>
     );
 }
 
