@@ -1,4 +1,4 @@
-import JeannetteLogo from '../../images/Jeannette_logo.svg';
+
 import '../../styles/layout/_footer.scss';
 
 
@@ -10,13 +10,6 @@ function Footer() {
                 <span className='additional-text'>All Rights Reserved</span>
             </div>
             <div className="additional-text"></div>
-            <div>
-                <img
-                    className='logoSponsor'
-                    src={JeannetteLogo}
-                    alt="Jeannette's Logo"
-                />
-            </div>
 
         </footer>
     );

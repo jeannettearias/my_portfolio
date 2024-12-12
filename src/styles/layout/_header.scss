@@ -2,10 +2,13 @@
 
 .header__section {
   display: flex;
-  justify-content: last baseline;
-  align-items: right;
-  margin: 2%;
+  flex-direction: row;
+  padding: 16px var(--size-8, 64px);
+  justify-content: space-around;
+  align-items: center;
+  align-self: stretch;
 
+  background: var(--Colors-Primary-800, #001735);
   color: var(--color-neutral-100);
   font: var(--font-Body-B-2);
 
@@ -15,42 +18,27 @@
   }
 }
 
+.logo__box {
+  display: flex;
+  flex-direction: row;
+}
+
+.logoSponsor {
+  display: flex;
+  width: 100px;
+
+  gap: 5.016px;
+}
+
 .header {
   display: flex;
-  margin: 2rem;
+
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   transition: background-color 0.3s ease; /* Smooth transition for background change */
-  color: white;
   top: 0;
   width: 100%;
   z-index: 100; /* Ensures it layers above content like cards */
-}
-
-.menu {
-  display: flex;
-  flex-direction: row;
-  background-color: rgba(255, 255, 255, 0.253); /* Initial background color */
-  position: fixed;
-  border-radius: 2rem; /* Rounds the corners of the list items */
-  box-shadow: 2px 2px 5px rgba(229, 241, 241, 0.2); /* Optional: Adds a slight shadow to the list items */
-  align-items: center;
-  margin-top: 0.5rem;
-  margin-left: auto;
-  margin-right: auto;
-  transition: background-color 0.3s ease; /* Smooth transition for background change */
-  max-width: 65rem;
-  height: 2rem;
-  justify-content: center;
-}
-
-.menu.transparent {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.116
-  ); /* More transparent background for the menu */
 }
 
 .menu__list {
