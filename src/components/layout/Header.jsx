@@ -3,11 +3,6 @@ import '../../styles/layout/_header.scss'
 import JeannetteLogo from '../../images/jean_logo.svg';
 
 function Header() {
-    const handleContactMeClick = (ev) => {
-        ev.preventDefault();
-        window.location.href = 'mailto:example@example.com?subject=Contact&body=Hello,';
-    };
-
 
     return (
 
@@ -33,15 +28,10 @@ function Header() {
                             <Link to="/projects"
                                 className="menu__link"> Projects </Link>
                         </li>
-                        <li className="menu__item">
-                            <Link to="/contact"
-                                className="menu__link">Contact</Link>
-                        </li>
                     </ul>
                 </nav>
                 <div className='btn__box'>
-                    <Link to='/contact' className='contact__btn'
-                        onClick={handleContactMeClick}>Contact</Link>
+                    <Link to='/contact' className='contact__btn'>Contact</Link>
                 </div>
             </header>
         </div>
