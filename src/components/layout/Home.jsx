@@ -1,6 +1,5 @@
 
 import '../../styles/layout/_home.scss'
-import Skills from '../projects/home/skills';
 
 function Home() {
 
@@ -33,7 +32,6 @@ function Home() {
                     </div>
                 </nav>
             </section>
-            <Skills />
         </>
 
     );
