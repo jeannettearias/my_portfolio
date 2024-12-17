@@ -1,7 +1,5 @@
 import '../../styles/home/_skills.scss';
 
-
-
 function Skills() {
 
     return (

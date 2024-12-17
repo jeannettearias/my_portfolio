@@ -1,6 +1,6 @@
 .exp__section {
   padding: 1rem;
-  color: var(--color-white);
+  color: var(--color-neutral-200, #dbe1e7);
 }
 .legend {
   padding: 1rem;
@@ -9,7 +9,7 @@
 .project__data {
   display: grid;
   grid-template-columns: 1fr;
-  border: 1px solid var(--color-greyish-brown);
+  border: 1px solid var(--color-neutral-300, #bdc8d3);
   padding: 1rem;
   margin-bottom: 1rem;
   margin: 1rem;
@@ -17,17 +17,17 @@
 }
 
 .text {
-  color: var(--color-white-50);
+  color: var(--color-neutral-200, #dbe1e7);
   font-style: bold;
 }
 
 .datetime {
   font-style: italic;
-  color: var(--color-white-50);
+  color: var(--color-neutral-200, #dbe1e7);
 }
 
 .description__list {
-  color: var(--color-white-50);
+  color: var(--color-neutral-200, #dbe1e7);
   border: solid var(--color-greyish-brown);
   padding: 0.5rem;
   margin-left: 1rem;
