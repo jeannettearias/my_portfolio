@@ -1,5 +1,6 @@
 
 import '../../styles/layout/_home.scss'
+import Skills from '../home/skills';
 
 function Home() {
 
@@ -9,7 +10,7 @@ function Home() {
     }
 
     return (
-        <>
+        <body>
             <section className='home__section'>
                 <div className='photo__layout'>
                     <img className='home__picture' alt="" />
@@ -21,18 +22,20 @@ function Home() {
                             With 16+ years in tech and a decade in agile environments, I excel in IT project management, financial planning, and vendor coordination. Certified in PMBOK, SAFe® 4 PM/PO, and PSM I, I deliver results with strategic focus and hands-on expertise.
                         </p>
                     </div>
+                    <nav className='btn__home__box'>
+                        <div className='home__btn'>
+                            <a
+                                className='linkedin__btn'
+                                href='https://www.linkedin.com/in/jeannettearias/'
+                                onClick={handleLinkedinClick}>LinkedIn
+                            </a>
+                        </div>
+                    </nav>
                 </div>
-                <nav className='btn__home__box'>
-                    <div className='home__btn'>
-                        <a
-                            className='linkedin__btn'
-                            href='https://www.linkedin.com/in/jeannettearias/'
-                            onClick={handleLinkedinClick}>LinkedIn
-                        </a>
-                    </div>
-                </nav>
+
             </section>
-        </>
+            <Skills />
+        </body>
 
     );
 }
