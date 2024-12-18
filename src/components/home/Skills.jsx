@@ -18,7 +18,6 @@ function Skills() {
                             <li className="skill__item">Financial Managem</li>
                         </ul>
                     </div>
-
                     <div className='skills__card'>
                         <h2 className="skills__subtitle">Web Development</h2>
                         <ul className="skills__icons">
