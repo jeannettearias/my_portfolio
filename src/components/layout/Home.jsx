@@ -10,7 +10,7 @@ function Home() {
     }
 
     return (
-        <body>
+        <>
             <section className='home__section'>
                 <div className='photo__layout'>
                     <img className='home__picture' alt="" />
@@ -32,10 +32,9 @@ function Home() {
                         </div>
                     </nav>
                 </div>
-
             </section>
             <Skills />
-        </body>
+        </>
 
     );
 }

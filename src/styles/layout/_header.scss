@@ -24,7 +24,7 @@
 
 .logoSponsor {
   display: flex;
-  width: 100px;
+  width: 152px;
   gap: 5.016px;
 }
 
@@ -76,7 +76,7 @@
   align-items: flex-start;
   flex-shrink: 0;
 
-  color: var(--Colors-Primary-200, #67a9ff);
+  color: var(--color-primary-200, #67a9ff);
   text-align: center;
   font: var(--font-Body-B-1);
 }
@@ -130,21 +130,21 @@
   text-decoration: none; /* Removes the underline */
 
   border-radius: var(--components-button-border-radius, 24px);
-  background: var(--Colors-Pink-500, #742488);
+  background: var(--color-pink-500, #742488);
   color: var(--color-neutral-100, #f9fafb);
 
   &:hover {
     border-radius: var(--components-button-border-radius, 24px);
-    background: var(--Colors-Pink-300, #c066d7);
+    background: var(--color-pink-300, #c066d7);
   }
 
   &:active {
     border-radius: var(--components-button-border-radius, 24px);
-    background: var(--Colors-Pink-400, #ba58d3);
+    background: var(--color-pink-400, #ba58d3);
   }
 
   &:disabled {
     border-radius: var(--components-button-border-radius, 24px);
-    background: var(--Colors-Pink-300, #c066d7);
+    background: var(--color-pink-300, #c066d7);
   }
 }

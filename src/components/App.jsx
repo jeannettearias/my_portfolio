@@ -53,7 +53,7 @@ function App() {
 
   //HTML
   return (
-    <div className="container">
+    <body className="container">
       <Header />
 
       <Routes>
@@ -70,7 +70,7 @@ function App() {
       </Routes>
 
       <Footer />
-    </div>
+    </body>
   );
 }
 
