@@ -1,3 +1,22 @@
 [
-    {}
+    {
+        "name": "Management and Analysis",
+        "skills": [
+            "Roadmapping",
+            "Product Discovery Process",
+            "Business Analysis",
+            "Project Management",
+            "Delivery Management",
+            "Financial Management"
+        ],
+        "technical_skills": [
+            "React",
+            "javaScript",
+            "CSS",
+            "HTML",
+            "Node.js",
+            "Express.js",
+            "MySQL"
+        ]
+    }
 ]

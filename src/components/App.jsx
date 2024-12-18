@@ -55,20 +55,17 @@ function App() {
   return (
     <div className="container">
       <Header />
-
       <Routes>
         <Route path='/' element={<Home />} />
 
         <Route path='/projects' element={<Landing
-          projectsArray={projectsArray}
-        />} />
+          projectsArray={projectsArray} />} />
 
         <Route path='/experience' element={<Experience
           exp={exp} />} />
-        <Route path='/contact' element={<Contact />}
-        />
-      </Routes>
 
+        <Route path='/contact' element={<Contact />} />
+      </Routes>
       <Footer />
     </div>
   );
