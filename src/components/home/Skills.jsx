@@ -1,23 +1,24 @@
 import '../../styles/home/_skills.scss';
 
-function Skills() {
+function Skills({ skills }) {
 
     return (
         <>
             <section className="skills__section">
+                {skills.map((skill, index) => (
+                    <div key={index} className="skills__card">
+                        <h2 className="skills__subtitle">{skill.title}</h2>
+                        <ul className="skills__list">
+                            {skill.skills.map((item, idx) => (
+                                <li className="skill__item" key={idx}>{item}</li>
+                            ))}
+                        </ul>
+
+                    </div>
+                ))}
                 <h1 className="skills__title">Get to Know my skills</h1>
                 <article className='skills__article'>
-                    <div className="skills__card">
-                        <h2 className="skills__subtitle">Management and Analysis</h2>
-                        <ul className="skills__list">
-                            <li className="skill__item">Roadmapping</li>
-                            <li className="skill__item">Product Discovery Process</li>
-                            <li className="skill__item">Business Analysis</li>
-                            <li className="skill__item">Project Management</li>
-                            <li className="skill__item">Delivery Management</li>
-                            <li className="skill__item">Financial Managem</li>
-                        </ul>
-                    </div>
+
                     <div className='skills__card'>
                         <h2 className="skills__subtitle">Web Development</h2>
                         <ul className="skills__icons">
@@ -44,9 +45,10 @@ function Skills() {
 
                     </div>
                 </article>
-            </section>
+            </section >
         </>
     );
 }
+
 
 export default Skills;

@@ -2,12 +2,30 @@
     {
         "name": "Management and Analysis",
         "skills": [
-            "Roadmapping",
-            "Product Discovery Process",
-            "Business Analysis",
-            "Project Management",
-            "Delivery Management",
-            "Financial Management"
+            {
+                "skill": "Roadmapping",
+                "level": "Advanced"
+            },
+            {
+                "skill": "Product Discovery Process",
+                "level": "Advanced"
+            },
+            {
+                "skill": "Business Analysis",
+                "level": "Advanced"
+            },
+            {
+                "skill": "Project Management",
+                "level": "Advanced"
+            },
+            {
+                "skill": "Delivery Management",
+                "level": "Intermediate"
+            },
+            {
+                "skill": "Financial Management",
+                "level": "Intermediate"
+            }
         ],
         "technical_skills": [
             "React",

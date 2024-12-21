@@ -10,6 +10,8 @@ import { useEffect, useState } from 'react';
 import Landing from './Landing';
 import Home from './layout/Home';
 import expJson from '../data/exp.json';
+import skillsJson from '../data/skills.json';
+import achievementsJson from '../data/achievements.json';
 
 function App() {
 
@@ -51,12 +53,31 @@ function App() {
     setExp(expJson);
   }, []);
 
+
+  // Get the skills from json data
+  const [skills, setSkills] = useState([]);
+
+  useEffect(() => {
+    // Set skills data from JSON file
+    setSkills(skillsJson);
+  }, []);
+
+
+  // Get the achievements from json data
+  const [achievements, setAchievements] = useState([]); // Set achievements data from JSON file
+
+  useEffect(() => {
+    setAchievements(achievementsJson);
+  }, []);
+
   //HTML
   return (
     <div className="container">
       <Header />
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home
+          skills={skills}
+          achievements={achievements} />} />
 
         <Route path='/projects' element={<Landing
           projectsArray={projectsArray} />} />

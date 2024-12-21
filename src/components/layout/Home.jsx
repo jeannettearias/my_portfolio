@@ -2,7 +2,7 @@
 import '../../styles/layout/_home.scss'
 import Skills from '../home/skills';
 
-function Home() {
+function Home({ skills }) {
 
     const handleLinkedinClick = (ev) => {
         ev.preventDefault();
@@ -33,7 +33,11 @@ function Home() {
                     </nav>
                 </div>
             </section>
-            <Skills />
+            <div >
+                <Skills skills={skills} />
+
+            </div>
+
         </>
 
     );
