@@ -4,7 +4,7 @@ import Skills from "../home/Skills";
 import PropType from 'prop-types';
 
 
-function Home({ skills, level }) {
+function Home({ skills }) {
 
     const handleLinkedinClick = (ev) => {
         ev.preventDefault();
@@ -35,19 +35,15 @@ function Home({ skills, level }) {
                     </nav>
                 </div>
             </section>
-            <div >
-                <Skills skills={skills}
-                    level={level} />
-
-            </div>
-
+            <section className='skills__section'>
+                <Skills skills={skills} />
+            </section>
         </>
 
     );
 }
 Home.propTypes = {
-    skills: PropType.array.isRequired,
-    level: PropType.string
+    skills: PropType.array.isRequired
 }
 
 export default Home;
