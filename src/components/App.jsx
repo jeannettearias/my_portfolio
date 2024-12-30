@@ -1,20 +1,19 @@
 import '../styles/App.scss';
 
 import Header from './layout/Header';
-import Footer from './layout/Footer';
+import Landing from './Landing';
+import Home from './layout/Home';
 import Experience from './layout/Experience';
 import Contact from './layout/Contact';
+import Footer from './layout/Footer';
 
 import { Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import Landing from './Landing';
-import Home from './layout/Home';
 import expJson from '../data/exp.json';
 import skillsJson from '../data/skills.json';
 import achievementsJson from '../data/achievements.json';
 
 function App() {
-
 
   //const [messageUrl, setMessageUrl] = useState('');
   //const [messageError, setMessageError] = useState('');
