@@ -4,6 +4,7 @@
         "role": "Scrum Master",
         "description": "“As the Product Owner in the Banco BCI project, achieved a 50% increase in the number of operational users (reaching 2K) and a 95% SNEX score (Customer Satisfaction and Efficiency) following the successful launch of the MVP into production.”",
         "metric": "+95% SNEX",
+        "avatar": "../images/jean_avatar.png",
         "graphic": "",
         "active": true
     },
@@ -12,6 +13,7 @@
         "role": "Product Owner",
         "description": "Move forward with a stuck MPV opening up communications and freeing up dependencies with other areas.",
         "metric": "",
+        "avatar": "../images/jean_avatar.png",
         "graphic": "",
         "active": false
     },
@@ -20,6 +22,7 @@
         "role": "Project Manager",
         "description": "Build the first Marketplace for Falabella Chile, managing a $5MM USD budget.",
         "metric": "",
+        "avatar": "../images/jean_avatar.png",
         "graphic": "",
         "active": false
     }

@@ -2,7 +2,7 @@ import '../../styles/home/_skills.scss';
 import PropTypes from 'prop-types';
 
 
-function Skills({ skills, achievements, activeAchievements }) {
+function Skills({ skills, activeAchievements }) {
 
     return (
         <>
@@ -37,13 +37,15 @@ function Skills({ skills, achievements, activeAchievements }) {
 
             <article className="skills__section">
                 <h2 className='skills__subtitle'>Achievements</h2>
-                {activeAchievements.map((achievement, index) => (
+                {activeAchievements.map((achievements, index) => (
                     <div key={index}
                         className='skills__card'>
                         <ul className='achivements__list'>
-                            <li className='achievements__item'>{achievement.description}
+                            <li className='achievements__item'>{achievements.metric}
                                 <br />
-                                <span className='achievement__date'>{achievement.metric}</span>
+                                <img src={achievements.image} alt={achievements.avatar} />
+                                <br />
+                                <p className='achievement__date'>{achievements.description}</p>
                             </li>
                         </ul>
                     </div>
