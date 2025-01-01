@@ -63,11 +63,20 @@ function App() {
 
 
   // Get the achievements from json data
-  const [achievements, setAchievements] = useState([]); // Set achievements data from JSON file
+  const [achievements, setAchievements] = useState([true]); // Set achievements data from JSON file
+  const [activeAchievements, setActiveAchievements] = useState([]);
 
   useEffect(() => {
+    // Simulate fetching data from a JSON file
     setAchievements(achievementsJson);
-  }, []);
+
+    // Filter the data where active is true
+    const filteredAchievements = achievementsJson.filter(item => item.active === true);
+    setActiveAchievements(filteredAchievements);
+
+    //setFilteredAchievements(achievementsJson.filter((achievement) => achievement.show === true));
+
+  }, [activeAchievements]);
 
   //HTML
   return (
@@ -76,7 +85,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home
           skills={skills}
-          achievements={achievements} />} />
+          achievements={achievements}
+          activeAchievements={activeAchievements} />} />
 
         <Route path='/projects' element={<Landing
           projectsArray={projectsArray} />} />
