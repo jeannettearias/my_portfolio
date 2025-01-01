@@ -1,7 +1,13 @@
+.section02 {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem;
+  gap: 24px;
+}
+
 .skills__main__section {
   display: flex;
   flex-wrap: wrap;
-  padding: 0px 72px;
   align-items: center;
   gap: 24px;
   align-self: stretch;
@@ -15,6 +21,8 @@
   flex: 1;
   gap: 24px;
   align-self: stretch;
+
+  list-style-type: none; /* Removes the bullets */
 }
 
 .skills__title {
@@ -71,8 +79,34 @@
   align-items: flex-start;
   gap: 8px;
   align-self: stretch;
+
+  list-style-type: none; /* Removes the bullets */
 }
 
+.skill__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.skill__name {
+  width: 250px;
+  min-width: 196px;
+}
+
+.skill__icon {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.skill__icon__item {
+  list-style-type: none; /* Removes the bullets */
+}
 //ACHIEVEMENTS STYLES
 
 .achievements__card {
@@ -91,4 +125,8 @@
 
 .ahievements__img {
   background-image: "../../images/jean_avatar.jpg";
+}
+
+.achievements__item {
+  list-style-type: none; /* Removes the bullets */
 }

@@ -12,7 +12,7 @@ function Home({ skills, achievements, activeAchievements }) {
 
     return (
         <>
-            <section className='home__section'>
+            <section className='section01'>
                 <div className='photo__layout'>
                     <img className='home__picture' alt="" />
                 </div>
@@ -34,7 +34,7 @@ function Home({ skills, achievements, activeAchievements }) {
                     </nav>
                 </div>
             </section>
-            <section>
+            <section className='section02'>
                 <Skills skills={skills}
                     achievements={achievements}
                     activeAchievements={activeAchievements}
