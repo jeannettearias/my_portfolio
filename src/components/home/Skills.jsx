@@ -1,55 +1,76 @@
+
+import PropTypes from 'prop-types';
 import '../../styles/home/_skills.scss';
 
-
-
-function Skills() {
+function Skills({ skills, activeAchievements, achievements }) {
+    // Check if skills array is not empty and contains the expected properties
+    const skillGroup = skills.length > 0 ? skills[0] : {};
 
     return (
         <>
-            <section className="skills__section">
-                <h1 className="skills__title">Get to Know my skills</h1>
-                <article className='skills__article'>
-                    <div className="skills__card">
-                        <h2 className="skills__subtitle">Management and Analysis</h2>
-                        <ul className="skills__list">
-                            <li className="skill__item">Roadmapping</li>
-                            <li className="skill__item">Product Discovery Process</li>
-                            <li className="skill__item">Business Analysis</li>
-                            <li className="skill__item">Project Management</li>
-                            <li className="skill__item">Delivery Management</li>
-                            <li className="skill__item">Financial Managem</li>
-                        </ul>
-                    </div>
 
-                    <div className='skills__card'>
-                        <h2 className="skills__subtitle">Web Development</h2>
-                        <ul className="skills__icons">
-                            <li className="skill__icon__item"></li>
-                            <li className="skill__icon__item"></li>
-                            <li className="skill__icon__item"></li>
-                        </ul>
-                    </div>
+            <h1 className="skills__title">Get to Know my skills</h1>
+            <section className='skills__main__section'>
 
-                    <div className="skills__card">
-                        <div>
-                            <div className="pic__banner">
-                                <img className="emo__pic" src="" alt="" />
-                                <h4>+95% SNEX</h4>
-                                <img className="graph__pic" src="" alt="" />
-                            </div>
-                            <p className="achievement__summary">“As the Product Owner in the Banco BCI project, achieved a 50% increase in the number of operational users (reaching 2K) and a 95% SNEX score (Customer Satisfaction and Efficiency) following the successful launch of the MVP into production.”</p>
+                {skillGroup.title && (
+                    <article className="skills__section">
+                        <h2 className="skills__subtitle">{skillGroup.title}</h2>
+
+                        <div className="skills__card">
+                            <ul className="skills__list">
+                                {skillGroup.skills && skillGroup.skills.map((item, idx) => (
+                                    <li key={idx} className="skill__item">
+                                        <span className="skill__name">{item.skill}</span>
+                                        <span className="skill__level">{item.level}</span>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
-                    </div>
-                </article>
+                    </article>
+                )}
 
-                <article className="content__article">
-                    <div>
+                {skillGroup.technical_title && (
+                    <article className='skills__section'>
+                        <h2 className="skills__subtitle">{skillGroup.technical_title}</h2>
+                        <div className="skills__card">
+                            <ul className="skills__icons">
+                                {skillGroup.technical_skills && skillGroup.technical_skills.map((technical_skill, idx) => (
+                                    <li key={idx} className="skill__icon__item">{technical_skill}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    </article>
+                )}
 
-                    </div>
-                </article>
+                {achievements.length > 0 && (
+                    <article className="skills__section">
+                        <h2 className='skills__subtitle'>{achievements[0].title}</h2>
+                        {activeAchievements.map((achievement, idx) => (
+                            <div key={idx} className='skills__card'>
+                                <ul className='achievements__list'>
+                                    <li className='achievements__item'>
+                                        {achievement.institution}
+                                        <br />
+                                        <img className='achievements__img' src={achievement.avatar} alt={`${achievement.institution} avatar`} />
+                                        <br />
+                                        <p className='achievement__metric'>{achievement.metric}</p>
+                                        <br />
+                                        <p className='achievement__description'>{achievement.description}</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        ))}
+                    </article>
+                )}
             </section>
         </>
     );
 }
+
+Skills.propTypes = {
+    skills: PropTypes.array.isRequired,
+    achievements: PropTypes.array.isRequired,
+    activeAchievements: PropTypes.array.isRequired
+};
 
 export default Skills;

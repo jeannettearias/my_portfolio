@@ -1,8 +1,9 @@
 
-import '../../styles/layout/_home.scss'
-import Skills from '../home/skills';
+import '../../styles/layout/_home.scss';
+import Skills from "../home/Skills";
+import PropType from 'prop-types';
 
-function Home() {
+function Home({ skills, achievements, activeAchievements }) {
 
     const handleLinkedinClick = (ev) => {
         ev.preventDefault();
@@ -10,8 +11,8 @@ function Home() {
     }
 
     return (
-        <body>
-            <section className='home__section'>
+        <>
+            <section className='section01'>
                 <div className='photo__layout'>
                     <img className='home__picture' alt="" />
                 </div>
@@ -32,12 +33,21 @@ function Home() {
                         </div>
                     </nav>
                 </div>
-
             </section>
-            <Skills />
-        </body>
+            <section className='section02'>
+                <Skills skills={skills}
+                    achievements={achievements}
+                    activeAchievements={activeAchievements}
+                />
+            </section>
+        </>
 
     );
+}
+Home.propTypes = {
+    skills: PropType.array.isRequired,
+    achievements: PropType.array.isRequired,
+    activeAchievements: PropType.array.isRequired
 }
 
 export default Home;

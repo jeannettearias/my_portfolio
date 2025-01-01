@@ -28,7 +28,8 @@ function ProjectCard({ project }) {
                         {project.project_technologies
                             ? project.project_technologies.split(',').map((tech, index) => (
                                 <li key={index}>
-                                    <a className={`tech__icon icon__${tech.trim().toLowerCase()}`} title={tech.trim()}></a>
+                                    <a className={`tech__icon icon__${tech.trim().toLowerCase()}`}
+                                        title={tech.trim()}></a>
                                 </li>
                             ))
                             : 'No technologies listed'}

@@ -1,0 +1,41 @@
+[
+    {
+        "title": "Management and Analysis",
+        "skills": [
+            {
+                "skill": "Roadmapping",
+                "level": "Advanced"
+            },
+            {
+                "skill": "Product Discovery Process",
+                "level": "Advanced"
+            },
+            {
+                "skill": "Business Analysis",
+                "level": "Advanced"
+            },
+            {
+                "skill": "Project Management",
+                "level": "Advanced"
+            },
+            {
+                "skill": "Delivery Management",
+                "level": "Intermediate"
+            },
+            {
+                "skill": "Financial Management",
+                "level": "Intermediate"
+            }
+        ],
+        "technical_title": "Technical Skills",
+        "technical_skills": [
+            "React",
+            "javaScript",
+            "CSS",
+            "HTML",
+            "Node.js",
+            "Express.js",
+            "MySQL"
+        ]
+    }
+]
