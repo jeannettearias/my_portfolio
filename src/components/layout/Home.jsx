@@ -34,7 +34,7 @@ function Home({ skills, achievements, activeAchievements }) {
                     </nav>
                 </div>
             </section>
-            <section className='skills__main__section'>
+            <section>
                 <Skills skills={skills}
                     achievements={achievements}
                     activeAchievements={activeAchievements}

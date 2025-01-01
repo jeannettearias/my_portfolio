@@ -18,6 +18,12 @@ function App() {
   //const [messageUrl, setMessageUrl] = useState('');
   //const [messageError, setMessageError] = useState('');
   const [projectsArray, setProjectsArray] = useState([]);
+  // Get the skills from json data
+  const [skills, setSkills] = useState([]);
+  // Get the achievements from json data
+  const [achievements, setAchievements] = useState([true]); // Set achievements data from JSON file
+  const [activeAchievements, setActiveAchievements] = useState([]);
+
 
   // Load JSON data on component mount
   useEffect(() => {
@@ -53,30 +59,16 @@ function App() {
   }, []);
 
 
-  // Get the skills from json data
-  const [skills, setSkills] = useState([]);
-
-  useEffect(() => {
-    // Set skills data from JSON file
-    setSkills(skillsJson);
-  }, []);
-
-
-  // Get the achievements from json data
-  const [achievements, setAchievements] = useState([true]); // Set achievements data from JSON file
-  const [activeAchievements, setActiveAchievements] = useState([]);
-
   useEffect(() => {
     // Simulate fetching data from a JSON file
+    setSkills(skillsJson);
     setAchievements(achievementsJson);
 
     // Filter the data where active is true
-    const filteredAchievements = achievementsJson.filter(item => item.active === true);
+    const filteredAchievements = achievementsJson[0].achievements.filter(item => item.active === true);
     setActiveAchievements(filteredAchievements);
 
-    //setFilteredAchievements(achievementsJson.filter((achievement) => achievement.show === true));
-
-  }, [activeAchievements]);
+  }, []);
 
   //HTML
   return (
