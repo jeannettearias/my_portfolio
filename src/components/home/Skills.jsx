@@ -54,6 +54,7 @@ function Skills({ skills, activeAchievements, achievements }) {
                                         <div className='achievement__graphic'>
                                             <img className='achievement__img' />
                                             <span className='achievement__metric'>{achievement.metric}</span>
+                                            <span className='achievement__graphic'>{achievement.graphic}</span>
                                         </div>
                                         <p className='achievement__description'>{achievement.description}</p>
                                     </li>
