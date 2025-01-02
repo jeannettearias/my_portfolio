@@ -54,8 +54,8 @@ function Skills({ skills, activeAchievements, achievements }) {
                                     <li className='achievements__item'>
                                         <div className='achievements__graphic'>
                                             <span className='institution__name'>{achievement.institution}</span>
-                                            <img className='achievements__img' src={achievement.avatar} alt={`${achievement.institution} avatar`} />
-                                            <p className='achievement__metric'>{achievement.metric}</p>
+                                            <img className='achievements__img' src={achievement.avatar} />
+                                            <span className='achievement__metric'>{achievement.metric}</span>
                                         </div>
                                         <p className='achievement__description'>{achievement.description}</p>
                                     </li>
