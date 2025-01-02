@@ -30,7 +30,7 @@ function Skills({ skills, activeAchievements, achievements }) {
                 )}
 
                 {skillGroup.technical_title && (
-                    <article className='skills__section'>
+                    <article className='skills__section skills__section__card'>
                         <h2 className="tech__skills__subtitle">
                             <img alt="" className="title-icon" />
                             {skillGroup.technical_title}
@@ -53,7 +53,7 @@ function Skills({ skills, activeAchievements, achievements }) {
                                 <ul className='achievements__list'>
                                     <li className='achievements__item'>
                                         <div className='achievements__graphic'>
-                                            <img className='achievements__img' src={achievement.avatar} />
+                                            <img className='achievements__img' />
                                             <span className='achievement__metric'>{achievement.metric}</span>
                                         </div>
                                         <p className='achievement__description'>{achievement.description}</p>
