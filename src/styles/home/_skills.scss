@@ -18,7 +18,6 @@
 .skills__section {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   flex: 1;
   gap: 24px;
   align-self: stretch;
@@ -121,6 +120,7 @@
 
 .tech__skills__subtitle {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 8px;
   align-self: stretch;
@@ -153,8 +153,8 @@
 //ACHIEVEMENTS STYLES
 .achievements__card {
   display: flex;
-  padding: 16px 16px 12px 16px;
-  align-items: center;
+  padding: 16px;
+  align-items: start;
   gap: 20px;
   flex: 1 0 0;
   align-self: stretch;
@@ -163,7 +163,7 @@
   background: var(--color-pink-alpha-10, rgba(216, 160, 230, 0.1));
 }
 
-.achievements__item {
+.achievement__item {
   display: grid;
   grid-template-columns: 1fr 3fr;
 
@@ -173,7 +173,7 @@
   align-self: stretch;
 }
 
-.achievements__graphic {
+.achievement__graphic {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -185,7 +185,7 @@
   min-width: 196px;
 }
 
-.achievements__img {
+.achievement__img {
   width: 108px;
   height: 94px;
   background-image: url("../../images/jean_avatar.jpg");
@@ -203,8 +203,25 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 10px;
+
+  color: var(--Colors-Green-200, #1fc16b);
+  /* Global Tokens/Headings/H-3 */
+  font: var(--font-headings-H-3);
 }
 
-.achievements__item {
+.achievement__item {
   list-style-type: none; /* Removes the bullets */
+}
+
+.achievement__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: stretch;
+
+  color: var(--color-neutral-100, #fff);
+  text-overflow: ellipsis;
+
+  /* Global Tokens/Body/B-2 */
+  font: var(--font-Body-B-2);
 }
