@@ -153,7 +153,6 @@
 //ACHIEVEMENTS STYLES
 .achievements__card {
   display: flex;
-  flex-direction: column;
   padding: 16px 16px 12px 16px;
   align-items: center;
   gap: 20px;
@@ -161,16 +160,12 @@
   align-self: stretch;
 
   border-radius: var(--Spacing-m, 16px);
-  background: var(--pink-Alpha-10, #d8a0e6);
-
-  color: var(--color-neutral-100, #f9fafb);
-  font: var(--font-Body-B-2);
+  background: var(--color-pink-alpha-10, rgba(216, 160, 230, 0.1));
 }
 
 .achievements__item {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 
   align-items: center;
   gap: 20px;
@@ -179,8 +174,8 @@
 }
 
 .achievements__graphic {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 20px;
 }

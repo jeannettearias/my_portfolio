@@ -46,14 +46,13 @@ function Skills({ skills, activeAchievements, achievements }) {
                 )}
 
                 {achievements.length > 0 && (
-                    <article className="skills__section">
+                    <article className="skills__section achievements__card">
                         <h2 className='skills__subtitle'>{achievements[0].title}</h2>
                         {activeAchievements.map((achievement, idx) => (
                             <div key={idx} className='skills__card'>
                                 <ul className='achievements__list'>
                                     <li className='achievements__item'>
                                         <div className='achievements__graphic'>
-                                            <span className='institution__name'>{achievement.institution}</span>
                                             <img className='achievements__img' src={achievement.avatar} />
                                             <span className='achievement__metric'>{achievement.metric}</span>
                                         </div>
