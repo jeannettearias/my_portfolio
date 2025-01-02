@@ -21,7 +21,10 @@ function Skills({ skills, activeAchievements, achievements }) {
                                 {skillGroup.skills && skillGroup.skills.map((item, idx) => (
                                     <li key={idx} className="skills__item">
                                         <span className="skill__name">{item.skill}</span>
-                                        <span className="skill__level">{item.level}</span>
+                                        <div className='skill__bar'>
+                                            <div className={`skill__level skill__level--${item.level.toLowerCase()}`}></div>
+                                        </div>
+
                                     </li>
                                 ))}
                             </ul>

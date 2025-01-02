@@ -105,6 +105,45 @@
 .skill__name {
   width: 250px;
   min-width: 196px;
+
+  color: #fff;
+  font: var(--font-Body-B-2);
+}
+
+.skill__bar {
+  flex: 2; /* Allow the bar to take up more space */
+  height: 10px; /* Height of the skill bar */
+  background-color: #e0e0e0; /* Light background for the bar */
+  border-radius: 5px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow content */
+  margin-left: 16px; /* Space between skill name and bar */
+  position: relative;
+
+  height: 8px;
+  flex: 1 0 0;
+}
+
+.skill__level {
+  height: 100%; /* Full height of the bar */
+  border-radius: 5px; /* Rounded corners */
+  transition: width 0.3s ease-in-out; /* Smooth transition for width change */
+}
+
+/* Specific skill levels */
+.skill__level--advanced {
+  width: 100%; /* Full width for advanced skills */
+  border-radius: 100px;
+  background: var(--color-pink-500, #a533c1);
+}
+
+.skill__level--intermediate {
+  width: 66%; /* Two-thirds width for medium skills */
+  background: var(--color-pink-500, #a533c1);
+}
+
+.skill__level--beginner {
+  width: 33%; /* One-third width for low skills */
+  background: var(--color-pink-500, #a533c1);
 }
 
 //TECHNICAL SKILLS STYLES
