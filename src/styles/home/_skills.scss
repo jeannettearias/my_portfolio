@@ -8,6 +8,7 @@
 .skills__main__section {
   display: flex;
   flex-wrap: wrap;
+  padding: 24px;
   align-items: center;
   gap: 24px;
   align-self: stretch;
@@ -47,6 +48,9 @@
   /* Global Tokens/Headings/H-2 */
   color: var(--color-neutral-100, #f9fafb);
   font: var(--font-headings-H-2);
+
+  border-radius: 16px;
+  border: 1px solid var(--color-primary-600, #00439b);
 }
 
 .skills__article {
@@ -69,7 +73,6 @@
 
   color: var(--color-neutral-100, #f9fafb);
   font: var(--font-Body-B-2);
-  border-radius: 24px;
 }
 
 .skills {
@@ -103,10 +106,22 @@
 
 //TECHNICAL SKILLS STYLES
 .title-icon {
-  background-image: url("../../images/icons/flame_image.svg");
+  background: url("../../images/icons/flame_image.svg");
   background-size: cover;
-  width: 2rem;
   margin-right: 1rem;
+
+  width: 88px;
+  height: 88px;
+}
+
+.tech__skills__subtitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+
+  color: var(--color-neutral-100, #f9fafb);
+  font: var(--font-headings-H-2);
 }
 
 .skills__chips__container {

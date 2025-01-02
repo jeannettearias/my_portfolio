@@ -31,7 +31,7 @@ function Skills({ skills, activeAchievements, achievements }) {
 
                 {skillGroup.technical_title && (
                     <article className='skills__section'>
-                        <h2 className="skills__subtitle">
+                        <h2 className="tech__skills__subtitle">
                             <img alt="" className="title-icon" />
                             {skillGroup.technical_title}
                         </h2>
