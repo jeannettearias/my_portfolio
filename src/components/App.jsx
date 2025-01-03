@@ -12,65 +12,37 @@ import { useEffect, useState } from 'react';
 import expJson from '../data/exp.json';
 import skillsJson from '../data/skills.json';
 import achievementsJson from '../data/achievements.json';
+import projectsJson from '../data/data.json';
 
 function App() {
-
-  //const [messageUrl, setMessageUrl] = useState('');
-  //const [messageError, setMessageError] = useState('');
+  // State for projects from JSON data
   const [projectsArray, setProjectsArray] = useState([]);
-  // Get the skills from json data
+  // State for skills from JSON data
   const [skills, setSkills] = useState([]);
-  // Get the achievements from json data
-  const [achievements, setAchievements] = useState([true]); // Set achievements data from JSON file
+  // State for achievements from JSON data
+  const [achievements, setAchievements] = useState([]);
+  // State for active achievements
   const [activeAchievements, setActiveAchievements] = useState([]);
-
+  // State for experience from JSON data
+  const [exp, setExp] = useState([]);
 
   // Load JSON data on component mount
   useEffect(() => {
-
-
-    // Fetch data
-    const fetchProjects = async () => {
-      try {
-        const app = import.meta.env.DEV ? 'http://localhost:4000/projects' : '/projects';
-        const response = await fetch(app);
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        setProjectsArray(data);
-
-      }
-      catch (error) {
-        console.error('Error loading JSON data:', error);
-      }
-    }
-
-    fetchProjects();
-
-  }, []);
-
-  // Get the experence from json data 
-  const [exp, setExp] = useState([]);
-
-  useEffect(() => {
+    // Set projects data from JSON file
+    setProjectsArray(projectsJson);
     // Set experience data from JSON file
     setExp(expJson);
-  }, []);
-
-
-  useEffect(() => {
-    // Simulate fetching data from a JSON file
+    // Set skills data from JSON file
     setSkills(skillsJson);
+    // Set achievements data from JSON file
     setAchievements(achievementsJson);
 
     // Filter the data where active is true
     const filteredAchievements = achievementsJson[0].achievements.filter(item => item.active === true);
     setActiveAchievements(filteredAchievements);
-
   }, []);
 
-  //HTML
+  // HTML
   return (
     <div className="layout">
       <Header />
@@ -79,13 +51,10 @@ function App() {
           skills={skills}
           achievements={achievements}
           activeAchievements={activeAchievements} />} />
-
         <Route path='/projects' element={<Landing
           projectsArray={projectsArray} />} />
-
         <Route path='/experience' element={<Experience
           exp={exp} />} />
-
         <Route path='/contact' element={<Contact />} />
       </Routes>
       <Footer />
