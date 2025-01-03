@@ -7,7 +7,7 @@
         "project_demo": "https://module-4-promo-bpt-proyectos-molones.onrender.com/",
         "project_technologies": "Node.js, Express, MongoDB, EJS, JavaScript, React, html, css",
         "project_description": "Web project to create Project cards with the author's information, consisting of two applications; a frontend built with JavaScript, React HTML5, and SCSS, and an API built with Nodejs and Express, connected to a MySQL DB to store the information.",
-        "project_image": "http://localhost:4000/images/molones_projects_pic_2.png",
+        "project_image": "/images/molones_projects_pic_2.png",
         "author_name": "Collaborative Adalab Group",
         "author_job": "Web Developer bootcamp",
         "author_photo": "/images/photo-pw-adalab.jpg"
@@ -20,7 +20,7 @@
         "project_demo": "https://jeannettearias.github.io/harry-potter-movie-characters-search/",
         "project_technologies": "Node.js, Express, MongoDB, EJS, JavaScript, React, html, css",
         "project_description": "Web project to search and list Harry potter information.",
-        "project_image": "http://localhost:4000/images/harry-potter-picture.png",
+        "project_image": "/images/harry-potter-picture.png",
         "author_name": "Jeannette Arias",
         "author_job": "Full stack developer",
         "author_photo": "/images/me.jpeg"

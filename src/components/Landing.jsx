@@ -8,11 +8,8 @@ function Landing({ projectsArray }) {
         <main className="preview">
             {projectsArray.map((project) => (
                 <div key={project.idproject} className="project">
-                    <div>
-                        <ProjectImage project={project} />
-                        <ProjectCard project={project} className='card__wrap' />
-                    </div>
-
+                    <ProjectImage project={project} />
+                    <ProjectCard project={project} className='card__wrap' />
                 </div>
             ))}
         </main>

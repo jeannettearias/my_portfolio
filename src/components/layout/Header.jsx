@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../../styles/layout/_header.scss'
-import JeannetteLogo from '../../images/jean_logo.svg';
+import JeannetteLogo from '/images/jean_logo.svg';
 
 function Header() {
 

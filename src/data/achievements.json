@@ -7,7 +7,7 @@
                 "role": "Scrum Master",
                 "description": "“As the Product Owner in the Banco BCI project, achieved a 50% increase in the number of operational users (reaching 2K) and a 95% SNEX score (Customer Satisfaction and Efficiency) following the successful launch of the MVP into production.”",
                 "metric": "+95% SNEX",
-                "avatar": "images/jean_avatar.jpg",
+                "avatar": "/jean_avatar.jpg",
                 "graphic": "",
                 "active": true
             },
