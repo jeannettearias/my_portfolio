@@ -92,7 +92,7 @@
 .home__picture {
   width: 368px;
   height: 368px;
-  background: url("../../images/me.jpg") 50% / cover no-repeat;
+  background: url("/images/me.jpg") 50% / cover no-repeat;
   border: none;
   flex-shrink: 0;
 }
@@ -186,5 +186,5 @@
   align-items: center;
 
   border-radius: 77px;
-  background: url("../../images/graphic__image.png") 50% / cover no-repeat;
+  background: url("/images/graphic__image.png") 50% / cover no-repeat;
 }

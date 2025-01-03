@@ -17,18 +17,20 @@
 }
 
 .projectImage {
-  max-width: 1000px;
-  max-height: 700px;
-  transition-duration: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  height: 600px; /* Adjust height as needed */
+  background-color: #f0f0f0; /* Light background color */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow content */
+}
 
-  border-radius: 8px; // Optional: rounded corners
-  overflow: hidden;
-
-  img {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-  }
+.projectImage__img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
 }
 
 .project .card {
@@ -110,7 +112,7 @@
   height: 75px;
   border-radius: 50%;
   max-width: 100%;
-  background-image: url("../../images/avatar.webp");
+  background-image: url("/images/avatar.webp");
   background-position: center;
   background-size: cover;
   margin-bottom: 1rem;
@@ -184,22 +186,22 @@
     background-size: cover;
 
     &.icon__javascript {
-      background-image: url("../../images/icons/javascript.svg");
+      background-image: url("/images/icons/javascript.svg");
     }
     &.icon__react {
-      background-image: url("../../images/icons/react.svg");
+      background-image: url("/images/icons/react.svg");
     }
     &.icon__nodejs {
-      background-image: url("../../images/icons/nodejs.svg");
+      background-image: url("/images/icons/nodejs.svg");
     }
     &.icon__express {
-      background-image: url("../../images/icons/Express.js_light.svg");
+      background-image: url("/images/icons/Express.js_light.svg");
     }
     &.icon__html {
-      background-image: url("../../images/icons/html5.svg");
+      background-image: url("/images/icons/html5.svg");
     }
     &.icon__css {
-      background-image: url("../../images/icons/css.svg");
+      background-image: url("/images/icons/css.svg");
     }
   }
 }
@@ -230,7 +232,7 @@
   display: flex;
   flex-direction: row;
   background-size: cover;
-  gap: 1rem; // Add spacing between the footer icons
+  gap: 1.5rem; // Add spacing between the footer icons
 }
 
 .icon__link {
@@ -241,9 +243,9 @@
 }
 
 .icon__www {
-  background-image: url("../../images/icons/globe-solid.svg");
+  background-image: url("/images/icons/globe-solid.svg");
 }
 
 .icon__github {
-  background-image: url("../../images/icons/github.svg");
+  background-image: url("/images/icons/github.svg");
 }
