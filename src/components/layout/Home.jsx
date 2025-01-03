@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import '../../styles/layout/_home.scss';
 import Skills from "../home/Skills";
 import PropType from 'prop-types';
@@ -42,8 +43,23 @@ function Home({ skills, achievements, activeAchievements }) {
                     activeAchievements={activeAchievements}
                 />
             </section>
+            <section className='section03'>
+                <div className='container03'>
+                    <h1 className='experience__link__title'>
+                        Discover more about me!
+                        <br />
+                        If you want to learn more about my experience and the companies I’ve worked with, click the link
+                    </h1>
+                    <div className='experience__link__btn__box'>
+                        <div className='experience__link__container'
+                        ><Link to="/Experience" className='experience__link__btn'>Go to my experience</Link></div>
+                    </div>
+                </div>
+                <div className='experience__link__graphic'>
+                    <img className='experience__link__img' />
+                </div>
+            </section>
         </>
-
     );
 }
 Home.propTypes = {
