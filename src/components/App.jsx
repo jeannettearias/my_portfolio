@@ -72,7 +72,7 @@ function App() {
 
   //HTML
   return (
-    <div className="container">
+    <div className="layout">
       <Header />
       <Routes>
         <Route path='/' element={<Home

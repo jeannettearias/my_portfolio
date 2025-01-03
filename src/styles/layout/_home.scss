@@ -1,10 +1,21 @@
 .section01 {
   display: flex;
-  flex-wrap: wrap;
-  margin: 5rem;
-  gap: 72px;
+  padding: 0px 72px;
+  flex-direction: column;
   align-items: flex-start;
+  gap: 10px;
   align-self: stretch;
+}
+
+.container01 {
+  display: flex;
+  padding-right: 32px;
+  align-items: center;
+  align-content: center;
+  gap: 44px;
+
+  flex-wrap: wrap;
+
   border-radius: 24px;
   background: rgba(216, 160, 230, 0.1);
 }
@@ -14,12 +25,8 @@
   flex-direction: column;
   justify-content: space-between;
   flex: 1 0 0;
-  max-width: 702px;
   height: 100%;
   gap: 24px;
-
-  margin-right: 5rem;
-  margin-top: 2rem;
 }
 
 .home__content {
@@ -34,13 +41,15 @@
 
 .home__btn {
   display: flex;
-  height: 35px;
-  width: 120px;
-  align-items: center;
+  min-width: 120px;
+  padding: var(--size-125, 12px) var(--size-25, 20px);
   justify-content: center;
+  align-items: center;
+
   border-radius: var(--components-button-border-radius, 24px);
   border: var(--components-button-border-width, 2px) solid
     var(--color-light-blue-100, #b7def5);
+  background: rgba(255, 255, 255, 0);
 
   @media (max-width: 680px) {
     font: var(--font-Body-B-2);

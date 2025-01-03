@@ -3,14 +3,14 @@
 
 .footer {
   display: flex;
-
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-self: center;
   color: var(--color-neutral-200, #dbe1e7);
   position: relative;
 
   min-height: 50px; // Optional: Set a smaller minimum height
-  margin: 6%;
+  margin: 2rem;
 
   .copy {
     display: flex;
@@ -18,10 +18,8 @@
     align-items: center;
     font: var(--font-Body-B-5);
     color: var(--color-neutral-200, #dbe1e7);
-    font-size: 0.8rem;
     gap: 1rem; // Add spacing between inline elements (e.g., text or icons)
     text-align: center; // Ensure the text is centered
-    margin-top: 0.5rem; // Add spacing between multiple rows of text (if needed)
   }
 
   .additional-text {
