@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './components/App.jsx'
 import { HashRouter } from 'react-router-dom'
+
 // React-router-dom in 4 steps
 //1. install i react-router-dom
 //2. modify package.json ( "homepage": "./",)
