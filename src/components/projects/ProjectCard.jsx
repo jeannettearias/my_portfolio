@@ -9,13 +9,19 @@ function ProjectCard({ project }) {
             </h2>
             <div className="card__author">
                 <div
-                    className="card__authorPhoto"
-                    style={{
-                        background: project.author_photo
-                            ? `url(${project.author_photo})`
-                            : null,
-                    }}
-                ></div>
+                    className="card__authorPhoto">
+                    <ul>
+                        <li className='card__authorPhoto'>
+                            <img
+                                style={{
+                                    background: project.author_photo
+                                        ? `url(${project.author_photo})`
+                                        : null,
+                                }}
+                            />
+                        </li>
+                    </ul>
+                </div>
                 <p className="card__job">{project.author_job || 'Full Stack Developer'}</p>
                 <h3 className="card__name">{project.author_name || 'Author Name'}</h3>
             </div>
