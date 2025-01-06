@@ -7,7 +7,7 @@
   margin-bottom: 2rem;
 
   color: var(--color-neutral-100);
-  font: var(--font-Body-B-1);
+  font: var(--font-Body-B-2);
 }
 
 .contact__title {
@@ -32,7 +32,7 @@
   justify-content: center;
 
   color: var(--color-neutral-100);
-  font: var(--font-Body-B-1);
+  font: var(--font-Body-B-2);
 }
 
 .select_reason {
@@ -45,7 +45,7 @@
 
   background-color: rgba(128, 128, 128, 0.138);
   color: var(--color-neutral-800);
-  font: var(--font-body-B-1);
+  font: var(--font-body-B-2);
 
   @media screen and (max-width: 768px) {
     width: 200px;
@@ -53,6 +53,11 @@
 
     font: var(--font-Body-B-2);
   }
+}
+
+.option_reason {
+  color: var(--color-neutral-100);
+  font: var(--font-Body-B-2);
 }
 
 .form__text {
@@ -95,7 +100,7 @@
 
   background-color: rgba(128, 128, 128, 0.138);
   color: var(--color-neutral-300);
-  font: var(--font-body-B-1);
+  font: var(--font-body-B-2);
 
   @media screen and (max-width: 768px) {
     width: 300px;
