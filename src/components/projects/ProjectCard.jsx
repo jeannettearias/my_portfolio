@@ -41,7 +41,6 @@ function ProjectCard({ project }) {
                             : 'No technologies listed'}
                     </ul>
                 </div>
-                <h3 className="card__descriptionTitle">Project Description</h3>
                 <p className="card__description">{project.project_description || 'No description provided.'}</p>
 
                 <footer className='card__footer'>
