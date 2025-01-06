@@ -7,7 +7,15 @@ function Contact() {
 
     const handleTextChange = (ev) => {
         setText(ev.target.value);
+
+        console.log('text changed');
     };
+
+    const handleSubmitClick = (ev) => {
+        ev.preventDefault();
+        console.log('Form submitted');
+    }
+
 
     return (
         <article className='contact__section'>
@@ -21,9 +29,9 @@ function Contact() {
                     defaultValue="Select a reason" >
                     <option className='select_reason'
                         value="Select a reason" disabled>Select a reason</option>
-                    <option className='select_reason' value="job">Job Offer</option>
-                    <option className='select_reason' value="feedback">Give Feedback</option>
-                    <option className='select_reason' value="others">Others</option>
+                    <option className='option_reason' value="job">Job Offer</option>
+                    <option className='option_reason' value="feedback">Give Feedback</option>
+                    <option className='option_reason' value="others">Others</option>
                 </select>
             </fieldset>
             <fieldset className='contact__inputs__form'>
@@ -43,7 +51,9 @@ function Contact() {
                     <input className="input__field" type="numeric" id="phone" placeholder="e.g. 765897345" />
                 </form>
                 <div className='submit__btn__box'>
-                    <button className='submit__btn'>Submit</button>
+                    <button className='submit__btn'
+                        onClick={handleSubmitClick}
+                    >Submit</button>
                 </div>
             </fieldset>
         </article>

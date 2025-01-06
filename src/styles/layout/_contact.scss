@@ -7,7 +7,7 @@
   margin-bottom: 2rem;
 
   color: var(--color-neutral-100);
-  font: var(--font-Body-B-1);
+  font: var(--font-Body-B-2);
 }
 
 .contact__title {
@@ -32,7 +32,7 @@
   justify-content: center;
 
   color: var(--color-neutral-100);
-  font: var(--font-Body-B-1);
+  font: var(--font-Body-B-2);
 }
 
 .select_reason {
@@ -45,7 +45,7 @@
 
   background-color: rgba(128, 128, 128, 0.138);
   color: var(--color-neutral-800);
-  font: var(--font-body-B-1);
+  font: var(--font-body-B-2);
 
   @media screen and (max-width: 768px) {
     width: 200px;
@@ -53,6 +53,11 @@
 
     font: var(--font-Body-B-2);
   }
+}
+
+.option_reason {
+  color: var(--color-neutral-100);
+  font: var(--font-Body-B-2);
 }
 
 .form__text {
@@ -79,7 +84,6 @@
   flex-direction: column;
   width: 600px;
   height: 250px;
-  margin-bottom: 2rem;
 
   color: var(--color-neutral-300);
   font: var(--font-body-B-1);
@@ -96,7 +100,7 @@
 
   background-color: rgba(128, 128, 128, 0.138);
   color: var(--color-neutral-300);
-  font: var(--font-body-B-1);
+  font: var(--font-body-B-2);
 
   @media screen and (max-width: 768px) {
     width: 300px;
@@ -122,11 +126,11 @@
   border: var(--components-button-border-width, 2px) solid
     var(--color-light-blue-100, #b7def5);
   background: rgba(255, 255, 255, 0);
-  font: var(--font-Body-B-1);
+  font: var(--font-Body-B-2);
   color: var(--color-light-blue-100, #b7def5);
 
   @media (max-width: 680px) {
-    font: var(--font-Body-B-2);
+    font: var(--font-Body-B-3);
     bottom: 30px; /* Adjust for smaller screens */
     right: 100px;
   }
