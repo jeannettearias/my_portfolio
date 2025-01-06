@@ -9,6 +9,12 @@ function Contact() {
         setText(ev.target.value);
     };
 
+    const handleSubmit = (ev) => {
+        ev.preventDefault();
+        console.log('Form submitted');
+    }
+
+
     return (
         <article className='contact__section'>
             <h1 className='contact__title'>Contact</h1>
@@ -43,7 +49,9 @@ function Contact() {
                     <input className="input__field" type="numeric" id="phone" placeholder="e.g. 765897345" />
                 </form>
                 <div className='submit__btn__box'>
-                    <button className='submit__btn'>Submit</button>
+                    <button className='submit__btn'
+                        onClick={handleSubmit}
+                    >Submit</button>
                 </div>
             </fieldset>
         </article>

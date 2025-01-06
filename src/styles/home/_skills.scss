@@ -147,8 +147,10 @@
 
 //TECHNICAL SKILLS STYLES
 .title-icon {
-  background: url("/images/icons/flame_image.svg") transparent 50% / cover
-    no-repeat;
+  background: url("/images/icons/flame_image.svg");
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
   margin-right: 1rem;
 
   width: 88px;
@@ -230,9 +232,9 @@
   width: 108px;
   height: 94px;
   background-image: url("/images/jean_avatar.jpg");
+  border-radius: 50%;
   background-size: cover;
   background-position: center;
-  border-radius: 50%;
 
   padding: 0; /* Ensure there is no padding */
   box-shadow: none; /* Remove any box shadow that might look like a border */
