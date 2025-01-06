@@ -9,6 +9,8 @@
 .project {
   display: flex;
   flex-direction: column;
+  align-items: center; // Center the entire content horizontally
+  justify-content: center;
   position: relative;
 
   max-width: 1000px; // Optional: limit the row width
@@ -25,6 +27,12 @@
   background-color: #f0f0f0; /* Light background color */
   border-radius: 8px; /* Rounded corners */
   overflow: hidden; /* Hide overflow content */
+  list-style: none;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+  }
 }
 
 .projectImage__img {
@@ -34,13 +42,14 @@
 }
 
 .project .card {
-  margin-inline: 20px;
-  transform: translateY(-45px);
+  transform: translateY(-35px);
 }
 
 .card {
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 250px 500px;
+  justify-content: center;
+  align-items: center;
 
   color: var(--color-neutral-100);
   font: var(--font-Body-B-3);
@@ -61,6 +70,17 @@
   background-clip: content-box, border-box;
 
   padding: 1rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card__project {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
 }
 
 .card .card__projectTitle {
@@ -112,10 +132,12 @@
   height: 75px;
   border-radius: 50%;
   max-width: 100%;
-  background-image: url("/images/avatar.webp");
+  background-image: url("/images/me.jpg");
   background-position: center;
   background-size: cover;
   margin-bottom: 1rem;
+
+  list-style: none;
 }
 
 .card .card__job {
@@ -164,20 +186,20 @@
 }
 
 .card .card__technicalInfo {
-  display: grid;
-  grid-template-columns: 1fr 2rem 2rem;
-  gap: 0.5em;
+  display: flex;
+
+  justify-content: space-between;
+  gap: 1em;
   align-items: center;
   margin-bottom: 1rem;
 }
 
 .card .card__technologies {
   display: flex;
-  flex-direction: row;
-  margin-bottom: 0.5rem;
-  list-style: none;
-  justify-content: space-between;
   flex-direction: row-reverse;
+  list-style: none;
+  align-items: start;
+  gap: 1rem;
 
   .tech__icon {
     width: 1.6rem;
