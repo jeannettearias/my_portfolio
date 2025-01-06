@@ -10,47 +10,42 @@ function Contact() {
     };
 
     return (
-        <article>
-            <h2>Contact</h2>
+        <article className='contact__section'>
+            <h1 className='contact__title'>Contact</h1>
             <fieldset className="contact__reason">
-                <div className="reason__inputs__box">
-                    <legend className="form__legend">Contact Form</legend>
-                    <select className="select_reason"
-                        name="reasonContact"
-                        id="reason"
-                        defaultValue="" >
-                        <option value="" disabled>Select a reason</option>
-                        <option value="job">Job Offer</option>
-                        <option value="feedback">Give Feedback</option>
-                        <option value="others">Others</option>
-                    </select>
+                <legend className="home__subtitle">Contact Form</legend>
+                <select
+                    className="select_reason"
+                    name="reasonContact"
+                    id="reason"
+                    defaultValue="Select a reason" >
+                    <option className='select_reason'
+                        value="Select a reason" disabled>Select a reason</option>
+                    <option className='select_reason' value="job">Job Offer</option>
+                    <option className='select_reason' value="feedback">Give Feedback</option>
+                    <option className='select_reason' value="others">Others</option>
+                </select>
+            </fieldset>
+            <fieldset className='contact__inputs__form'>
+                <legend className="home__subtitle" htmlFor="reason_text">Comments</legend>
+                <textarea
+                    className="form__text"
+                    id="textarea"
+                    name="textarea"
+                    placeholder="Enter your comments here"
+                    value={text}
+                    onChange={handleTextChange}
+                />
 
-                    <label className="form__label" htmlFor="reason_text">Comments</label>
-                    <textarea
-                        className="form__text"
-                        id="textarea"
-                        name="textarea"
-                        rows="10"
-                        cols="20"
-                        placeholder="Enter your comments here"
-                        value={text}
-                        onChange={handleTextChange}
-                        style={{
-                            border: '1px solid #ccc',
-                            padding: '10px',
-                            fontFamily: 'Arial, sans-serif',
-                            fontSize: '14px',
-                            width: '100%',
-                        }}
-                    />
-                </div>
-                <div className="input__fields">
-                    <input className="input__field_1" type="text" name="name" id="name" placeholder="Input your name" />
-                    <input className="input__field_2" type="email" id="email" placeholder="input your email" />
-                    <input className="input__field_3" type="numeric" id="phone" placeholder="e.g. 765897345" />
+                <form className="input__fields">
+                    <input className="input__field" type="text" name="name" id="name" placeholder="Input your name" />
+                    <input className="input__field" type="email" id="email" placeholder="input your email" />
+                    <input className="input__field" type="numeric" id="phone" placeholder="e.g. 765897345" />
+                </form>
+                <div className='submit__btn__box'>
+                    <button className='submit__btn'>Submit</button>
                 </div>
             </fieldset>
-
         </article>
     );
 }
