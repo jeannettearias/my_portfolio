@@ -3,12 +3,7 @@ import '../../styles/project/_project.scss';
 
 function ProjectImage({ project }) {
     return (
-        <div
-
-            style={{
-                backgroundImage: project.project_image ? `url(${project.project_image})` : 'none',
-            }}
-        >
+        <div className="projectImageContainer">
             {project.project_image ? (
                 <img
                     className="projectImage"
@@ -23,7 +18,10 @@ function ProjectImage({ project }) {
 }
 
 ProjectImage.propTypes = {
-    project: PropTypes.object.isRequired,
+    project: PropTypes.shape({
+        project_image: PropTypes.string,
+        project_name: PropTypes.string,
+    }).isRequired,
 };
 
 export default ProjectImage;
