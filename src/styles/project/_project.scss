@@ -17,6 +17,18 @@
   align-items: center; // Center the card and image vertically
   margin-bottom: 2rem;
 }
+.projectImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-color: #f0f0f0; // Light background color
+  border-radius: 8px; // Rounded corners
+  overflow: hidden; // Hide overflow content
+  list-style: none;
+  padding: 10px;
+}
 
 .projectImage {
   display: flex;
@@ -28,6 +40,12 @@
   border-radius: 8px; /* Rounded corners */
   overflow: hidden; /* Hide overflow content */
   list-style: none;
+
+  max-width: 100%;
+  max-height: 300px; /* Adjust as needed */
+  object-fit: cover;
+  border: none; /* Remove any border */
+  border-radius: 8px;
 
   @media screen and (max-width: 768px) {
     width: 100%;
