@@ -92,7 +92,7 @@
 .home__picture {
   width: 368px;
   height: 368px;
-  background-image: url("/images/me.jpg");
+  background: url("/images/me.jpg");
   border-radius: 50%;
   background-size: cover;
   background-position: center;
@@ -170,23 +170,17 @@
   font: var(--font-Body-B-2);
 }
 
-.experience__link__image {
+.experience__link__graphic {
   display: flex;
-  width: 500px;
-  padding: 0px 80.5px;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  align-self: stretch;
+  gap: 24px;
 }
 
-.experience__link__graphic {
-  width: 291px;
-  flex-shrink: 0;
-  align-self: stretch;
-  align-items: center;
-
-  border-radius: 77px;
-  background: url("/images/graphic__image.png");
+.experience__link__img {
+  width: 368px;
+  height: 368px;
+  background: url("/images/graphic__Image.png");
   border-radius: 50%;
   background-size: cover;
   background-position: center;

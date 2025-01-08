@@ -10,7 +10,6 @@ function Home({ skills, achievements, activeAchievements }) {
         ev.preventDefault();
         window.open(ev.target.href, '_blank', 'noopener,noreferrer')
     }
-
     return (
         <>
             <section className='section01'>
@@ -22,7 +21,9 @@ function Home({ skills, achievements, activeAchievements }) {
                         <h1 className='home__title' >Hi, I am Jeannette!👋</h1>
                         <div className='home__content'>
                             <p className="prh__text">
-                                With 16+ years in tech and a decade in agile environments, I excel in IT project management, financial planning, and vendor coordination. Certified in PMBOK, SAFe® 4 PM/PO, and PSM I, I deliver results with strategic focus and hands-on expertise.
+                                With 16+ years in tech and a decade in agile environments, I excel in IT project management,
+                                financial planning, and vendor coordination. Certified in PMBOK, SAFe® 4 PM/PO, and PSM I,
+                                I deliver results with strategic focus and hands-on expertise.
                             </p>
                         </div>
                         <nav className='btn__home__box'>
@@ -48,7 +49,7 @@ function Home({ skills, achievements, activeAchievements }) {
                     <h1 className='experience__link__title'>
                         Discover more about me!
                         <br />
-                        If you want to learn more about my experience and the companies I’ve worked with, click the link
+                        If you want to learn more about my experience and the companies I’ve worked with, click the link.
                     </h1>
                     <div className='experience__link__btn__box'>
                         <div className='experience__link__container'
@@ -56,7 +57,7 @@ function Home({ skills, achievements, activeAchievements }) {
                     </div>
                 </div>
                 <div className='experience__link__graphic'>
-                    <img className='experience__link__img' />
+                    <img className='experience__link__img' src={`${import.meta.env.BASE_URL}images/graphic__image.png`} alt='Experience graphic' />
                 </div>
             </section>
         </>
