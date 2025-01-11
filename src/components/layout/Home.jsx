@@ -30,7 +30,7 @@ function Home({ skills, achievements, activeAchievements }) {
                             <div className='home__btn'>
                                 <a
                                     className='linkedin__btn'
-                                    href='https://www.linkedin.com/in/jeannettearias/'
+                                    href='https://www.linkedin.com/in/jeannettearias'
                                     onClick={handleLinkedinClick}>Go to linkedIn
                                 </a>
                             </div>
