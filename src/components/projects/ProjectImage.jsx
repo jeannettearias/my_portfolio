@@ -8,7 +8,7 @@ function ProjectImage({ project }) {
                 <img
                     className="projectImage"
                     src={project.project_image}
-                    alt={project.project_name || 'Project'}
+                    alt={project.project_name}
                 />
             ) : (
                 <p>No Image Available</p>
