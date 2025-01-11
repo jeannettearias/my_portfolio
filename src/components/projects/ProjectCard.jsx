@@ -14,7 +14,7 @@ function ProjectCard({ project }) {
                         <li className='card__authorPhoto'>
                             <img
                                 className="card__authorPhoto"
-                                src={project.author_photo}
+                                src={import.meta.env.BASE_URL + project.author_photo}
                             />
                         </li>
                     </ul>

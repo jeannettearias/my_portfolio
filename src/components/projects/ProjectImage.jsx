@@ -7,7 +7,7 @@ function ProjectImage({ project }) {
             {project.project_image ? (
                 <img
                     className="projectImage"
-                    src={project.project_image}
+                    src={import.meta.env.BASE_URL + project.project_image}
                 />
             ) : (
                 <p>No Image Available</p>
