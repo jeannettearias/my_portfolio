@@ -5,7 +5,7 @@ function ProjectCard({ project }) {
     return (
         <div className="card">
             <h2 className="card__projectTitle">
-                <span className="card__projectTitle--text">{project.project_name || 'Personal Project Card'}</span>
+                <span className="card__projectTitle--text">{project.project_name}</span>
             </h2>
             <div className="card__author">
                 <div
@@ -13,22 +13,20 @@ function ProjectCard({ project }) {
                     <ul>
                         <li className='card__authorPhoto'>
                             <img
-                                style={{
-                                    background: project.author_photo
-                                        ? `url(${project.author_photo})`
-                                        : null,
-                                }}
+                                className="card__authorPhoto"
+                                src={project.author_photo}
+                                alt={project.author_name}
                             />
                         </li>
                     </ul>
                 </div>
-                <p className="card__job">{project.author_job || 'Full Stack Developer'}</p>
-                <h3 className="card__name">{project.author_name || 'Author Name'}</h3>
+                <p className="card__job">{project.author_job}</p>
+                <h3 className="card__name">{project.author_name}</h3>
             </div>
 
             <div className="card__project">
-                <h3 className="card__projectName">{project.project_name || 'Elegant Workspace'}</h3>
-                <p className="card__slogan">{project.project_slogan || 'Exclusive Design'}</p>
+                <h3 className="card__projectName">{project.project_name}</h3>
+                <p className="card__slogan">{project.project_slogan}</p>
                 <div className="card__technicalInfo">
                     <ul className="card__technologies">
                         {project.project_technologies
@@ -41,7 +39,7 @@ function ProjectCard({ project }) {
                             : 'No technologies listed'}
                     </ul>
                 </div>
-                <p className="card__description">{project.project_description || 'No description provided.'}</p>
+                <p className="card__description">{project.project_description}</p>
 
                 <footer className='card__footer'>
                     <ul className='icon'>
