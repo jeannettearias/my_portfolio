@@ -31,18 +31,11 @@
 }
 
 .projectImage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 800px;
   height: 600px; /* Adjust height as needed */
-  background-color: #f0f0f0; /* Light background color */
-  border-radius: 8px; /* Rounded corners */
-  overflow: hidden; /* Hide overflow content */
-  list-style: none;
-
+  background: url("/images/ebook-example.jpg");
   max-width: 100%;
-  max-height: 300px; /* Adjust as needed */
+  max-height: 400px; /* Adjust as needed */
   object-fit: cover;
   border: none; /* Remove any border */
   border-radius: 8px;
@@ -146,11 +139,11 @@
 }
 
 .card .card__authorPhoto {
-  width: 75px;
-  height: 75px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   max-width: 100%;
-
+  background: url("/images/avatar.webp");
   background-position: center;
   background-size: cover;
   margin-bottom: 1rem;
