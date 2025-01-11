@@ -15,7 +15,6 @@ function ProjectCard({ project }) {
                             <img
                                 className="card__authorPhoto"
                                 src={project.author_photo}
-                                alt={project.author_name}
                             />
                         </li>
                     </ul>
