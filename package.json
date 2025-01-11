@@ -9,7 +9,7 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "deploy": "vite build && git add docs && git commit -m 'Deployed new version of the page to production' && git push"
+    "deploy": "vite build &&  gh-pages -d dist  && git add docs && git commit -m 'Deployed new version of the page to production' && git push"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
