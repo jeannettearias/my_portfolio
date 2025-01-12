@@ -22,7 +22,7 @@ function Header() {
                         </li>
                         <li className="menu__item">
                             <Link to="/experience"
-                                className="menu__link">Experience</Link>
+                                className="menu__link">About me</Link>
                         </li>
                         <li className="menu__item">
                             <Link to="/projects"

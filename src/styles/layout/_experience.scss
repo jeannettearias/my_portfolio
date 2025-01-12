@@ -1,8 +1,132 @@
 .exp__section {
-  padding: 1rem;
-  color: var(--color-neutral-200, #dbe1e7);
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+
+  padding: 0px 72px;
 }
+
+//////////////////////////// HERO ////////////////////////////
+.Margin__Herosection {
+  display: flex;
+  padding-left: 88px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+
+  background: linear-gradient(
+    99deg,
+    rgba(255, 255, 255, 0.01) 43.4%,
+    rgba(153, 153, 153, 0.1) 100%
+  );
+}
+
+.Herosection {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: 44px;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  flex: 1 0 0;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--components-button-gap, 8px);
+}
+.exp__title {
+  align-self: stretch;
+
+  font: var(--font-headings-H-1);
+  color: var(--color-neutral-100);
+}
+
+.text {
+  display: flex;
+  width: 596px;
+  height: 35.575px;
+  flex-direction: column;
+  justify-content: center;
+
+  color: var(--color-primary-100, #99c6ff);
+  font: var(--font-headings-H-2);
+}
+
+.exp__paragraph {
+  align-self: stretch;
+
+  color: var(--color-neutral-100, #fff);
+  font: var(--font-Body-B-1);
+}
+
+.image {
+  width: 602px;
+  height: 400px;
+
+  background: url("/images/computer__jean.png");
+}
+
+.background__image {
+  flex-shrink: 0;
+}
+
+////////////////////////////////// MARGIN //////////////////////////////////////////
+///
+.carrer__path__title {
+  display: flex;
+  justify-content: center;
+  font: var(--font-headings-H-1);
+  color: var(--color-neutral-100);
+}
+
+/////////////////////////////////// EXPERIENCE DATA ///////////////////////////////////
+///
+.margin__section {
+  display: flex;
+  padding: 0px 64px;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.exp__margin {
+  display: flex;
+  padding: 24px 32px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  flex: 1 0 0;
+}
+
+.exp__text {
+  align-self: stretch;
+
+  font: var(--font-Body-B-1);
+  color: var(--color-neutral-100);
+}
+
+.frame__card {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
 .legend {
+  display: flex;
+
+  font: var(--font-Body-B-1);
+  color: var(--color-neutral-100);
   padding: 1rem;
 }
 
@@ -14,11 +138,6 @@
   margin-bottom: 1rem;
   margin: 1rem;
   gap: 1rem;
-}
-
-.text {
-  color: var(--color-neutral-200, #dbe1e7);
-  font-style: bold;
 }
 
 .datetime {
