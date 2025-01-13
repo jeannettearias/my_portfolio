@@ -12,8 +12,11 @@ function Contact() {
     };
 
     const handleSubmitClick = (ev) => {
+        //validation 
+
         ev.preventDefault();
         console.log('Form submitted');
+
     }
 
 
