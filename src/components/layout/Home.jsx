@@ -57,7 +57,7 @@ function Home({ skills, achievements, activeAchievements }) {
                     </div>
                 </div>
                 <div className='experience__link__graphic'>
-                    <img className='experience__link__img' src={`${import.meta.env.BASE_URL}images/graphic__image.png`} alt='Experience graphic' />
+                    <img className='experience__link__img' src={`${import.meta.env.BASE_URL}images/graphic__image.png`} />
                 </div>
             </section>
         </>

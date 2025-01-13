@@ -85,6 +85,13 @@
   text-decoration: none; /*remove underlines*/
 }
 
+.photo__layout {
+  display: flex;
+
+  width: 368px;
+  height: 368px;
+}
+
 .linkedin__btn:hover {
   text-decoration: underline; /* Optional: Adds underline on hover for better UX */
 }
@@ -180,8 +187,8 @@
 .experience__link__img {
   width: 368px;
   height: 368px;
-  background: url("/images/graphic__Image.png");
-  border-radius: 50%;
-  background-size: cover;
-  background-position: center;
+  background: url("/images/graphic__Image.png") no-repeat center;
+  border: none; /* Remove any border */
+  border-radius: 50%; /* Ensure no rounding of corners */
+  box-shadow: none; /* Remove any box shadow if present */
 }
