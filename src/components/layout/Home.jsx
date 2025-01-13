@@ -15,7 +15,7 @@ function Home({ skills, achievements, activeAchievements }) {
             <section className='section01'>
                 <div className='container01'>
                     <div className='photo__layout'>
-                        <img className='home__picture' alt="" />
+                        <div className='home__picture' alt="" />
                     </div>
                     <div className='home__box'>
                         <h1 className='home__title' >Hi, I am Jeannette!👋</h1>
@@ -57,7 +57,7 @@ function Home({ skills, achievements, activeAchievements }) {
                     </div>
                 </div>
                 <div className='experience__link__graphic'>
-                    <img className='experience__link__img' src={`${import.meta.env.BASE_URL}images/graphic__image.png`} />
+                    <div className='experience__link__img' src={`${import.meta.env.BASE_URL}images/graphic__image.png`} />
                 </div>
             </section>
         </>

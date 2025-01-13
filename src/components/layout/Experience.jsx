@@ -22,7 +22,7 @@ function Experience({ exp }) {
                         </p>
                     </div>
                     <div className='image'>
-                        <img className='background__image' />
+                        <div className='background__image' />
                     </div>
                 </div>
             </section>
