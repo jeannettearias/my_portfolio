@@ -26,9 +26,11 @@ function Experience({ exp }) {
                     </div>
                 </div>
             </section>
-            <h1 className='carrer__path__title'>Carrer Path</h1>
 
             <section className='margin__section'>
+                <div className='carrer__title__box'>
+                    <h1 className='carrer__path__title'>Carrer Path</h1>
+                </div>
                 <div className='exp__margin'>
                     <p className='exp__text'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Asperiores quis quam cum neque quibusdam non id, officiis doloribus,
