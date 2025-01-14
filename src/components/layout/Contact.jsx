@@ -14,7 +14,8 @@ function Contact() {
     const handleSubmitClick = (ev) => {
         //validation 
 
-        ev.preventDefault();
+        ev.preventDefault(ev.target.value);
+
         console.log('Form submitted');
 
     }
