@@ -46,8 +46,7 @@ function Contact() {
                     name="textarea"
                     placeholder="Enter your comments here"
                     value={text}
-                    onChange={handleTextChange}
-                />
+                    onChange={handleTextChange} />
 
                 <form className="input__fields">
                     <input className="input__field" type="text" name="name" id="name" placeholder="Input your name" />
