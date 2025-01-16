@@ -3,18 +3,32 @@ import { useState } from "react";
 
 
 function Contact() {
-    const [text, setText] = useState("");
+    const [text, setText] = useState('');
+    const [select, setSelect] = useState('');
+
 
     const handleTextChange = (ev) => {
         setText(ev.target.value);
 
-        console.log('text changed');
     };
 
-    const handleSubmitClick = (ev) => {
-        //validation 
+    const handleSelectChange = (ev) => {
+        ev.preventDefault();
+        setSelect(ev.target.value)
 
-        ev.preventDefault(ev.target.value);
+        console.log('contact form selected');
+
+    }
+
+    const handleSubmitClick = (ev) => {
+        ev.preventDefault();
+        //validation 
+        if (text != '') {
+            // Reset the text and values selected state
+            setText('')
+
+            console.log('data cleaned');
+        }
 
         console.log('Form submitted');
 
@@ -27,6 +41,8 @@ function Contact() {
             <fieldset className="contact__reason">
                 <legend className="home__subtitle">Contact Form</legend>
                 <select
+                    onChange={handleSelectChange}
+                    value={select}
                     className="select_reason"
                     name="reasonContact"
                     id="reason"
@@ -48,7 +64,9 @@ function Contact() {
                     value={text}
                     onChange={handleTextChange} />
 
-                <form className="input__fields">
+                <form
+
+                    className="input__fields">
                     <input className="input__field" type="text" name="name" id="name" placeholder="Input your name" />
                     <input className="input__field" type="email" id="email" placeholder="input your email" />
                     <input className="input__field" type="numeric" id="phone" placeholder="e.g. 765897345" />
@@ -56,6 +74,8 @@ function Contact() {
                 <div className='submit__btn__box'>
                     <button className='submit__btn'
                         onClick={handleSubmitClick}
+                        value={text}
+
                     >Submit</button>
                 </div>
             </fieldset>
