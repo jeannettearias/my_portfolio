@@ -25,6 +25,39 @@ function App() {
   const [activeAchievements, setActiveAchievements] = useState([]);
   // State for experience from JSON data
   const [exp, setExp] = useState([]);
+  const [inputValues, setInputValues] = useState({
+    name: '',
+    email: '',
+    phone: ''
+  });
+
+  //connect with the server 
+  const handleSubmitClick = async (ev) => {
+    ev.preventDefault();
+    try {
+      const response = await fetch('http://localhost:4000/my_portfolio/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(inputValues),
+      });
+      //validation 
+      if (response.ok) {
+        console.log('Data inserted successfully');
+        // optionally, reset the form
+        setInputValues({
+          name: '',
+          email: '',
+          phone: ''
+        });
+      } else {
+        console.error('Failed to insert data');
+      }
+    } catch (error) {
+      console.error('Error', error);
+    }
+  };
 
   // Load JSON data on component mount
   useEffect(() => {
@@ -55,11 +88,13 @@ function App() {
           projectsArray={projectsArray} />} />
         <Route path='/experience' element={<Experience
           exp={exp} />} />
-        <Route path='/contact' element={<Contact />} />
+        <Route path='/contact' element={<Contact
+          handleSubmitClick={handleSubmitClick} />} />
       </Routes>
       <Footer />
     </div>
   );
 }
+
 
 export default App;
