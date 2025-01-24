@@ -25,23 +25,43 @@ function App() {
   const [activeAchievements, setActiveAchievements] = useState([]);
   // State for experience from JSON data
   const [exp, setExp] = useState([]);
+  const [contactTypes, setContactTypes] = useState([]);
   const [inputValues, setInputValues] = useState({
+    description: '',
     name: '',
     email: '',
-    phone: ''
+    phone: '',
+    status: ''
   });
 
-  //connect with the server 
+  //CONNECT TO BACKEND 
+  //List contact types+reasons
+  //GET DATA
+  const fetchContactTypes = async () => {
+    try {
+      const response = await fetch('http://localhost:4000/contact/type');
+      const data = await response.json();
+      setContactTypes(data);
+
+    } catch (error) {
+      console.error('Error', error);
+    }
+  };
+
+
+  //INSEºRT DATA
   const handleSubmitClick = async (ev) => {
     ev.preventDefault();
+
     try {
-      const response = await fetch('http://localhost:4000/my_portfolio/contact', {
+      const response = await fetch('http://localhost:4000/contact/save', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(inputValues),
       });
+
       //validation 
       if (response.ok) {
         console.log('Data inserted successfully');
@@ -51,6 +71,7 @@ function App() {
           email: '',
           phone: ''
         });
+
       } else {
         console.error('Failed to insert data');
       }
@@ -69,6 +90,9 @@ function App() {
     setSkills(skillsJson);
     // Set achievements data from JSON file
     setAchievements(achievementsJson);
+
+    // Fetch contact types
+    fetchContactTypes();
 
     // Filter the data where active is true
     const filteredAchievements = achievementsJson[0].achievements.filter(item => item.active === true);
@@ -89,7 +113,9 @@ function App() {
         <Route path='/experience' element={<Experience
           exp={exp} />} />
         <Route path='/contact' element={<Contact
-          handleSubmitClick={handleSubmitClick} />} />
+          handleSubmitClick={handleSubmitClick}
+          contactTypes={contactTypes}
+          fetchContactTypes={fetchContactTypes} />} />
       </Routes>
       <Footer />
     </div>
