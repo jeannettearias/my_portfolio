@@ -1,27 +1,22 @@
 import PropTypes from 'prop-types';
 import '../../styles/layout/_contact.scss';
-import { useState, useEffect } from "react"; // Make sure to import useEffect here
+import { useState } from "react"; // Make sure to import useEffect here
 
 
-function Contact({ handleSubmitClick, fetchContactTypes, contactTypes }) {
+function Contact({ handleSubmitClick, contactTypes }) {
     const [text, setText] = useState('');
     const [selectedValue, setSelectedValue] = useState('');
-    const [inputValues, SetInputValues] = useState({
+    const [inputValues, setInputValues] = useState({
         name: '',
         email: '',
         phone: '',
-        status: ''
+        status: 'A'
     });
-
-    // Fetch contact types on component mount
-    useEffect(() => {
-        fetchContactTypes();
-    }, [fetchContactTypes]);
 
     //inputs data
     const handleChange = (ev) => {
         const { name, value } = ev.target;
-        SetInputValues({
+        setInputValues({
             ...inputValues,
             [name]: value
         });
@@ -49,8 +44,7 @@ function Contact({ handleSubmitClick, fetchContactTypes, contactTypes }) {
                     className="select_reason"
                     name="reasonContact"
                     id="reason"
-                    required
-                >
+                    required>
                     <option className='select_reason' value="" disabled>Select a type</option>
                     {Array.isArray(contactTypes) && contactTypes.map((type) => (
                         <option
@@ -107,8 +101,8 @@ function Contact({ handleSubmitClick, fetchContactTypes, contactTypes }) {
                     <div className='submit__btn__box'>
                         <button
                             onSubmit={(ev) => handleSubmitClick(ev, inputValues)}
-                            type='submit' className='submit__btn'
-                        >Submit</button>
+                            type='submit'
+                            className='submit__btn'>Submit</button>
                     </div>
                 </form>
             </fieldset>
@@ -118,7 +112,6 @@ function Contact({ handleSubmitClick, fetchContactTypes, contactTypes }) {
 
 Contact.propTypes = {
     handleSubmitClick: PropTypes.func.isRequired,
-    fetchContactTypes: PropTypes.func.isRequired,
     contactTypes: PropTypes.array.isRequired,
 }
 

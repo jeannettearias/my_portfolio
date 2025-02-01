@@ -5,13 +5,14 @@ import axios from 'axios';
 
 
 
-function fetchContactTypes() {
+function ParentComponent() {
     const [contactTypes, setContactTypes] = useState([]);
 
     const fetchContactTypes = async () => {
         try {
             const response = await axios.get('http://localhost:4000/contact/type');
             setContactTypes(response.data);
+
         } catch (error) {
             console.error('Error fetching contact types:', error); // Add missing quotes
         }
@@ -21,9 +22,12 @@ function fetchContactTypes() {
         fetchContactTypes();
     }, []);
 
+
     const handleSubmitClick = async (ev) => {
         ev.preventDefault();
+
         // Handle form submission
+
     };
 
     return (
@@ -35,9 +39,9 @@ function fetchContactTypes() {
     );
 }
 
-fetchContactTypes.propTypes = {
+ParentComponent.propTypes = {
     fetchContactTypes: PropTypes.func.isRequired,
     contactTypes: PropTypes.array.isRequired,
 };
 
-export default fetchContactTypes;
+export default ParentComponent;

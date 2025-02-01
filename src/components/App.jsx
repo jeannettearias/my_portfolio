@@ -31,10 +31,11 @@ function App() {
     name: '',
     email: '',
     phone: '',
-    status: ''
+    status: 'A'
   });
 
   //CONNECT TO BACKEND 
+
   //List contact types+reasons
   //GET DATA
   const fetchContactTypes = async () => {
@@ -48,36 +49,29 @@ function App() {
     }
   };
 
-
   //INSEºRT DATA
   const handleSubmitClick = async (ev) => {
     ev.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:4000/contact/save', {
+      console.log(inputValues);
+      const response = await fetch('http://localhost:4000/contact', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(inputValues),
       });
 
-      //validation 
-      if (response.ok) {
-        console.log('Data inserted successfully');
-        // optionally, reset the form
-        setInputValues({
-          name: '',
-          email: '',
-          phone: ''
-        });
+      const data = await response.json();
+      console.log(data);
 
-      } else {
-        console.error('Failed to insert data');
-      }
     } catch (error) {
-      console.error('Error', error);
+      console.log(inputValues);
+
+      console.error('Error in the insert', error);  // Add missing quotes
+
     }
+
+
   };
 
   // Load JSON data on component mount
@@ -93,6 +87,10 @@ function App() {
 
     // Fetch contact types
     fetchContactTypes();
+
+    // fetch contacts
+    setInputValues();
+
 
     // Filter the data where active is true
     const filteredAchievements = achievementsJson[0].achievements.filter(item => item.active === true);
@@ -112,15 +110,15 @@ function App() {
           projectsArray={projectsArray} />} />
         <Route path='/experience' element={<Experience
           exp={exp} />} />
-        <Route path='/contact' element={<Contact
-          handleSubmitClick={handleSubmitClick}
-          contactTypes={contactTypes}
-          fetchContactTypes={fetchContactTypes} />} />
+        <Route path='/contact'
+          element={<Contact
+            handleSubmitClick={handleSubmitClick}
+            contactTypes={contactTypes}
+            fetchContactTypes={fetchContactTypes} />} />
       </Routes>
       <Footer />
     </div>
   );
 }
-
 
 export default App;
