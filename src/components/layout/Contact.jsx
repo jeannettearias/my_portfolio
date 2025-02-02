@@ -3,25 +3,22 @@ import '../../styles/layout/_contact.scss';
 import { useState } from "react"; // Make sure to import useEffect here
 
 
-function Contact({ handleSubmitClick, contactTypes }) {
+function Contact({ handleSubmitClick, contactTypes, inputValues, setInputValues }) {
     const [text, setText] = useState('');
     const [selectedValue, setSelectedValue] = useState('');
-    const [inputValues, setInputValues] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        status: ''
-    });
 
     //inputs data
     const handleChange = (ev) => {
         const { name, value } = ev.target;
-        setInputValues(({ ...inputValues, [name]: value }));
+        setInputValues(prev => ({ ...prev, [name]: value })); // Update in App
     };
+
 
     //select optiontype
     const handleSelectChange = (ev) => {
-        setSelectedValue(ev.target.value)
+        const value = ev.target.value;
+        setSelectedValue(value);
+        console.log("Selected Contact Type", value); // debugging log
     };
 
     //input textarea info
@@ -41,7 +38,8 @@ function Contact({ handleSubmitClick, contactTypes }) {
                     className="select_reason"
                     name="reasonContact"
                     id="reason"
-                    required>
+                    required
+                >
                     <option className='select_reason' value="" disabled>Select a type</option>
                     {Array.isArray(contactTypes) && contactTypes.map((type) => (
                         <option
@@ -62,8 +60,10 @@ function Contact({ handleSubmitClick, contactTypes }) {
                     placeholder="Enter your comments here"
                     value={text}
                     onChange={handleTextChange}
-                    required />
-                <form className='input__fields'>
+                    required
+                />
+                <form onSubmit={(ev) => handleSubmitClick(ev, selectedValue)}>
+
                     <div>
                         <input
                             className="input__field"
@@ -96,20 +96,19 @@ function Contact({ handleSubmitClick, contactTypes }) {
                             placeholder="e.g. 765897345" />
                     </div>
                     <div className='submit__btn__box'>
-                        <button
-                            onSubmit={(ev) => handleSubmitClick(ev, inputValues, selectedValue, text, contactTypes)}
-                            type='submit'
-                            className='submit__btn'>Submit</button>
+                        <button type='submit' className='submit__btn'>Submit</button>
                     </div>
                 </form>
             </fieldset>
-        </article>
+        </article >
     );
 }
 
 Contact.propTypes = {
     handleSubmitClick: PropTypes.func.isRequired,
     contactTypes: PropTypes.array.isRequired,
+    inputValues: PropTypes.object.isRequired,
+    setInputValues: PropTypes.func.isRequired,
 }
 
 export default Contact;

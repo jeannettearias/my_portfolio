@@ -25,6 +25,7 @@ function App() {
   const [activeAchievements, setActiveAchievements] = useState([]);
   // State for experience from JSON data
   const [exp, setExp] = useState([]);
+
   const [contactTypes, setContactTypes] = useState([]);
   const [inputValues, setInputValues] = useState({
     description: '',
@@ -50,24 +51,30 @@ function App() {
   };
 
   //INSEºRT DATA
-  const handleSubmitClick = async (ev) => {
+  const handleSubmitClick = async (ev, selectedValue) => {
     ev.preventDefault();
+
+    const dataToSend = {
+      ...inputValues,
+      contactType: selectedValue
+    };
+
+    console.log("Data being sent:", dataToSend); // Debugging log
+
 
     try {
       console.log(inputValues);
       const response = await fetch('http://localhost:4000/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(inputValues),
+        body: JSON.stringify(dataToSend),
       });
 
       const data = await response.json();
       console.log(data);
-
     } catch (error) {
       console.error('Error in the insert', error);  // Add missing quotes
     }
-
   };
 
   // Load JSON data on component mount
@@ -83,10 +90,6 @@ function App() {
 
     // Fetch contact types
     fetchContactTypes();
-
-    // fetch contacts
-    setInputValues();
-
 
     // Filter the data where active is true
     const filteredAchievements = achievementsJson[0].achievements.filter(item => item.active === true);
@@ -110,7 +113,8 @@ function App() {
           element={<Contact
             handleSubmitClick={handleSubmitClick}
             contactTypes={contactTypes}
-            inputValues={inputValues} />} />
+            inputValues={inputValues}
+            setInputValues={setInputValues} />} />
       </Routes>
       <Footer />
     </div>
