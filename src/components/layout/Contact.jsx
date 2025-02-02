@@ -4,7 +4,6 @@ import { useState } from "react"; // Make sure to import useEffect here
 
 
 function Contact({ handleSubmitClick, contactTypes, inputValues, setInputValues }) {
-    const [text, setText] = useState('');
     const [selectedValue, setSelectedValue] = useState('');
 
     //inputs data
@@ -13,17 +12,18 @@ function Contact({ handleSubmitClick, contactTypes, inputValues, setInputValues 
         setInputValues(prev => ({ ...prev, [name]: value })); // Update in App
     };
 
-
     //select optiontype
     const handleSelectChange = (ev) => {
         const value = ev.target.value;
         setSelectedValue(value);
-        console.log("Selected Contact Type", value); // debugging log
+
     };
 
     //input textarea info
     const handleTextChange = (ev) => {
-        setText(ev.target.value);
+        const value = ev.target.value;
+        setInputValues(prev => ({ ...prev, description: value }));
+
     };
 
     return (
@@ -56,9 +56,9 @@ function Contact({ handleSubmitClick, contactTypes, inputValues, setInputValues 
                 <textarea
                     className="form__text"
                     id="textarea"
-                    name="textarea"
+                    name="description"  // ✅ Name must match `inputValues`
                     placeholder="Enter your comments here"
-                    value={text}
+                    value={inputValues.description} // ✅ Use inputValues
                     onChange={handleTextChange}
                     required
                 />

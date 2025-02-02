@@ -56,14 +56,12 @@ function App() {
 
     const dataToSend = {
       ...inputValues,
-      contactType: selectedValue
+      contact_typeid: selectedValue  // ✅ Use correct field name
     };
 
-    console.log("Data being sent:", dataToSend); // Debugging log
-
+    console.log("🚀 Data being sent:", JSON.stringify(dataToSend, null, 2)); // Debug log
 
     try {
-      console.log(inputValues);
       const response = await fetch('http://localhost:4000/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -71,9 +69,9 @@ function App() {
       });
 
       const data = await response.json();
-      console.log(data);
+      console.log("✅ Server response:", data);
     } catch (error) {
-      console.error('Error in the insert', error);  // Add missing quotes
+      console.error('❌ Error in the insert:', error);
     }
   };
 
