@@ -65,12 +65,8 @@ function App() {
       console.log(data);
 
     } catch (error) {
-      console.log(inputValues);
-
       console.error('Error in the insert', error);  // Add missing quotes
-
     }
-
 
   };
 
@@ -114,7 +110,7 @@ function App() {
           element={<Contact
             handleSubmitClick={handleSubmitClick}
             contactTypes={contactTypes}
-            fetchContactTypes={fetchContactTypes} />} />
+            inputValues={inputValues} />} />
       </Routes>
       <Footer />
     </div>

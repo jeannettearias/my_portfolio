@@ -10,16 +10,13 @@ function Contact({ handleSubmitClick, contactTypes }) {
         name: '',
         email: '',
         phone: '',
-        status: 'A'
+        status: ''
     });
 
     //inputs data
     const handleChange = (ev) => {
         const { name, value } = ev.target;
-        setInputValues({
-            ...inputValues,
-            [name]: value
-        });
+        setInputValues(({ ...inputValues, [name]: value }));
     };
 
     //select optiontype
@@ -100,7 +97,7 @@ function Contact({ handleSubmitClick, contactTypes }) {
                     </div>
                     <div className='submit__btn__box'>
                         <button
-                            onSubmit={(ev) => handleSubmitClick(ev, inputValues)}
+                            onSubmit={(ev) => handleSubmitClick(ev, inputValues, selectedValue, text, contactTypes)}
                             type='submit'
                             className='submit__btn'>Submit</button>
                     </div>
