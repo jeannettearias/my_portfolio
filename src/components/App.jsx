@@ -26,6 +26,55 @@ function App() {
   // State for experience from JSON data
   const [exp, setExp] = useState([]);
 
+  const [contactTypes, setContactTypes] = useState([]);
+  const [inputValues, setInputValues] = useState({
+    description: '',
+    name: '',
+    email: '',
+    phone: '',
+    status: 'A'
+  });
+
+  //CONNECT TO BACKEND 
+
+  //List contact types+reasons
+  //GET DATA
+  const fetchContactTypes = async () => {
+    try {
+      const response = await fetch('http://localhost:4000/contact/type');
+      const data = await response.json();
+      setContactTypes(data);
+
+    } catch (error) {
+      console.error('Error', error);
+    }
+  };
+
+  //INSEºRT DATA
+  const handleSubmitClick = async (ev, selectedValue) => {
+    ev.preventDefault();
+
+    const dataToSend = {
+      ...inputValues,
+      contact_typeid: selectedValue  // ✅ Use correct field name
+    };
+
+    console.log("🚀 Data being sent:", JSON.stringify(dataToSend, null, 2)); // Debug log
+
+    try {
+      const response = await fetch('http://localhost:4000/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(dataToSend),
+      });
+
+      const data = await response.json();
+      console.log("✅ Server response:", data);
+    } catch (error) {
+      console.error('❌ Error in the insert:', error);
+    }
+  };
+
   // Load JSON data on component mount
   useEffect(() => {
     // Set projects data from JSON file
@@ -36,6 +85,9 @@ function App() {
     setSkills(skillsJson);
     // Set achievements data from JSON file
     setAchievements(achievementsJson);
+
+    // Fetch contact types
+    fetchContactTypes();
 
     // Filter the data where active is true
     const filteredAchievements = achievementsJson[0].achievements.filter(item => item.active === true);
@@ -55,7 +107,12 @@ function App() {
           projectsArray={projectsArray} />} />
         <Route path='/experience' element={<Experience
           exp={exp} />} />
-        <Route path='/contact' element={<Contact />} />
+        <Route path='/contact'
+          element={<Contact
+            handleSubmitClick={handleSubmitClick}
+            contactTypes={contactTypes}
+            inputValues={inputValues}
+            setInputValues={setInputValues} />} />
       </Routes>
       <Footer />
     </div>

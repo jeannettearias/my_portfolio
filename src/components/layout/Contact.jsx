@@ -1,41 +1,54 @@
+import PropTypes from 'prop-types';
 import '../../styles/layout/_contact.scss';
-import { useState } from "react";
+import { useState } from "react"; // Make sure to import useEffect here
 
 
-function Contact() {
-    const [text, setText] = useState("");
+function Contact({ handleSubmitClick, contactTypes, inputValues, setInputValues }) {
+    const [selectedValue, setSelectedValue] = useState('');
 
-    const handleTextChange = (ev) => {
-        setText(ev.target.value);
-
-        console.log('text changed');
+    //inputs data
+    const handleChange = (ev) => {
+        const { name, value } = ev.target;
+        setInputValues(prev => ({ ...prev, [name]: value })); // Update in App
     };
 
-    const handleSubmitClick = (ev) => {
-        //validation 
+    //select optiontype
+    const handleSelectChange = (ev) => {
+        const value = ev.target.value;
+        setSelectedValue(value);
 
-        ev.preventDefault(ev.target.value);
+    };
 
-        console.log('Form submitted');
+    //input textarea info
+    const handleTextChange = (ev) => {
+        const value = ev.target.value;
+        setInputValues(prev => ({ ...prev, description: value }));
 
-    }
-
+    };
 
     return (
         <article className='contact__section'>
             <h1 className='contact__title'>Contact</h1>
+
             <fieldset className="contact__reason">
                 <legend className="home__subtitle">Contact Form</legend>
                 <select
+                    onChange={handleSelectChange}
+                    value={selectedValue}
                     className="select_reason"
                     name="reasonContact"
                     id="reason"
-                    defaultValue="Select a reason" >
-                    <option className='select_reason'
-                        value="Select a reason" disabled>Select a reason</option>
-                    <option className='option_reason' value="job">Job Offer</option>
-                    <option className='option_reason' value="feedback">Give Feedback</option>
-                    <option className='option_reason' value="others">Others</option>
+                    required
+                >
+                    <option className='select_reason' value="" disabled>Select a type</option>
+                    {Array.isArray(contactTypes) && contactTypes.map((type) => (
+                        <option
+                            className='option_reason'
+                            key={type.contact_typeid}
+                            value={type.contact_typeid}>
+                            {type.contact_type}
+                        </option>
+                    ))}
                 </select>
             </fieldset>
             <fieldset className='contact__inputs__form'>
@@ -43,24 +56,59 @@ function Contact() {
                 <textarea
                     className="form__text"
                     id="textarea"
-                    name="textarea"
+                    name="description"  // ✅ Name must match `inputValues`
                     placeholder="Enter your comments here"
-                    value={text}
-                    onChange={handleTextChange} />
+                    value={inputValues.description} // ✅ Use inputValues
+                    onChange={handleTextChange}
+                    required
+                />
+                <form onSubmit={(ev) => handleSubmitClick(ev, selectedValue)}>
 
-                <form className="input__fields">
-                    <input className="input__field" type="text" name="name" id="name" placeholder="Input your name" />
-                    <input className="input__field" type="email" id="email" placeholder="input your email" />
-                    <input className="input__field" type="numeric" id="phone" placeholder="e.g. 765897345" />
+                    <div>
+                        <input
+                            className="input__field"
+                            type="text"
+                            id="name"
+                            name="name"
+                            value={inputValues.name}
+                            onChange={handleChange}
+                            required
+                            placeholder="Input your name" />
+                    </div>
+                    <div>
+                        <input
+                            onChange={handleChange}
+                            value={inputValues.email}
+                            className="input__field"
+                            type="email"
+                            name='email'
+                            id="email"
+                            placeholder="input your email" />
+                    </div>
+                    <div>
+                        <input
+                            onChange={handleChange}
+                            value={inputValues.phone}
+                            className="input__field"
+                            type="tel"
+                            name='phone'
+                            id="phone"
+                            placeholder="e.g. 765897345" />
+                    </div>
+                    <div className='submit__btn__box'>
+                        <button type='submit' className='submit__btn'>Submit</button>
+                    </div>
                 </form>
-                <div className='submit__btn__box'>
-                    <button className='submit__btn'
-                        onClick={handleSubmitClick}
-                    >Submit</button>
-                </div>
             </fieldset>
-        </article>
+        </article >
     );
+}
+
+Contact.propTypes = {
+    handleSubmitClick: PropTypes.func.isRequired,
+    contactTypes: PropTypes.array.isRequired,
+    inputValues: PropTypes.object.isRequired,
+    setInputValues: PropTypes.func.isRequired,
 }
 
 export default Contact;
