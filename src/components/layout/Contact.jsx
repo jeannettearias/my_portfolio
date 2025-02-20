@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import '../../styles/layout/_contact.scss';
 import { useState } from "react"; // Make sure to import useEffect here
+import CleanContact from './cleanContact';
 
 
 function Contact({ handleSubmitClick, contactTypes, inputValues, setInputValues }) {
@@ -23,7 +24,6 @@ function Contact({ handleSubmitClick, contactTypes, inputValues, setInputValues 
     const handleTextChange = (ev) => {
         const value = ev.target.value;
         setInputValues(prev => ({ ...prev, description: value }));
-
     };
 
     return (
@@ -100,6 +100,8 @@ function Contact({ handleSubmitClick, contactTypes, inputValues, setInputValues 
                     </div>
                 </form>
             </fieldset>
+            <CleanContact handleSubmitClick={handleSubmitClick} />
+
         </article >
     );
 }
