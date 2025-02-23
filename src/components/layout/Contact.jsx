@@ -16,14 +16,12 @@ function Contact({ handleSubmitClick, contactTypes, inputValues, setInputValues 
     const handleSelectChange = (ev) => {
         const value = ev.target.value;
         setSelectedValue(value);
-
     };
 
     //input textarea info
     const handleTextChange = (ev) => {
         const value = ev.target.value;
         setInputValues(prev => ({ ...prev, description: value }));
-
     };
 
     return (
@@ -60,6 +58,7 @@ function Contact({ handleSubmitClick, contactTypes, inputValues, setInputValues 
                     placeholder="Enter your comments here"
                     value={inputValues.description} // ✅ Use inputValues
                     onChange={handleTextChange}
+                    type="text"
                     required
                 />
                 <form onSubmit={(ev) => handleSubmitClick(ev, selectedValue)}>
@@ -96,10 +95,15 @@ function Contact({ handleSubmitClick, contactTypes, inputValues, setInputValues 
                             placeholder="e.g. 765897345" />
                     </div>
                     <div className='submit__btn__box'>
-                        <button type='submit' className='submit__btn'>Submit</button>
+                        <button
+                            type='submit'
+                            className='submit__btn'
+
+                        >Submit</button>
                     </div>
                 </form>
             </fieldset>
+
         </article >
     );
 }

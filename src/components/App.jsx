@@ -35,6 +35,7 @@ function App() {
     status: 'A'
   });
 
+
   //CONNECT TO BACKEND 
 
   //List contact types+reasons
@@ -70,6 +71,19 @@ function App() {
 
       const data = await response.json();
       console.log("✅ Server response:", data);
+
+      //clean contacttypes and inputvalues
+      if (response.ok) {
+        setContactTypes([]);
+        setInputValues({
+          description: '',
+          name: '',
+          email: '',
+          phone: '',
+          status: 'A'
+        });
+      }
+
     } catch (error) {
       console.error('❌ Error in the insert:', error);
     }
