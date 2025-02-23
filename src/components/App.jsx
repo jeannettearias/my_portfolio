@@ -67,6 +67,7 @@ function App() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(dataToSend),
+
       });
 
       const data = await response.json();
