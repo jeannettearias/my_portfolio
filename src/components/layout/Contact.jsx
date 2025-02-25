@@ -31,6 +31,8 @@ function Contact({ handleSubmitClick, contactTypes, inputValues, setInputValues 
     const handleBlur = (event) => {
         if (event.target.validity.patternMismatch) {
             setError(true);
+        } else {
+            setError(false);
         }
     };
 
@@ -71,6 +73,7 @@ function Contact({ handleSubmitClick, contactTypes, inputValues, setInputValues 
                     value={inputValues.description} // ✅ Use inputValues
                     onChange={handleTextChange}
                     type="text"
+                    maxLength={500}
                     required
                 />
                 <form onSubmit={(ev) => handleSubmitClick(ev, selectedValue)}>
@@ -83,6 +86,7 @@ function Contact({ handleSubmitClick, contactTypes, inputValues, setInputValues 
                             pattern="^[A-Za-zÁÉÍÓÚáéíóúÜüÑñ' ]+$" // ✅ Add pattern for decimal numbers
                             style={{ borderColor: error ? 'red' : 'initial' }} // ✅ Add error style
                             onBlur={handleBlur}
+                            maxLength={50}
 
                             id="name"
                             name="name"
@@ -96,6 +100,7 @@ function Contact({ handleSubmitClick, contactTypes, inputValues, setInputValues 
                             className="input__field"
                             type="email"
                             inputMode='email'
+                            maxLength={50}
 
                             id="email"
                             name='email'
@@ -109,6 +114,7 @@ function Contact({ handleSubmitClick, contactTypes, inputValues, setInputValues 
                             type='tel'
                             inputMode='tel'
                             pattern="^\+?\d{0,3}-?\d{3}-\d{3}-\d{3}$"
+                            maxLength={15}
 
                             id="phone"
                             name='phone'
