@@ -16,12 +16,24 @@ function Contact({ handleSubmitClick, contactTypes, inputValues, setInputValues 
     const handleSelectChange = (ev) => {
         const value = ev.target.value;
         setSelectedValue(value);
+
     };
 
     //input textarea info
     const handleTextChange = (ev) => {
         const value = ev.target.value;
+
         setInputValues(prev => ({ ...prev, description: value }));
+    };
+
+
+    const [error, setError] = useState(false);    // ✅ Add error state
+    const handleBlur = (event) => {
+        if (event.target.validity.patternMismatch) {
+            setError(true);
+        } else {
+            setError(false);
+        }
     };
 
     return (
@@ -38,7 +50,9 @@ function Contact({ handleSubmitClick, contactTypes, inputValues, setInputValues 
                     id="reason"
                     required
                 >
-                    <option className='select_reason' value="" disabled>Select a type</option>
+                    <option className='select_reason'
+                        value="" disabled
+                    >Select a type</option>
                     {Array.isArray(contactTypes) && contactTypes.map((type) => (
                         <option
                             className='option_reason'
@@ -59,6 +73,7 @@ function Contact({ handleSubmitClick, contactTypes, inputValues, setInputValues 
                     value={inputValues.description} // ✅ Use inputValues
                     onChange={handleTextChange}
                     type="text"
+                    maxLength={500}
                     required
                 />
                 <form onSubmit={(ev) => handleSubmitClick(ev, selectedValue)}>
@@ -67,6 +82,12 @@ function Contact({ handleSubmitClick, contactTypes, inputValues, setInputValues 
                         <input
                             className="input__field"
                             type="text"
+                            inputMode='text'
+                            pattern="^[A-Za-zÁÉÍÓÚáéíóúÜüÑñ' ]+$" // ✅ Add pattern for decimal numbers
+                            style={{ borderColor: error ? 'red' : 'initial' }} // ✅ Add error style
+                            onBlur={handleBlur}
+                            maxLength={50}
+
                             id="name"
                             name="name"
                             value={inputValues.name}
@@ -76,23 +97,30 @@ function Contact({ handleSubmitClick, contactTypes, inputValues, setInputValues 
                     </div>
                     <div>
                         <input
-                            onChange={handleChange}
-                            value={inputValues.email}
                             className="input__field"
                             type="email"
-                            name='email'
+                            inputMode='email'
+                            maxLength={50}
+
                             id="email"
-                            placeholder="input your email" />
+                            name='email'
+                            value={inputValues.email}
+                            onChange={handleChange}
+                            placeholder="e.g. name@email.com" />
                     </div>
                     <div>
                         <input
-                            onChange={handleChange}
-                            value={inputValues.phone}
                             className="input__field"
-                            type="tel"
-                            name='phone'
+                            type='tel'
+                            inputMode='tel'
+                            pattern="^\+?\d{0,3}-?\d{3}-\d{3}-\d{3}$"
+                            maxLength={15}
+
                             id="phone"
-                            placeholder="e.g. 765897345" />
+                            name='phone'
+                            value={inputValues.phone}
+                            onChange={handleChange}
+                            placeholder="e.g. 765-897-345" />
                     </div>
                     <div className='submit__btn__box'>
                         <button
@@ -112,7 +140,7 @@ Contact.propTypes = {
     handleSubmitClick: PropTypes.func.isRequired,
     contactTypes: PropTypes.array.isRequired,
     inputValues: PropTypes.object.isRequired,
-    setInputValues: PropTypes.func.isRequired,
+    setInputValues: PropTypes.func.isRequired
 }
 
 export default Contact;

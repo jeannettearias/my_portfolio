@@ -31,7 +31,6 @@
   display: flex;
   justify-content: center;
 
-  color: var(--color-neutral-100);
   font: var(--font-Body-B-2);
 }
 
@@ -44,25 +43,24 @@
   margin-bottom: 2rem;
 
   background-color: rgba(128, 128, 128, 0.138);
-  color: var(--color-neutral-800);
-  font: var(--font-body-B-2);
+  color: var(--color-neutral-300, #516678);
+  font: var(--font-Body-B-2);
 
   @media screen and (max-width: 768px) {
     width: 200px;
     height: 20px; /* Adjust height as needed */
-
     font: var(--font-Body-B-2);
   }
-}
 
-.option_reason {
-  color: var(--color-neutral-100);
-  font: var(--font-Body-B-2);
+  .option_reason {
+    background-color: rgba(128, 128, 128, 0.138);
+    color: var(--color-neutral-300);
+    font: var(--font-body-B-1);
+  }
 }
 
 .form__text {
   display: flex;
-
   width: 600px;
   height: 250px;
   margin-bottom: 2rem;
