@@ -7,6 +7,19 @@
   align-self: stretch;
 }
 
+.wip_label {
+  display: flex;
+  padding: 8px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 300;
+  transform: rotate(-30deg);
+
+  border: 1px solid #fe0;
+  background: #fe0;
+}
+
 //////////////////////////// HERO ////////////////////////////
 .Margin__Herosection {
   display: flex;

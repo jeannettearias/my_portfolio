@@ -10,7 +10,10 @@ function Experience({ exp }) {
             <section className='Margin__Herosection'>
                 <div className='Herosection'>
                     <div className='content'>
-                        <h1 className='exp__title'>About me!</h1>
+                        <div>
+                            <h1 className='exp__title'>About me!</h1>
+                            <label className="wip_label" htmlFor="WIP">WIP 🚧</label>
+                        </div>
                         <div className='container'>
                             <h2 className='text'>
                                 I am passionate about learning and travel.</h2>
