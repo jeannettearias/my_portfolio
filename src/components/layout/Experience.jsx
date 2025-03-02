@@ -3,44 +3,40 @@ import '../../styles/layout/_experience.scss';
 
 
 function Experience({ exp }) {
-
     return (
-
-        <section className='exp__section'>
-            <section className='Margin__Herosection'>
-                <div className='Herosection'>
-                    <div className='content'>
-                        <h1 className='exp__title'>About me!</h1>
-                        <div className='container'>
-                            <h2 className='text'>
+        <div className='exp__head'>
+            <section className='hero__section'>
+                <label className="wip__label" htmlFor="WIP">WIP 🚧</label>
+                <div className='hero__container'>
+                    <div className='hero__image__container'>
+                        <div className='container__image' /></div>
+                    <div className='hero__content'>
+                        <h1 className='content__title'>About me!</h1>
+                        <div className='content__text__container'>
+                            <h2 className='content__subtitle'>
                                 I am passionate about learning and travel.</h2>
                         </div>
-                        <p className='exp__paragraph'>
-                            I am passionate about learning, travel and technology, which I value for its ability to transform lives and optimize processes.
-                            I have led projects as a Scrum Master, motivating teams, and more recently as a Project Manager, with a strategic and human focus.
-                            My essence reflects curiosity, resilience and a constant commitment to growth.
-                        </p>
-                    </div>
-                    <div className='image'>
-                        <div className='background__image' />
+                        <div >
+                            <p className='content__text'>
+                                I am passionate about learning, travel and technology, which I value for its ability to transform lives and optimize processes.
+                                I have led projects as a Scrum Master, motivating teams, and more recently as a Project Manager, with a strategic and human focus.
+                                My essence reflects curiosity, resilience and a constant commitment to growth.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
+            <div className='margin__title__container'>
+                <h1 className='margin__title'>Experience</h1>
+            </div>
+            <section className='container__section'>
+                <div className='container__article'>
 
-            <section className='margin__section'>
-                <div className='carrer__title__box'>
-                    <h1 className='carrer__path__title'>Carrer Path</h1>
-                </div>
-                <div className='exp__margin'>
-                    <p className='exp__text'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Asperiores quis quam cum neque quibusdam non id, officiis doloribus,
-                        illum consectetur nihil saepe esse sunt sequi architecto eos tempora sapiente dolorem!</p>
-                    <div className='frame__card'>
+                    <div className='container__card'>
                         {exp.map((expJson, index) => (
                             <form key={index}>
-                                <fieldset className='project__data' >
+                                <article className='project__data' >
                                     <legend className='legend'>{expJson.Company}</legend>
-
                                     <p className="text">{expJson.Role}</p>
                                     <p className='text'>{expJson.Employment_type}</p>
                                     <time className="datetime" >{expJson.Time}</time>
@@ -72,13 +68,13 @@ function Experience({ exp }) {
                                             ))}
                                         </ul>
                                     )}
-                                </fieldset>
+                                </article>
                             </form>
                         ))}
                     </div>
                 </div>
             </section>
-        </section>
+        </div>
     );
 }
 
