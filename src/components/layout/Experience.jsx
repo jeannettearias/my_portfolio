@@ -27,9 +27,8 @@ function Experience({ exp }) {
                 </div>
             </section>
             <div className='margin__title__container'>
-                <h1 className='margin__title'>Carrer Path</h1>
+                <h1 className='margin__title'>Experience</h1>
             </div>
-
             <section className='container__section'>
                 <div className='container__article'>
 
