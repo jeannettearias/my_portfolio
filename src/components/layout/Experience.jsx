@@ -32,15 +32,16 @@ function Experience({ exp }) {
             <section className='container__section'>
                 <div className='container__article'>
                     <div className='line' ></div>
-                    <div className='time-line'></div>
-                    <div className='container__card'>
+                    <div className='time-line'>
                         {exp.map((expJson, index) => (
                             <form key={index}>
-                                <article className='project__data' >
-                                    <legend className='legend'>{expJson.Company}</legend>
+                                <article className='Header' >
+                                    <legend className='logo'>{expJson.Company}</legend>
                                     <p className="text">{expJson.Role}</p>
                                     <p className='text'>{expJson.Employment_type}</p>
-                                    <time className="datetime" >{expJson.Time}</time>
+                                    <time className="date" >{expJson.Time}</time>
+                                </article>
+                                <article className='Down'>
                                     {Array.isArray(expJson.Description) ? (
                                         <ul className='description__list'>
                                             {expJson.Description.map((item, idx) => (
@@ -74,8 +75,8 @@ function Experience({ exp }) {
                         ))}
                     </div>
                 </div>
-            </section>
-        </div>
+            </section >
+        </div >
     );
 }
 
