@@ -10,9 +10,7 @@
   border: 1px solid #fe0;
   background: #fe0;
 }
-
 //////////////////////////// HERO section ////////////////////////////
-
 .hero__section {
   display: flex;
   padding: 0px 72px;
@@ -29,6 +27,7 @@
   align-content: center;
   gap: 44px;
   align-self: stretch;
+
   flex-wrap: wrap;
 
   border-radius: 24px;
@@ -80,6 +79,8 @@
 
     color: var(--color-primary-100, #99c6ff);
     font: var(--font-headings-H-2);
+
+    line-height: 57px; /* 178.125% */
   }
 }
 
@@ -96,6 +97,15 @@
 }
 
 //////////////////////////// MARGIN section ////////////////////////////
+.margin__title__container {
+  display: flex;
+  padding: 0px 72px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+}
+
 .margin__title {
   flex: 1 0 0;
 
@@ -104,3 +114,37 @@
 }
 
 //////////////////////////// EXPERIENCE section ////////////////////////////
+.container__section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.container__article {
+  display: flex;
+  padding: 0px 64px;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.line {
+  width: 0px;
+  align-self: stretch;
+
+  stroke-width: 2px;
+  stroke: var(--color-neutral-100, #fff);
+  background-image: url("/images/icons/line.svg");
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.time-line {
+  display: flex;
+  padding-left: 44px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 44px;
+}

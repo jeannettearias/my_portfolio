@@ -31,7 +31,8 @@ function Experience({ exp }) {
             </div>
             <section className='container__section'>
                 <div className='container__article'>
-
+                    <div className='line' ></div>
+                    <div className='time-line'></div>
                     <div className='container__card'>
                         {exp.map((expJson, index) => (
                             <form key={index}>
