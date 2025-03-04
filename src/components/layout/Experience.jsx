@@ -37,9 +37,14 @@ function Experience({ exp }) {
                             <form key={index}>
                                 <article className='Header'>
                                     <div className='header__experience'>
-                                        <div className='logo'></div>
-                                        <legend className='location'>{expJson.location}</legend>
-                                        <legend className='location'>{expJson.location_type}</legend>
+                                        <image className='image'></image>
+                                        <div className='header__content'>
+                                            <img className='logo'></img>
+                                            <div className='dates'>
+                                                <legend className='location'>{expJson.location}</legend>
+                                                <legend className='location'>{expJson.location_type}</legend>
+                                            </div>
+                                        </div>
                                     </div>
                                 </article>
                                 <article className='Down'>
@@ -80,9 +85,16 @@ function Experience({ exp }) {
                                         </ul>
                                     </div>
                                     <div className='down__cards'>
-                                        <p className="text">{expJson.role}</p>
-                                        <p className='text'>{expJson.employment_type}</p>
-                                        <time className="date" >{expJson.time}</time>
+                                        <div className="card1">
+                                            <p className='text__card1' >{expJson.role}</p>
+                                        </div>
+                                        <div className='card2'>
+                                            <p className='text__card2'>{expJson.employment_type}</p>
+                                        </div>
+                                        <div className="card3">
+                                            <time className='text__card3' >{expJson.time}</time>
+                                        </div>
+
                                     </div>
                                 </article>
                             </form>
