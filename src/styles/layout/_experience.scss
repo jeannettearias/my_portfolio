@@ -119,6 +119,8 @@
   flex-direction: column;
   align-items: flex-start;
   align-self: stretch;
+
+  color: var(--color-neutral-100);
 }
 
 .container__article {
@@ -133,7 +135,7 @@
   align-self: stretch;
 
   stroke-width: 2px;
-  stroke: var(--color-neutral-100, #fff);
+  stroke: var(--color-neutral-100);
   background-image: url("/images/icons/line.svg");
 
   @media (max-width: 768px) {

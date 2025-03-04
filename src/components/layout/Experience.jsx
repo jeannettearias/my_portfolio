@@ -14,7 +14,7 @@ function Experience({ exp }) {
                         <h1 className='content__title'>About me!</h1>
                         <div className='content__text__container'>
                             <h2 className='content__subtitle'>
-                                I am passionate about learning and travel.</h2>
+                                Passionate about learning</h2>
                         </div>
                         <div >
                             <p className='content__text'>
@@ -35,41 +35,55 @@ function Experience({ exp }) {
                     <div className='time-line'>
                         {exp.map((expJson, index) => (
                             <form key={index}>
-                                <article className='Header' >
-                                    <legend className='logo'>{expJson.Company}</legend>
-                                    <p className="text">{expJson.Role}</p>
-                                    <p className='text'>{expJson.Employment_type}</p>
-                                    <time className="date" >{expJson.Time}</time>
+                                <article className='Header'>
+                                    <div className='header__experience'>
+                                        <div className='logo'></div>
+                                        <legend className='location'>{expJson.location}</legend>
+                                        <legend className='location'>{expJson.location_type}</legend>
+                                    </div>
                                 </article>
                                 <article className='Down'>
-                                    {Array.isArray(expJson.Description) ? (
+                                    <div className='down__experience'>
+                                        <h3 className='company__card'>{expJson.company}</h3>
+                                    </div>
+                                    {Array.isArray(expJson.description) ? (
                                         <ul className='description__list'>
-                                            {expJson.Description.map((item, idx) => (
+                                            {expJson.description.map((item, idx) => (
                                                 <li className='item__list' key={idx}>{item}</li>
                                             ))}
                                         </ul>
                                     ) : (
                                         <ul className='description__list'>
-                                            {expJson.Description.split('. ').map((item, idx) => (
+                                            {expJson.description.split('. ').map((item, idx) => (
                                                 item.trim() && <li className='item__list' key={idx}>{item.trim()}</li>
                                             ))}
                                         </ul>
                                     )}
-                                    {expJson.Projects && (
+                                    {expJson.projects && (
                                         <ul className='description__list'>
-                                            {expJson.Projects.map((project, idx) => (
+                                            {expJson.projects.map((project, idx) => (
                                                 <li key={idx} className='project__item'>
                                                     <ul>
-                                                        <h4 className='project__title'>{project.Title} | {project.Year}</h4>
-                                                        <li className='item__link'><p>{project.Description}</p></li>
+                                                        <h4 className='project__title'>{project.title} | {project.Year}</h4>
+                                                        <li className='item__link'><p>{project.description}</p></li>
                                                         <li className='item__link'>
-                                                            <a href={project.Link} target='_blank' rel='noopener noreferrer'>{project.Link}</a>
+                                                            <a href={project.link} target='_blank' rel='noopener noreferrer'>{project.link}</a>
                                                         </li>
                                                     </ul>
                                                 </li>
                                             ))}
                                         </ul>
                                     )}
+                                    <div>
+                                        <ul className='chips'>
+                                            <li className='chip'>{expJson.skills}</li>
+                                        </ul>
+                                    </div>
+                                    <div className='down__cards'>
+                                        <p className="text">{expJson.role}</p>
+                                        <p className='text'>{expJson.employment_type}</p>
+                                        <time className="date" >{expJson.time}</time>
+                                    </div>
                                 </article>
                             </form>
                         ))}
