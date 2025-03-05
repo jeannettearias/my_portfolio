@@ -1,6 +1,7 @@
 [
     {
         "company": "ENTELGY",
+        "logo": "images/icons/entelgy_logo.svg",
         "location": "Madrid, Spain",
         "location_type": "Remote",
         "role": "Product Owner",
@@ -12,10 +13,12 @@
             "Confluence",
             "SAFe",
             "Scrum"
-        ]
+        ],
+        "image": "images/icons/calendar_icon.svg"
     },
     {
         "company": "ADALAB",
+        "logo": "images/icons/adalab_logo.png",
         "location": "Madrid, Spain",
         "location_type": "Remote",
         "role": "Frontend Developer",
@@ -67,10 +70,12 @@
                 "description": "Disney characters searching cards. Developed using JavaScript, HTML5, and SCSS.",
                 "link": "https://github.com/jeannettearias/disney-character-cards"
             }
-        ]
+        ],
+        "image": "images/icons/javascript.svg"
     },
     {
         "company": "ALTEN Spain",
+        "logo": "images/icons/alten_logo.svg",
         "location": "Barcelona, Spain",
         "location_type": "Hybrid",
         "role": "Product Owner",
@@ -84,10 +89,12 @@
             "Agile",
             "Requirements Analysis",
             "Roadmapping"
-        ]
+        ],
+        "image": "images/icons/htmls5.svg"
     },
     {
         "company": "CITI",
+        "logo": "images/icons/citi_logo.png",
         "location": "Santiago, Chile",
         "location_type": "Hybrid",
         "role": "Product Owner",
@@ -102,10 +109,12 @@
             "SCRUM",
             "Product Management",
             "Leadership"
-        ]
+        ],
+        "image": "images/icons/laptop-code-solid.svg"
     },
     {
-        "company": "BANCO BCI",
+        "company": "2Brains",
+        "logo": "images/icons/2brains_logo.png",
         "location": "Santiago, Chile",
         "location_type": "Remote",
         "role": "Scrum master",
@@ -118,10 +127,12 @@
             "Agile Leadership",
             "SCRUM",
             "Project Management"
-        ]
+        ],
+        "image": "images/icons/flame_image.svg"
     },
     {
         "company": "FALABELLA TECHNOLOGY",
+        "logo": "images/icons/falabella_logo.png",
         "location": "Santiago, Chile",
         "location_type": "Hybrid",
         "role": "Project Manager, Agile Lead",
@@ -135,6 +146,7 @@
             "Agile Leadership",
             "Financial Management",
             "Third-Party Vendor Management"
-        ]
+        ],
+        "image": "images/icons/thumbs_UP_icon.svg"
     }
 ]

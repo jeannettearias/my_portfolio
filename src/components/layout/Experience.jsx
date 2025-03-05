@@ -37,9 +37,13 @@ function Experience({ exp }) {
                             <form key={index}>
                                 <article className='Header'>
                                     <div className='header__experience'>
-                                        <image className='image'></image>
+                                        <img className='image'
+                                            src={import.meta.env.BASE_URL + expJson.image}
+                                        ></img>
                                         <div className='header__content'>
-                                            <img className='logo'></img>
+                                            <img className='logo'
+                                                src={import.meta.env.BASE_URL + expJson.logo}
+                                            ></img>
                                             <div className='dates'>
                                                 <legend className='location'>{expJson.location}</legend>
                                                 <legend className='location'>{expJson.location_type}</legend>
@@ -68,8 +72,8 @@ function Experience({ exp }) {
                                         <ul className='description__list'>
                                             {expJson.projects.map((project, idx) => (
                                                 <li key={idx} className='project__item'>
-                                                    <ul>
-                                                        <h4 className='project__title'>{project.title} | {project.Year}</h4>
+                                                    <h4 className='project__title'>{project.title} | {project.Year}</h4>
+                                                    <ul >
                                                         <li className='item__link'><p>{project.description}</p></li>
                                                         <li className='item__link'>
                                                             <a href={project.link} target='_blank' rel='noopener noreferrer'>{project.link}</a>
@@ -79,7 +83,7 @@ function Experience({ exp }) {
                                             ))}
                                         </ul>
                                     )}
-                                    <div>
+                                    <div >
                                         <ul className='chips'>
                                             <li className='chip'>{expJson.skills}</li>
                                         </ul>
