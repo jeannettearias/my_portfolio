@@ -23,7 +23,6 @@ function Skills({ skills, activeAchievements, achievements }) {
                                         <div className='skill__bar'>
                                             <div className={`skill__level skill__level--${item.level.toLowerCase()}`}></div>
                                         </div>
-
                                     </li>
                                 ))}
                             </ul>
