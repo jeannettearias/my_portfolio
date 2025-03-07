@@ -31,22 +31,23 @@ function Experience({ exp }) {
             </div>
             <section className='container__section'>
                 <div className='container__article'>
-                    <div className='line' ></div>
+                    <div>
+                        <hr className="line" />
+                    </div>
                     <div className='time-line'>
                         {exp.map((expJson, index) => (
                             <form key={index}>
                                 <article className='Header'>
                                     <div className='header__experience'>
-                                        <img className='image'
-                                            src={import.meta.env.BASE_URL + expJson.image}
-                                        ></img>
                                         <div className='header__content'>
                                             <img className='logo'
                                                 src={import.meta.env.BASE_URL + expJson.logo}
                                             ></img>
+                                            <hr className='divider' />
                                             <div className='dates'>
                                                 <legend className='location'>{expJson.location}</legend>
-                                                <legend className='location'>{expJson.location_type}</legend>
+                                                <time className='text__card3' >{expJson.time}</time>
+
                                             </div>
                                         </div>
                                     </div>
@@ -98,10 +99,12 @@ function Experience({ exp }) {
                                             <p className='text__card1' >{expJson.role}</p>
                                         </div>
                                         <div className='card2'>
-                                            <p className='text__card2'>{expJson.employment_type}</p>
+                                            <legend className='location'>{expJson.location_type}</legend>
+
                                         </div>
                                         <div className="card3">
-                                            <time className='text__card3' >{expJson.time}</time>
+                                            <p className='text__card2'>{expJson.employment_type}</p>
+
                                         </div>
 
                                     </div>

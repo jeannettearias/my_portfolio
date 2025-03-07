@@ -117,7 +117,7 @@
 //////////////////////////// EXPERIENCE section ////////////////////////////
 .container__section {
   display: flex;
-
+  padding: 0px 64px;
   flex-direction: column;
   align-items: flex-start;
   align-self: stretch;
@@ -136,21 +136,10 @@
   width: 0px;
   align-self: stretch;
 
+  background-image: url("/images/line.png");
+
   stroke-width: 2px;
-  stroke: var(--color-neutral-100);
-  background-image: url("/images/icons/line.svg");
-
-  @media (max-width: 768px) {
-    display: none;
-  }
-}
-
-.time-line {
-  display: flex;
-  padding-left: 44px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 44px;
+  stroke: var(--color-neutral-100, #fff);
 }
 
 .Header {
@@ -159,59 +148,48 @@
   gap: 10px;
   align-self: stretch;
 }
-
-.header__experience {
+.time-line {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 44px;
-  flex: 1 0 0;
-
-  border-radius: 12px;
-}
-
-.image {
-  width: 100px;
-  height: 100px;
-
-  max-width: 100%;
-  background-position: center;
-  background-size: cover;
-  margin-bottom: 1rem;
-  background-repeat: no-repeat;
-}
-
-.header__content {
-  display: flex;
+  padding-left: 44px;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
-  gap: 16px;
-  flex: 1 0 0;
+  gap: 24px;
 
-  font: var(--font-Body-B-1);
-  color: var(--color-neutral-100);
-
-  .logo {
-    height: 60px;
-
-    max-width: 100%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    background-image: url("/images/icons/entelgy_logo.png");
-  }
-  .dates {
+  .header__content {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    align-self: stretch;
+    width: 1279px;
+    align-items: center;
+    gap: 24px;
+
+    .logo {
+      width: 142px;
+      height: 40px;
+      flex-shrink: 0;
+      background-color: var(--color-neutral-100, #eff2f6);
+      background-image: url("/images/icons/entelgy_logo.png");
+    }
+
+    .dates {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      align-self: stretch;
+    }
+    .location {
+      align-self: stretch;
+    }
   }
-  .location {
-    align-self: stretch;
-  }
+}
+
+.divider {
+  width: 0px;
+  flex-shrink: 0;
+  align-self: stretch;
+  stroke-width: 5px;
+  stroke: var(--color-pink-600, #8c2ba4);
+
+  background-image: url("/images/Divider.png");
 }
 
 .Down {
