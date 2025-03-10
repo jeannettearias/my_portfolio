@@ -1,3 +1,4 @@
+//////////////////////////// HERO section ////////////////////////////
 .wip__label {
   display: flex;
   padding: 8px 12px;
@@ -10,7 +11,7 @@
   border: 1px solid #fe0;
   background: #fe0;
 }
-//////////////////////////// HERO section ////////////////////////////
+
 .hero__section {
   display: flex;
   padding: 0px 72px;
@@ -18,270 +19,36 @@
   align-items: flex-start;
   gap: 10px;
   align-self: stretch;
+  padding: 0px 72px;
 }
 
 .hero__container {
   display: flex;
-  padding: 44px;
   align-items: center;
   align-content: center;
   gap: 44px;
   align-self: stretch;
-
   flex-wrap: wrap;
 
   border-radius: 24px;
   background: rgba(216, 160, 230, 0.1);
 }
 
-.hero__image__container {
-  display: flex;
+.image__layout {
+  flex-shrink: 0;
+  flex: 1 0 0;
+  height: 100%;
+  gap: 24px;
+}
+
+.experience__picture {
+  display: inline-flex;
   padding-bottom: 0px;
   justify-content: flex-end;
   align-items: center;
+  width: 400px;
+  height: 440px;
 
-  .container__image {
-    width: 300px;
-    height: 300px;
-
-    background: url("/images/Margin/about_me.png") lightgray 50% / cover
-      no-repeat;
-    border-radius: 50%;
-  }
-}
-
-.hero__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 24px;
-
-  flex: 1 0 0;
-}
-
-.content__title {
-  align-self: stretch;
-
-  font: var(--font-headings-H-1);
-  color: var(--color-neutral-100);
-}
-
-.content__text__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: var(--components-button-gap, 8px);
-
-  .content__subtitle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    color: var(--color-primary-100, #99c6ff);
-    font: var(--font-headings-H-2);
-
-    line-height: 57px; /* 178.125% */
-  }
-}
-
-.content__text {
-  color: var(--color-neutral-100, #fff);
-  font: var(--font-Body-B-1);
-}
-
-.content__text__container {
-  display: flex;
-  justify-content: center;
-  align-self: stretch;
-  gap: 44px;
-}
-
-//////////////////////////// MARGIN section ////////////////////////////
-.margin__title__container {
-  display: flex;
-  padding: 0px 72px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-  align-self: stretch;
-}
-
-.margin__title {
-  flex: 1 0 0;
-
-  font: var(--font-headings-H-1);
-  color: var(--color-neutral-100);
-}
-
-//////////////////////////// EXPERIENCE section ////////////////////////////
-.container__section {
-  display: flex;
-  padding: 0px 64px;
-  flex-direction: column;
-  align-items: flex-start;
-  align-self: stretch;
-
-  color: var(--color-neutral-100);
-}
-
-.container__article {
-  display: flex;
-  padding: 0px 64px;
-  align-items: flex-start;
-  align-self: stretch;
-}
-
-.line {
-  width: 0px;
-  align-self: stretch;
-
-  background-image: url("/images/line.png");
-
-  stroke-width: 2px;
-  stroke: var(--color-neutral-100, #fff);
-}
-
-.Header {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  align-self: stretch;
-}
-.time-line {
-  display: flex;
-  padding-left: 44px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 24px;
-
-  .header__content {
-    display: flex;
-    width: 1279px;
-    align-items: center;
-    gap: 24px;
-
-    .logo {
-      width: 142px;
-      height: 40px;
-      flex-shrink: 0;
-      background-color: var(--color-neutral-100, #eff2f6);
-      background-image: url("/images/icons/entelgy_logo.png");
-    }
-
-    .dates {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 8px;
-      align-self: stretch;
-    }
-    .location {
-      align-self: stretch;
-    }
-  }
-}
-
-.divider {
-  width: 0px;
-  flex-shrink: 0;
-  align-self: stretch;
-  stroke-width: 5px;
-  stroke: var(--color-pink-600, #8c2ba4);
-
-  background-image: url("/images/Divider.png");
-}
-
-.Down {
-  display: flex;
-  width: 1279px;
-  padding-bottom: 72px;
-  align-items: flex-start;
-  gap: 24px;
-}
-
-.down__experience {
-  display: flex;
-  padding: 28px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 16px;
-  flex: 1 0 0;
-  align-self: stretch;
-
-  border-radius: 12px;
-  border: 1px solid var(--color-primary-600, #00439b);
-}
-
-.chips__container {
-  display: flex;
-  align-items: flex-end;
-  align-content: flex-end;
-  gap: 12px 8px;
-  align-self: stretch;
-  flex-wrap: wrap;
-
-  .chip {
-    display: flex;
-    padding: var(--size-1, 8px) var(--size-125, 12px);
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-
-    border-radius: 10000px;
-    background: var(--color-primary-700, #002d68);
-
-    color: var(--color-neutral-100);
-  }
-}
-
-.down__cards {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  flex: 1 0 0;
-  align-self: stretch;
-
-  .card1 {
-    display: flex;
-    padding: 16px 8px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    flex: 1 0 0;
-    align-self: stretch;
-
-    border-radius: 12px;
-    background: var(--color-primary-700, #002d68);
-  }
-
-  .card2 {
-    display: flex;
-    padding: 16px 8px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    flex: 1 0 0;
-    align-self: stretch;
-
-    border-radius: 12px;
-    background: var(--Colors-Primary-700, #002d68);
-  }
-
-  .card3 {
-    display: flex;
-    padding: 16px 8px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    flex: 1 0 0;
-    align-self: stretch;
-
-    border-radius: 12px;
-    background: var(--color-primary-600, #00439b);
-  }
+  background: url("/images/Margin/about_me.png") lightgray 50% / cover no-repeat;
+  border-radius: 0px 400px 0px 0px;
 }

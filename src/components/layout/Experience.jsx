@@ -4,25 +4,24 @@ import '../../styles/layout/_experience.scss';
 
 function Experience({ exp }) {
     return (
-        <div className='exp__head'>
+        <>
             <section className='hero__section'>
                 <label className="wip__label" htmlFor="WIP">WIP 🚧</label>
                 <div className='hero__container'>
-                    <div className='hero__image__container'>
-                        <div className='container__image' /></div>
+                    <div className='image__layout'>
+                        <div className='experience__picture' />
+                    </div>
                     <div className='hero__content'>
                         <h1 className='content__title'>About me!</h1>
-                        <div className='content__text__container'>
-                            <h2 className='content__subtitle'>
-                                Passionate about learning</h2>
-                        </div>
-                        <div >
-                            <p className='content__text'>
-                                I am passionate about learning, travel and technology, which I value for its ability to transform lives and optimize processes.
-                                I have led projects as a Scrum Master, motivating teams, and more recently as a Project Manager, with a strategic and human focus.
-                                My essence reflects curiosity, resilience and a constant commitment to growth.
-                            </p>
-                        </div>
+                        <h2 className='content__subtitle'>
+                            Passionate about learning</h2>
+                    </div>
+                    <div className='experience__content'>
+                        <p className='content__text'>
+                            I am passionate about learning, travel and technology, which I value for its ability to transform lives and optimize processes.
+                            I have led projects as a Scrum Master, motivating teams, and more recently as a Project Manager, with a strategic and human focus.
+                            My essence reflects curiosity, resilience and a constant commitment to growth.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -31,9 +30,7 @@ function Experience({ exp }) {
             </div>
             <section className='container__section'>
                 <div className='container__article'>
-                    <div>
-                        <hr className="line" />
-                    </div>
+                    <hr className="line" />
                     <div className='time-line'>
                         {exp.map((expJson, index) => (
                             <form key={index}>
@@ -47,7 +44,6 @@ function Experience({ exp }) {
                                             <div className='dates'>
                                                 <legend className='location'>{expJson.location}</legend>
                                                 <time className='text__card3' >{expJson.time}</time>
-
                                             </div>
                                         </div>
                                     </div>
@@ -114,7 +110,7 @@ function Experience({ exp }) {
                     </div>
                 </div>
             </section >
-        </div >
+        </>
     );
 }
 
