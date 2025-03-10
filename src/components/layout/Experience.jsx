@@ -15,13 +15,13 @@ function Experience({ exp }) {
                         <h1 className='content__title'>About me!</h1>
                         <h2 className='content__subtitle'>
                             Passionate about learning</h2>
-                    </div>
-                    <div className='experience__content'>
-                        <p className='content__text'>
-                            I am passionate about learning, travel and technology, which I value for its ability to transform lives and optimize processes.
-                            I have led projects as a Scrum Master, motivating teams, and more recently as a Project Manager, with a strategic and human focus.
-                            My essence reflects curiosity, resilience and a constant commitment to growth.
-                        </p>
+                        <div className='experience__content'>
+                            <p className='content__text'>
+                                I am passionate about learning, travel and technology, which I value for its ability to transform lives and optimize processes.
+                                I have led projects as a Scrum Master, motivating teams, and more recently as a Project Manager, with a strategic and human focus.
+                                My essence reflects curiosity, resilience and a constant commitment to growth.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
