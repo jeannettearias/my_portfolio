@@ -8,7 +8,6 @@ function Skills({ skills, activeAchievements, achievements }) {
 
     return (
         <>
-
             <h1 className="skills__title">Get to Know my skills</h1>
             <section className='skills__main__section'>
 
@@ -24,14 +23,12 @@ function Skills({ skills, activeAchievements, achievements }) {
                                         <div className='skill__bar'>
                                             <div className={`skill__level skill__level--${item.level.toLowerCase()}`}></div>
                                         </div>
-
                                     </li>
                                 ))}
                             </ul>
                         </div>
                     </article>
                 )}
-
                 {skillGroup.technical_title && (
                     <article className='skills__section skills__section__card'>
                         <h2 className="tech__skills__subtitle">

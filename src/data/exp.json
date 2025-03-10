@@ -1,17 +1,30 @@
 [
     {
-        "Company": "ENTELGY",
-        "Role": "Product Owner",
-        "Employment_type": "Full-time",
-        "Time": "Currently",
-        "Description": "Working at OpenBank by Entelgy. "
+        "company": "ENTELGY",
+        "logo": "images/icons/entelgy_logo.svg",
+        "location": "Madrid, Spain",
+        "location_type": "Remote",
+        "role": "Product Owner",
+        "employment_type": "Full-time",
+        "time": "Currently",
+        "description": "Working at OpenBank by Entelgy. ",
+        "skills": [
+            "Jira",
+            "Confluence",
+            "SAFe",
+            "Scrum"
+        ],
+        "image": "images/icons/calendar_icon.svg"
     },
     {
-        "Company": "ADALAB",
-        "Role": "Frontend Developer",
-        "Employment_type": "Part-time",
-        "Time": "Apr 2024 - Oct 2024",
-        "Description": [
+        "company": "ADALAB",
+        "logo": "images/icons/adalab_logo.png",
+        "location": "Madrid, Spain",
+        "location_type": "Remote",
+        "role": "Frontend Developer",
+        "employment_type": "Part-time",
+        "time": "Apr 2024 - Oct 2024",
+        "description": [
             "HTML5, CSS3, Flexbox, CSS Grid, responsive design, SASS, and Layout Components.",
             "JavaScript knowledge.",
             "Third party APIs web service.",
@@ -21,45 +34,119 @@
             "Version Control with Git.",
             "Slack, GitHub."
         ],
-        "Projects": [
+        "skills": [
+            "JavaScript",
+            "React.js",
+            "Node.js",
+            "Express.js",
+            "MySQL",
+            "HTML5",
+            "SCSS",
+            "CSS Flexbox",
+            "Team Leadership"
+        ],
+        "projects": [
             {
-                "Title": "PROJECT ADMIN APP",
-                "Year": 2024,
-                "Description": "Web project to create Project cards with the author's information, consisting of two applications; a frontend built with JavaScript, React HTML5, and SCSS, and an API built with Nodejs and Express, connected to a MySQL DB to store the information.",
-                "Link": "https://github.com/jeannettearias/Project-admin-app"
+                "title": "PROJECT ADMIN APP",
+                "year": 2024,
+                "description": "Web project to create Project cards with the author's information, consisting of two applications; a frontend built with JavaScript, React HTML5, and SCSS, and an API built with Nodejs and Express, connected to a MySQL DB to store the information.",
+                "link": "https://github.com/jeannettearias/Project-admin-app"
             },
             {
-                "Title": "AWESOME PROFILE CARDS",
-                "Year": 2024,
-                "Description": "Group project of a web app to create interactive business cards. Developed with HTML5, CSS3, JavaScript.",
-                "Link": "https://github.com/jeannettearias/awesome-professional-cards"
+                "title": "AWESOME PROFILE CARDS",
+                "year": 2024,
+                "description": "Group project of a web app to create interactive business cards. Developed with HTML5, CSS3, JavaScript.",
+                "link": "https://github.com/jeannettearias/awesome-professional-cards"
             },
             {
-                "Title": "\"HARRY POTTER\" CHARACTERS",
-                "Year": 2024,
-                "Description": "Simple SPA developed using React. Users can look for and filter information about the movie characters.",
-                "Link": "https://github.com/jeannettearias/harry-potter-movie-characters-search"
+                "title": "\"HARRY POTTER\" CHARACTERS",
+                "year": 2024,
+                "description": "Simple SPA developed using React. Users can look for and filter information about the movie characters.",
+                "link": "https://github.com/jeannettearias/harry-potter-movie-characters-search"
             },
             {
-                "Title": "DISNEY CHARACTER CARDS SEARCH",
-                "Year": 2024,
-                "Description": "Disney characters searching cards. Developed using JavaScript, HTML5, and SCSS.",
-                "Link": "https://github.com/jeannettearias/disney-character-cards"
+                "title": "DISNEY CHARACTER CARDS SEARCH",
+                "year": 2024,
+                "description": "Disney characters searching cards. Developed using JavaScript, HTML5, and SCSS.",
+                "link": "https://github.com/jeannettearias/disney-character-cards"
             }
-        ]
+        ],
+        "image": "images/icons/javascript.svg"
     },
     {
-        "Company": "ALTEN Spain",
-        "Role": "Product Owner",
-        "Employment_type": "Full-time",
-        "Time": "Sep 2023 - Mar 2024",
-        "Description": "Consultancy and Engineering Services Currently working at Alten as a Product Owner with Scrum Framework. Analyze and understand the business requirements for further refinement with the business analyst and development team. Roadmapping and high level estimation to build linked with the prioritized milestones.        Prioritization to Epic and Features level, and Items contained in the Team Product backlog.        Process modeling in the analysis stage to get the target process (MODELIO). Backlog Items breackdown in close collaboration with the Business Analyst. Product and Technical Backlog refinement to understand the intention and priority of the US. Promoting and attending Scrum ceremonies. "
+        "company": "ALTEN Spain",
+        "logo": "images/icons/alten_logo.svg",
+        "location": "Barcelona, Spain",
+        "location_type": "Hybrid",
+        "role": "Product Owner",
+        "employment_type": "Full-time",
+        "time": "Sep 2023 - Mar 2024",
+        "description": "Consultancy and Engineering Services Currently working at Alten as a Product Owner with Scrum Framework. Analyze and understand the business requirements for further refinement with the business analyst and development team. Roadmapping and high level estimation to build linked with the prioritized milestones.        Prioritization to Epic and Features level, and Items contained in the Team Product backlog.        Process modeling in the analysis stage to get the target process (MODELIO). Backlog Items breackdown in close collaboration with the Business Analyst. Product and Technical Backlog refinement to understand the intention and priority of the US. Promoting and attending Scrum ceremonies. ",
+        "skills": [
+            "Modelio",
+            "Scrum",
+            "Business Analysis",
+            "Agile",
+            "Requirements Analysis",
+            "Roadmapping"
+        ],
+        "image": "images/icons/htmls5.svg"
     },
     {
-        "Company": "CITI",
-        "Role": "Product Owner",
-        "Employment_type": "Full-time",
-        "Time": "Sep 2022 - Aug 2023",
-        "Description": "Banking Company: At Citi, I worked as a Product Owner, the Product team under the SAFe (Scaled Agile Framework) guidelines for stream value organization, and Scrum for team orientation. Transversal tasks previous scrum teams assignation:  Analyze and understand the requirements received to involve all Impacted tracks required in the scope. Coordinate the walkthrough to get the L0 estimations and Plan. Closely work with the Regional PMs and Business stakeholders to plan every ART (Agile Release Train).  Jira and Confluence Dashboard building. Scrum teams working: Creation of User Stories in close collaboration with the Product Manager. Backlog refinement to understand the intention and priority of the US. Attending SAFe and Scrum ceremonies."
+        "company": "CITI",
+        "logo": "images/icons/citi_logo.png",
+        "location": "Santiago, Chile",
+        "location_type": "Hybrid",
+        "role": "Product Owner",
+        "employment_type": "Full-time",
+        "time": "Sep 2022 - Aug 2023",
+        "description": "Banking Company: At Citi, I worked as a Product Owner, the Product team under the SAFe (Scaled Agile Framework) guidelines for stream value organization, and Scrum for team orientation. Transversal tasks previous scrum teams assignation:  Analyze and understand the requirements received to involve all Impacted tracks required in the scope. Coordinate the walkthrough to get the L0 estimations and Plan. Closely work with the Regional PMs and Business stakeholders to plan every ART (Agile Release Train).  Jira and Confluence Dashboard building. Scrum teams working: Creation of User Stories in close collaboration with the Product Manager. Backlog refinement to understand the intention and priority of the US. Attending SAFe and Scrum ceremonies.",
+        "skills": [
+            "Design Thinking",
+            "Safe",
+            "Business Analysis",
+            "Requirements Analysis",
+            "SCRUM",
+            "Product Management",
+            "Leadership"
+        ],
+        "image": "images/icons/laptop-code-solid.svg"
+    },
+    {
+        "company": "2Brains",
+        "logo": "images/icons/2brains_logo.png",
+        "location": "Santiago, Chile",
+        "location_type": "Remote",
+        "role": "Scrum master",
+        "employment_type": "Full-time",
+        "time": "Sep 2021 - Aug 2022",
+        "description": "Banking Company: At BCI, I worked as a Scrum Master, the Scrum team under the SAFe (Scaled Agile Framework) guidelines for stream value organization, and Scrum for team orientation. Transversal tasks previous scrum teams assignation:  Analyze and understand the requirements received to involve all Impacted tracks required in the scope. Coordinate the walkthrough to get the L0 estimations and Plan. Closely work with the Regional PMs and Business stakeholders to plan every ART (Agile Release Train).  Jira and Confluence Dashboard building. Scrum teams working: Creation of User Stories in close collaboration with the Product Manager. Backlog refinement to understand the intention and priority of the US. Attending SAFe and Scrum ceremonies.",
+        "skills": [
+            "Product Management",
+            "Design Thinking",
+            "Agile Leadership",
+            "SCRUM",
+            "Project Management"
+        ],
+        "image": "images/icons/flame_image.svg"
+    },
+    {
+        "company": "FALABELLA TECHNOLOGY",
+        "logo": "images/icons/falabella_logo.png",
+        "location": "Santiago, Chile",
+        "location_type": "Hybrid",
+        "role": "Project Manager, Agile Lead",
+        "employment_type": "Full-time",
+        "time": "Jun 2015 - Aug 2021",
+        "description": "Retail Company: At Falabella, I worked as a Project Manager, Agile Lead, and Scrum Master. I was responsible for the management of the project portfolio, the implementation of the Agile methodology, and the management of the Scrum teams. I was in charge of the implementation of the Agile methodology in the company, the training of the teams, and the management of the Scrum teams. I was also responsible for the management of the project portfolio, the implementation of the Agile methodology, and the management of the Scrum teams. I was also responsible for the management of the project portfolio, the implementation of the Agile methodology, and the management of the Scrum teams.",
+        "skills": [
+            "SCRUM",
+            "Quality Management",
+            "Project Management",
+            "Agile Leadership",
+            "Financial Management",
+            "Third-Party Vendor Management"
+        ],
+        "image": "images/icons/thumbs_UP_icon.svg"
     }
 ]

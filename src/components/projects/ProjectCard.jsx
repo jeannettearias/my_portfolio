@@ -8,8 +8,7 @@ function ProjectCard({ project }) {
                 <span className="card__projectTitle--text">{project.project_name}</span>
             </h2>
             <div className="card__author">
-                <div
-                    className="card__authorPhoto">
+                <div className="card__authorPhoto">
                     <ul>
                         <li className='card__authorPhoto'>
                             <img

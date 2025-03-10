@@ -4,25 +4,24 @@ import '../../styles/layout/_experience.scss';
 
 function Experience({ exp }) {
     return (
-        <div className='exp__head'>
+        <>
             <section className='hero__section'>
                 <label className="wip__label" htmlFor="WIP">WIP 🚧</label>
                 <div className='hero__container'>
-                    <div className='hero__image__container'>
-                        <div className='container__image' /></div>
+                    <div className='image__layout'>
+                        <div className='experience__picture' />
+                    </div>
                     <div className='hero__content'>
                         <h1 className='content__title'>About me!</h1>
-                        <div className='content__text__container'>
-                            <h2 className='content__subtitle'>
-                                I am passionate about learning and travel.</h2>
-                        </div>
-                        <div >
-                            <p className='content__text'>
-                                I am passionate about learning, travel and technology, which I value for its ability to transform lives and optimize processes.
-                                I have led projects as a Scrum Master, motivating teams, and more recently as a Project Manager, with a strategic and human focus.
-                                My essence reflects curiosity, resilience and a constant commitment to growth.
-                            </p>
-                        </div>
+                        <h2 className='content__subtitle'>
+                            Passionate about learning</h2>
+                    </div>
+                    <div className='experience__content'>
+                        <p className='content__text'>
+                            I am passionate about learning, travel and technology, which I value for its ability to transform lives and optimize processes.
+                            I have led projects as a Scrum Master, motivating teams, and more recently as a Project Manager, with a strategic and human focus.
+                            My essence reflects curiosity, resilience and a constant commitment to growth.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -31,50 +30,87 @@ function Experience({ exp }) {
             </div>
             <section className='container__section'>
                 <div className='container__article'>
-
-                    <div className='container__card'>
+                    <hr className="line" />
+                    <div className='time-line'>
                         {exp.map((expJson, index) => (
                             <form key={index}>
-                                <article className='project__data' >
-                                    <legend className='legend'>{expJson.Company}</legend>
-                                    <p className="text">{expJson.Role}</p>
-                                    <p className='text'>{expJson.Employment_type}</p>
-                                    <time className="datetime" >{expJson.Time}</time>
-                                    {Array.isArray(expJson.Description) ? (
-                                        <ul className='description__list'>
-                                            {expJson.Description.map((item, idx) => (
-                                                <li className='item__list' key={idx}>{item}</li>
-                                            ))}
-                                        </ul>
-                                    ) : (
-                                        <ul className='description__list'>
-                                            {expJson.Description.split('. ').map((item, idx) => (
-                                                item.trim() && <li className='item__list' key={idx}>{item.trim()}</li>
-                                            ))}
-                                        </ul>
-                                    )}
-                                    {expJson.Projects && (
-                                        <ul className='description__list'>
-                                            {expJson.Projects.map((project, idx) => (
-                                                <li key={idx} className='project__item'>
-                                                    <ul>
-                                                        <h4 className='project__title'>{project.Title} | {project.Year}</h4>
-                                                        <li className='item__link'><p>{project.Description}</p></li>
-                                                        <li className='item__link'>
-                                                            <a href={project.Link} target='_blank' rel='noopener noreferrer'>{project.Link}</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    )}
+                                <article className='Header'>
+                                    <div className='header__experience'>
+                                        <div className='header__content'>
+                                            <img className='logo'
+                                                src={import.meta.env.BASE_URL + expJson.logo}
+                                            ></img>
+                                            <hr className='divider' />
+                                            <div className='dates'>
+                                                <legend className='location'>{expJson.location}</legend>
+                                                <time className='text__card3' >{expJson.time}</time>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article className='Down'>
+                                    <div className='down__experience'>
+                                        <h3 className='company__card'>{expJson.company}</h3>
+
+                                        {Array.isArray(expJson.description) ? (
+                                            <ul className='description__list'>
+                                                {expJson.description.map((item, idx) => (
+                                                    <li className='item__list' key={idx}>{item}</li>
+                                                ))}
+                                            </ul>
+                                        ) : (
+                                            <ul className='description__list'>
+                                                {expJson.description.split('. ').map((item, idx) => (
+                                                    item.trim() && <li className='item__list' key={idx}>{item.trim()}</li>
+                                                ))}
+                                            </ul>
+                                        )}
+                                        {expJson.projects && (
+                                            <ul className='description__list'>
+                                                {expJson.projects.map((project, idx) => (
+                                                    <li key={idx} className='project__item'>
+                                                        <h4 className='project__title'>{project.title} | {project.Year}</h4>
+                                                        <ul >
+                                                            <li className='item__link'><p>{project.description}</p></li>
+                                                            <li className='item__link'>
+                                                                <a href={project.link} target='_blank' rel='noopener noreferrer'>{project.link}</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        )}
+                                        <div >
+                                            <ul className='chips__container'>
+                                                {expJson.skills.map((skills, index) => (
+                                                    <li key={index} className="chip">
+                                                        {skills}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div className='down__cards'>
+                                        <div className="card1">
+                                            <p className='text__card1' >{expJson.role}</p>
+                                        </div>
+                                        <div className='card2'>
+                                            <legend className='location'>{expJson.location_type}</legend>
+
+                                        </div>
+                                        <div className="card3">
+                                            <p className='text__card2'>{expJson.employment_type}</p>
+
+                                        </div>
+
+                                    </div>
                                 </article>
                             </form>
                         ))}
                     </div>
                 </div>
-            </section>
-        </div>
+            </section >
+        </>
     );
 }
 

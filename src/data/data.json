@@ -1,7 +1,7 @@
 [
     {
         "idproject": 1,
-        "project_name": "Molones Project ",
+        "project_name": "Molones Project",
         "project_slogan": "Application to add new projects by author",
         "project_repo": "https://github.com/jeannettearias/Project-admin-app",
         "project_demo": "https://module-4-promo-bpt-proyectos-molones.onrender.com",
@@ -24,5 +24,45 @@
         "author_name": "Jeannette Arias",
         "author_job": "Full stack developer",
         "author_photo": "images/me.jpg"
-    }
+    },
+    {
+        "idproject": 3,
+        "project_name": "awesome-professional-cards",
+        "project_slogan": "Application to create professional cards",
+        "project_repo": "https://github.com/jeannettearias/awesome-professional-cards",
+        "project_demo": "https://jeannettearias.github.io/awesome-professional-cards",
+        "project_technologies": "Node.js, Express, MongoDB, EJS, JavaScript, React, html, css",
+        "project_description": "Web project to create professional cards with the user's information.",
+        "project_image": "images/awesome_projects.png",
+        "author_name": "Collaborative Adalab Group",
+        "author_job": "Full stack developer",
+        "author_photo": "images/photo-pw-adalab.jpg"
+    },
+    {
+        "idproject": 4,
+        "project_name": "Disney characters cards",
+        "project_slogan": "Application to create Disney characters cards",
+        "project_repo": "https://jeannettearias.github.io/disney-character-cards",
+        "project_demo": "https://jeannettearias.github.io/disney-character-cards",
+        "project_technologies": "JavaScript, SCSS, HTML5",
+        "project_description": "Web project to create Disney characters cards.",
+        "project_image": "images/disney_projects.png",
+        "author_name": "Jeannette Arias",
+        "author_job": "Full stack developer",
+        "author_photo": "images/me.jpg"
+    },
+    {
+        "idproject": 5,
+        "project_name": "Scooby Doo webpage",
+        "project_slogan": "scooby doo team's web page",
+        "project_repo": "https://github.com/jeannettearias/scoobydoo-services-web-site",
+        "project_demo": "https://jeannettearias.github.io/scoobydoo-services-web-site",
+        "project_technologies": "JavaScript, SCSS, HTML5",
+        "project_description": "Web project to create Scooby Doo characters cards.",
+        "project_image": "images/scooby_projects.png",
+        "author_name": "Collaborative Adalab Group",
+        "author_job": "Full stack developer",
+        "author_photo": "images/photo-pw-adalab.jpg"
+    },
+    {}
 ]
