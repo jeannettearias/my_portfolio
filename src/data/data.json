@@ -64,5 +64,17 @@
         "author_job": "Full stack developer",
         "author_photo": "images/photo-pw-adalab.jpg"
     },
-    {}
+    {
+        "idproject": 6,
+        "project_name": "My Portfolio",
+        "project_slogan": "My personal portfolio",
+        "project_repo": "https://github.com/jeannettearias/my_portfolio",
+        "project_demo": "https://jeannettearias.github.io/my_portfolio",
+        "project_technologies": "Node.js, Express, MongoDB, EJS, JavaScript, React, html, css",
+        "project_description": "Web project to create my personal portfolio.",
+        "project_image": "images/my_portfolio.png",
+        "author_name": "Jeannette Arias",
+        "author_job": "Full stack developer",
+        "author_photo": "images/me_working.jpeg"
+    }
 ]
