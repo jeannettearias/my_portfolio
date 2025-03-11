@@ -94,13 +94,25 @@ function Experience({ exp }) {
                                     </div>
                                     <div className='down__cards'>
                                         <div className="card1">
+                                            <button className='Button-primary'>
+                                                <img className='user_logo'
+                                                    src='{import.meta.env.BASE_URL + "images/icons/User.svg"}' />
+                                            </button>
                                             <p className='text__card1' >{expJson.role}</p>
                                         </div>
                                         <div className='card2'>
+                                            <button className='Button-primary'>
+                                                <img className='user_logo'
+                                                    src='{import.meta.env.BASE_URL + "images/icons/Button/House.svg"}' />
+                                            </button>
                                             <legend className='location'>{expJson.location_type}</legend>
 
                                         </div>
                                         <div className="card3">
+                                            <button className='Button-primary'>
+                                                <img className='user_logo'
+                                                    src='{import.meta.env.BASE_URL + "images/icons/Button/Clock.svg"}' />
+                                            </button>
                                             <p className='text__card2'>{expJson.employment_type}</p>
 
                                         </div>
