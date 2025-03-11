@@ -17,63 +17,6 @@
         "image": "images/icons/calendar_icon.svg"
     },
     {
-        "company": "ADALAB",
-        "logo": "images/icons/adalab_logo.png",
-        "location": "Madrid, Spain",
-        "location_type": "Remote",
-        "role": "Frontend Developer",
-        "employment_type": "Part-time",
-        "time": "Apr 2024 - Oct 2024",
-        "description": [
-            "HTML5, CSS3, Flexbox, CSS Grid, responsive design, SASS, and Layout Components.",
-            "JavaScript knowledge.",
-            "Third party APIs web service.",
-            "Simple SPAs creation, with React.",
-            "Experience developing projects using Agile and SCRUM.",
-            "Visual Studio Code, Terminal.",
-            "Version Control with Git.",
-            "Slack, GitHub."
-        ],
-        "skills": [
-            "JavaScript",
-            "React.js",
-            "Node.js",
-            "Express.js",
-            "MySQL",
-            "HTML5",
-            "SCSS",
-            "CSS Flexbox",
-            "Team Leadership"
-        ],
-        "projects": [
-            {
-                "title": "PROJECT ADMIN APP",
-                "year": 2024,
-                "description": "Web project to create Project cards with the author's information, consisting of two applications; a frontend built with JavaScript, React HTML5, and SCSS, and an API built with Nodejs and Express, connected to a MySQL DB to store the information.",
-                "link": "https://github.com/jeannettearias/Project-admin-app"
-            },
-            {
-                "title": "AWESOME PROFILE CARDS",
-                "year": 2024,
-                "description": "Group project of a web app to create interactive business cards. Developed with HTML5, CSS3, JavaScript.",
-                "link": "https://github.com/jeannettearias/awesome-professional-cards"
-            },
-            {
-                "title": "\"HARRY POTTER\" CHARACTERS",
-                "year": 2024,
-                "description": "Simple SPA developed using React. Users can look for and filter information about the movie characters.",
-                "link": "https://github.com/jeannettearias/harry-potter-movie-characters-search"
-            },
-            {
-                "title": "DISNEY CHARACTER CARDS SEARCH",
-                "year": 2024,
-                "description": "Disney characters searching cards. Developed using JavaScript, HTML5, and SCSS.",
-                "link": "https://github.com/jeannettearias/disney-character-cards"
-            }
-        ],
-        "image": "images/icons/javascript.svg"
-    },
-    {
         "company": "ALTEN Spain",
         "logo": "images/icons/alten_logo.svg",
         "location": "Barcelona, Spain",
