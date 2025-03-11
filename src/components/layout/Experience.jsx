@@ -50,36 +50,38 @@ function Experience({ exp }) {
                                 </article>
                                 <article className='Down'>
                                     <div className='down__experience'>
-                                        <h3 className='company__card'>{expJson.company}</h3>
+                                        <div className='down__content'>
+                                            <h3 className='company__card'>{expJson.company}</h3>
 
-                                        {Array.isArray(expJson.description) ? (
-                                            <ul className='description__list'>
-                                                {expJson.description.map((item, idx) => (
-                                                    <li className='item__list' key={idx}>{item}</li>
-                                                ))}
-                                            </ul>
-                                        ) : (
-                                            <ul className='description__list'>
-                                                {expJson.description.split('. ').map((item, idx) => (
-                                                    item.trim() && <li className='item__list' key={idx}>{item.trim()}</li>
-                                                ))}
-                                            </ul>
-                                        )}
-                                        {expJson.projects && (
-                                            <ul className='description__list'>
-                                                {expJson.projects.map((project, idx) => (
-                                                    <li key={idx} className='project__item'>
-                                                        <h4 className='project__title'>{project.title} | {project.Year}</h4>
-                                                        <ul >
-                                                            <li className='item__link'><p>{project.description}</p></li>
-                                                            <li className='item__link'>
-                                                                <a href={project.link} target='_blank' rel='noopener noreferrer'>{project.link}</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        )}
+                                            {Array.isArray(expJson.description) ? (
+                                                <ul className='description__list'>
+                                                    {expJson.description.map((item, idx) => (
+                                                        <li className='item__list' key={idx}>{item}</li>
+                                                    ))}
+                                                </ul>
+                                            ) : (
+                                                <ul className='description__list'>
+                                                    {expJson.description.split('. ').map((item, idx) => (
+                                                        item.trim() && <li className='item__list' key={idx}>{item.trim()}</li>
+                                                    ))}
+                                                </ul>
+                                            )}
+                                            {expJson.projects && (
+                                                <ul className='description__list'>
+                                                    {expJson.projects.map((project, idx) => (
+                                                        <li key={idx} className='project__item'>
+                                                            <h4 className='project__title'>{project.title} | {project.Year}</h4>
+                                                            <ul >
+                                                                <li className='item__link'><p>{project.description}</p></li>
+                                                                <li className='item__link'>
+                                                                    <a href={project.link} target='_blank' rel='noopener noreferrer'>{project.link}</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            )}
+                                        </div>
                                         <div >
                                             <ul className='chips__container'>
                                                 {expJson.skills.map((skills, index) => (

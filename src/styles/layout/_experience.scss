@@ -193,7 +193,7 @@
   display: flex;
   padding: 28px;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 24px;
   flex: 1 0 0;
@@ -201,4 +201,48 @@
 
   border-radius: 12px;
   border: 1px solid var(--color-primary-600, #00439b);
+}
+
+.down__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+
+  .company__card {
+    align-self: stretch;
+
+    color: var(--color-neutral-100, #fff);
+    font: var(--font-headings-H-4);
+  }
+
+  .description__list {
+    align-self: stretch;
+
+    color: var(--color-neutral-100, #fff);
+    font: var(--font-Body-B-2);
+  }
+}
+.chips__container {
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 12px 8px;
+  align-self: stretch;
+  flex-wrap: wrap;
+
+  color: var(--color-neutral-100);
+
+  .chip {
+    display: flex;
+    padding: var(--size-1, 8px) var(--size-125, 12px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+    border-radius: 10000px;
+    background: var(--color-primary-700, #002d68);
+  }
 }
