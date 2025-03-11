@@ -42,14 +42,15 @@ function Experience({ exp }) {
                                             ></img>
                                             <hr className='divider' />
                                             <div className='dates'>
+                                                <time className='date' >{expJson.time}</time>
                                                 <legend className='location'>{expJson.location}</legend>
-                                                <time className='text__card3' >{expJson.time}</time>
+
                                             </div>
                                         </div>
                                     </div>
                                 </article>
                                 <article className='Down'>
-                                    <div className='down__experience'>
+                                    <div className='left__experience'>
                                         <div className='down__content'>
                                             <h3 className='company__card'>{expJson.company}</h3>
 
@@ -92,19 +93,32 @@ function Experience({ exp }) {
                                             </ul>
                                         </div>
                                     </div>
-                                    <div className='down__cards'>
-                                        <div className="card1">
-                                            <p className='text__card1' >{expJson.role}</p>
-                                        </div>
-                                        <div className='card2'>
-                                            <legend className='location'>{expJson.location_type}</legend>
+                                    <div className='right__experience'>
+                                        <div className='down__cards'>
+                                            <div className="card1">
+                                                <button className='Button-primary'>
+                                                    <img className='user_logo'
+                                                        src='{import.meta.env.BASE_URL + "images/icons/Button/User.svg"}' />
+                                                </button>
+                                                <p className='text__card1' >{expJson.role}</p>
+                                            </div>
+                                            <div className='card2'>
+                                                <button className='Button-primary'>
+                                                    <img className='user_logo'
+                                                        src='{import.meta.env.BASE_URL + "images/icons/Button/House.svg"}' />
+                                                </button>
+                                                <legend className='text__card2'>{expJson.location_type}</legend>
 
-                                        </div>
-                                        <div className="card3">
-                                            <p className='text__card2'>{expJson.employment_type}</p>
+                                            </div>
+                                            <div className="card3">
+                                                <button className='Button-primary'>
+                                                    <img className='user_logo'
+                                                        src='{import.meta.env.BASE_URL + "images/icons/Button/Clock.svg"}' />
+                                                </button>
+                                                <p className='text__card3'>{expJson.employment_type}</p>
 
+                                            </div>
                                         </div>
-
                                     </div>
                                 </article>
                             </form>
