@@ -35,17 +35,14 @@ function Experience({ exp }) {
                         {exp.map((expJson, index) => (
                             <form key={index}>
                                 <article className='Header'>
-                                    <div className='header__experience'>
-                                        <div className='header__content'>
-                                            <img className='logo'
-                                                src={import.meta.env.BASE_URL + expJson.logo}
-                                            ></img>
-                                            <hr className='divider' />
-                                            <div className='dates'>
-                                                <time className='date' >{expJson.time}</time>
-                                                <legend className='location'>{expJson.location}</legend>
-
-                                            </div>
+                                    <div className='header__content'>
+                                        <img className='logo'
+                                            src={import.meta.env.BASE_URL + expJson.logo}
+                                        ></img>
+                                        <hr className='divider' />
+                                        <div className='dates'>
+                                            <time className='date'>{expJson.time}</time>
+                                            <legend className='location'>{expJson.location}</legend>
                                         </div>
                                     </div>
                                 </article>
