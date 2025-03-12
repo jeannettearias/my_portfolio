@@ -14,6 +14,42 @@
             "SAFe",
             "Scrum"
         ],
+        "achievement": "roadmap predictivity, and throughput",
+        "goal_description": "Throughput= Time Period / Number of completed items​",
+        "data": [
+            {
+                "quarter": "Q1-2024",
+                "value": "10"
+            },
+            {
+                "quarter": "Q2-2024",
+                "value": "20"
+            },
+            {
+                "quarter": "Q3-2024",
+                "value": "10%"
+            },
+            {
+                "quarter": "Q4-2024",
+                "value": "10%"
+            },
+            {
+                "quarter": "Q1-2025",
+                "value": "10%"
+            },
+            {
+                "quarter": "Q2-2025",
+                "value": "10%"
+            },
+            {
+                "quarter": "Q3-2025",
+                "value": "10%"
+            },
+            {
+                "quarter": "Q4-2025",
+                "value": "10%"
+            }
+        ],
         "image": "images/icons/calendar_icon.svg"
     },
     {

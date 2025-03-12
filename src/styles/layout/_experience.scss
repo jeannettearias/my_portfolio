@@ -426,3 +426,32 @@
   color: var(--color-neutral-100, #fff);
   font: var(--font-headings-H-3);
 }
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+
+  border-radius: 12px;
+  border: 0.5px solid var(--color-neutral-300, #bec2c4);
+
+  .chart__header {
+    display: flex;
+    padding: 8px 16px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+
+    border-bottom: 0.5px solid var(--color-neutral-100, #fff);
+  }
+
+  .chart__content_goes_here {
+    display: flex;
+    padding: 16px;
+    align-items: flex-start;
+    align-content: flex-start;
+    align-self: stretch;
+    flex-wrap: wrap;
+  }
+}

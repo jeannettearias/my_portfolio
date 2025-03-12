@@ -116,6 +116,14 @@ function Experience({ exp }) {
 
                                             </div>
                                         </div>
+                                        <div className='chart'>
+                                            <div className='chart__header'>
+
+                                            </div>
+                                            <div className='chart__content_goes_here'>
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </article>
                             </form>
