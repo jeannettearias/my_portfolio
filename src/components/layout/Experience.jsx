@@ -80,6 +80,7 @@ function Experience({ exp }) {
                                             </ul>
                                         )}
                                     </div>
+
                                     <div >
                                         <ul className='chips__container'>
                                             {expJson.skills.map((skills, index) => (
@@ -105,6 +106,7 @@ function Experience({ exp }) {
                                                     src="images/icons/Button/House.svg" />
                                             </button>
                                             <legend className='text__card2'>{expJson.location_type}</legend>
+
 
                                         </div>
                                         <div className="card3">
