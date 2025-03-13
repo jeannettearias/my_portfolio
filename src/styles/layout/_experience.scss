@@ -315,14 +315,14 @@
       var(--color-primary-300, #348cff) 80.13%
     )
   );
-  .user_logo {
-    width: 22px;
-    height: 22px;
-    object-fit: contain;
-
-    background-image: url("/images/icons/Button/User.svg");
-  }
 }
+
+.user_logo {
+  width: 0px;
+  height: 60px;
+  object-fit: contain;
+}
+
 .text__card1 {
   display: flex;
   align-self: stretch;
@@ -366,8 +366,6 @@
     width: 22px;
     height: 22px;
     object-fit: contain;
-
-    background-image: url("/images/icons/Button/House.svg");
   }
 }
 .text__card2 {
@@ -413,8 +411,6 @@
     width: 22px;
     height: 22px;
     object-fit: contain;
-
-    background-image: url("/images/icons/Button/Clock.svg");
   }
 }
 .text__card3 {
