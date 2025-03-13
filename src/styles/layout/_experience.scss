@@ -126,13 +126,11 @@
 }
 
 .line {
-  width: 0px;
+  width: 8px;
   align-self: stretch;
 
   stroke-width: 2px;
   stroke: var(--color-neutral-100, #fff);
-
-  background-image: url("/images/Line.png");
 }
 
 .time-line {
@@ -141,6 +139,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
+  flex: 1 0 0;
 }
 
 .header__content {
@@ -148,7 +147,6 @@
   width: 1279px;
   align-items: center;
   gap: 24px;
-  padding-bottom: 24px;
 
   color: var(--color-neutral-100);
   font: var(--font-Body-B-2);
@@ -164,11 +162,10 @@
 }
 
 .divider {
-  width: 0px;
+  width: 2px;
   flex-shrink: 0;
   align-self: stretch;
 
-  background-image: url("/images/Divider.png");
   stroke-width: 2px;
   stroke: var(--Degrade, #a533c1);
 }
@@ -197,9 +194,9 @@
 
 //////// description /////////
 ///
-.Down {
+.Down__content {
   display: flex;
-  padding-bottom: 88px;
+  padding-bottom: 72px;
   align-items: flex-start;
   gap: 24px;
   align-self: stretch;
