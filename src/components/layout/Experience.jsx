@@ -29,7 +29,6 @@ function Experience({ exp }) {
                 <h1 className='margin__title'>Experience</h1>
             </div>
             <section className='container__section'>
-
                 {exp.map((expJson, index) => (
                     <article key={index}
                         className='container__article'>
@@ -46,7 +45,6 @@ function Experience({ exp }) {
                                     <time className='date'>{expJson.time}</time>
                                     <legend className='location'>{expJson.location}</legend>
                                 </div>
-
                             </div>
                             <article className='Down__content'>
                                 <div className='left__experience'>
@@ -98,7 +96,6 @@ function Experience({ exp }) {
                                             <button className='Button-primary'>
                                                 <img className='user_logo'
                                                     src="images/icons/Button/User.svg" />
-
                                             </button>
                                             <p className='text__card1' >{expJson.role}</p>
                                         </div>
@@ -131,7 +128,6 @@ function Experience({ exp }) {
                             </article>
                         </div>
                     </article>
-
                 ))}
             </section>
         </>
