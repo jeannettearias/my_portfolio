@@ -12,6 +12,8 @@
     "deploy": "vite build &&  gh-pages -d docs  && git add docs && git commit -m 'Deployed new version of the page to production' && git push"
   },
   "dependencies": {
+    "ag-charts-react": "^11.1.1",
+    "chart.js": "^4.4.8",
     "dotenv": "^16.4.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -28,6 +30,7 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
     "gh-pages": "^6.3.0",
+    "parcel": "^2.6.2",
     "sass": "^1.83.0",
     "vite": "^6.0.6"
   }

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import '../../styles/layout/_experience.scss';
+import ExpChart from '../charts/ExpChart';
 
 
 function Experience({ exp }) {
@@ -118,14 +119,10 @@ function Experience({ exp }) {
 
                                         </div>
                                     </div>
-                                    <div className='chart'>
-                                        <div className='chart__header'>
 
-                                        </div>
-                                        <div className='chart__content_goes_here'>
-                                        </div>
+                                    <ExpChart
+                                    />
 
-                                    </div>
                                 </div>
                             </article>
                         </div>
@@ -157,7 +154,8 @@ Experience.propTypes = {
             )
         })
 
-    ).isRequired
+    ).isRequired,
+    chartOptions: PropTypes.object
 };
 export default Experience;
 
