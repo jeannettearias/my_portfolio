@@ -121,7 +121,6 @@ function Experience({ exp }) {
                                     </div>
 
                                     <ExpChart
-
                                     />
 
                                 </div>
