@@ -20,13 +20,16 @@ function ExpChart() {
             { month: "01-2025", value: 10 },
             { month: "02-2025", value: 110 },
             { month: "03-2025", value: 20 },
-            { month: "04-2025", value: 130 },
+
         ],
         // Series: Defines which chart type and data to use
         series: [{
             type: 'bar',
             xKey: 'month',
-            yKey: 'value'
+            yKey: 'value',
+            fill: {
+                background: 'rgb(151, 49, 151)',
+            }, // Change this to your desired color
         }],
         // Title: Chart title
         title: {
@@ -44,7 +47,11 @@ function ExpChart() {
             },
             {
                 type: 'number',
-                position: 'left'
+                position: 'left',
+                tick: {
+                    interval: 10 // Set the interval to display more ticks
+
+                }
             }
         ],
     });
@@ -59,10 +66,12 @@ function ExpChart() {
                     <AgCharts options={chartOptions}
                         className='Chart__container'
                     />
+                    <div className='time__line'>
+                        <div className='chart__dates'>
+
+                        </div>
+                    </div>
                 </div>
-
-
-
             </div>
         </>
     );
