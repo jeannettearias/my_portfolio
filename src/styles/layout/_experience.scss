@@ -133,13 +133,11 @@
   width: 8px;
   align-self: stretch;
 
-  stroke-width: 2px;
   stroke: var(--color-neutral-100, #fff);
 }
 
 .time-line {
   display: flex;
-  padding-left: 44px;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
@@ -148,7 +146,6 @@
 
 .header__content {
   display: flex;
-  width: 1279px;
   align-items: center;
   gap: 24px;
 
@@ -267,16 +264,18 @@
   align-items: center;
   gap: 28px;
   flex: 1 0 0;
-
-  border-radius: 12px;
-  background: var(--color-pink-Alpha-10, rgba(216, 160, 230, 0.1));
 }
 
 .down__cards {
   display: flex;
-  align-items: flex-start;
+  padding: 32px;
+  justify-content: center;
   gap: 20px;
+  flex: 1 0 0;
   align-self: stretch;
+
+  border-radius: 12px;
+  background: var(--color-pink-Alpha-10, rgba(216, 160, 230, 0.1));
 }
 
 .card1 {
@@ -318,13 +317,10 @@
 }
 
 .text__card1 {
-  display: flex;
   align-self: stretch;
-  justify-content: center;
-  align-items: center;
 
   color: var(--color-neutral-100, #fff);
-  font: var(--font-headings-H-3);
+  font: var(--font-Body-B-3);
 }
 
 .card2 {
@@ -363,13 +359,10 @@
   }
 }
 .text__card2 {
-  display: flex;
   align-self: stretch;
-  justify-content: center;
-  align-items: center;
 
   color: var(--color-neutral-100, #fff);
-  font: var(--font-headings-H-3);
+  font: var(--font-Body-B-3);
 }
 
 .card3 {
@@ -408,20 +401,16 @@
   }
 }
 .text__card3 {
-  display: flex;
   align-self: stretch;
-  justify-content: center;
-  align-items: center;
 
   color: var(--color-neutral-100, #fff);
-  font: var(--font-headings-H-3);
+  font: var(--font-Body-B-3);
 }
 
 .chart {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  align-self: stretch;
 
   border-radius: 12px;
   border: 0.5px solid var(--color-neutral-300, #bec2c4);
@@ -431,7 +420,7 @@
   padding: 8px 16px;
   justify-content: space-between;
   align-items: center;
-  align-self: stretch;
+  align-self: center;
 
   border-bottom: 0.5px solid var(--color-neutral-100, #fff);
 }
@@ -463,5 +452,17 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+
+  .down__cards {
+    align-self: stretch;
+  }
+
+  .card1 .card2 .card3 {
+    align-self: center;
+  }
+
+  .text__card1 .text__card2 .text__card3 {
+    align-self: center;
   }
 }
