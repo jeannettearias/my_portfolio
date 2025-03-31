@@ -14,6 +14,7 @@ import skillsJson from '../data/skills.json';
 import achievementsJson from '../data/achievements.json';
 import projectsJson from '../data/data.json';
 
+
 function App() {
   // State for projects from JSON data
   const [projectsArray, setProjectsArray] = useState([]);
@@ -109,6 +110,7 @@ function App() {
     setActiveAchievements(filteredAchievements);
   }, []);
 
+
   // HTML
   return (
     <div className="layout">
@@ -121,7 +123,9 @@ function App() {
         <Route path='/projects' element={<Landing
           projectsArray={projectsArray} />} />
         <Route path='/experience' element={<Experience
-          exp={exp} />} />
+          exp={exp} />}
+        />
+
         <Route path='/contact'
           element={<Contact
             handleSubmitClick={handleSubmitClick}

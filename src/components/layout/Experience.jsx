@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import '../../styles/layout/_experience.scss';
 import ExpChart from '../charts/ExpChart';
 
-
 function Experience({ exp }) {
+
     return (
         <>
             <section className='hero__section'>
@@ -99,15 +99,19 @@ function Experience({ exp }) {
                                                 <img className='user_logo'
                                                     src="images/icons/Button/User.svg" />
                                             </button>
-                                            <p className='text__card1' >{expJson.role}</p>
+                                            <div className='alignment'>
+                                                <legend className='text__card1' >{expJson.role}</legend>
+                                            </div>
+
                                         </div>
                                         <div className='card2'>
                                             <button className='Button-primary'>
                                                 <img className='user_logo'
                                                     src="images/icons/Button/House.svg" />
                                             </button>
-                                            <legend className='text__card2'>{expJson.location_type}</legend>
-
+                                            <div className='alignment'>
+                                                <legend className='text__card2'>{expJson.location_type}</legend>
+                                            </div>
 
                                         </div>
                                         <div className="card3">
@@ -115,20 +119,22 @@ function Experience({ exp }) {
                                                 <img className='user_logo'
                                                     src="images/icons/Button/Clock.svg" />
                                             </button>
-                                            <p className='text__card3'>{expJson.employment_type}</p>
+                                            <div className='alignment'>
+                                                <legend className='text__card3'>{expJson.employment_type}</legend>
+                                            </div>
+
 
                                         </div>
                                     </div>
-
-                                    <ExpChart
+                                    <ExpChart expChart={expJson}
                                     />
-
                                 </div>
                             </article>
                         </div>
                     </article>
                 ))}
             </section>
+
         </>
     );
 }

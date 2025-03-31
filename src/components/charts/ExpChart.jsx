@@ -1,39 +1,29 @@
 import '../../styles/exp/_expChart.scss';
 import { AgCharts } from 'ag-charts-react';
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
+// Chart component
+function ExpChart({ expChart }) {
 
-function ExpChart() {
     // Chart Options: Control & configure the chart
     const [chartOptions, setChartOptions] = useState({
-        // Data: Data to be displayed in the chart
-        data: [
-            { month: "04-2024", value: 10 },
-            { month: "05-2024", value: 20 },
-            { month: "06-2024", value: 30 },
-            { month: "07-2024", value: 40 },
-            { month: "08-2024", value: 50 },
-            { month: "09-2024", value: 10 },
-            { month: "10-2024", value: 70 },
-            { month: "11-2024", value: 80 },
-            { month: "12-2024", value: 90 },
-            { month: "01-2025", value: 10 },
-            { month: "02-2025", value: 110 },
-            { month: "03-2025", value: 20 },
 
-        ],
+        // Data: Chart data
+        data: expChart.data,
         // Series: Defines which chart type and data to use
         series: [{
-            type: 'bar',
-            xKey: 'month',
-            yKey: 'value',
+            type: expChart.graphic_type,
+            xKey: expChart.data.xKey,
+            yKey: expChart.data.yKey,
             fill: {
                 background: 'rgb(151, 49, 151)',
             }, // Change this to your desired color
         }],
         // Title: Chart title
         title: {
-            text: 'Roadmap predictivity, and throughput'
+            text: expChart.achievement_title,
+
         },
         // Legend: Chart legend
         legend: {
@@ -50,7 +40,6 @@ function ExpChart() {
                 position: 'left',
                 tick: {
                     interval: 10 // Set the interval to display more ticks
-
                 }
             }
         ],
@@ -60,10 +49,10 @@ function ExpChart() {
         <>
             <div className='Chart'>
                 <div className='Chart__header'>
-                    <h2 className='Chart__title'>Roadmap Impact</h2>
                 </div>
                 <div className='Chart__content'>
                     <AgCharts options={chartOptions}
+
                         className='Chart__container'
                     />
                     <div className='time__line'>
@@ -74,9 +63,15 @@ function ExpChart() {
                 </div>
             </div>
         </>
+
     );
 }
 
-
+ExpChart.propTypes = {
+    setChartOptions: PropTypes.func,
+    chartOptions: PropTypes.object,
+    expChart: PropTypes.array,
+    expJson: PropTypes.object
+};
 
 export default ExpChart;
