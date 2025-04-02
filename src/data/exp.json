@@ -63,12 +63,12 @@
         "graphic_type": "bubble",
         "data": [
             {
-                "xKey": "1%",
-                "yKey": "project schedule variance"
+                "xKey": "project schedule variance",
+                "yKey": "1%"
             },
             {
-                "xKey": "99%",
-                "yKey": "projects delivery"
+                "xKey": "projects delivery",
+                "yKey": "99%"
             }
         ],
         "image": "images/icons/html5.svg"

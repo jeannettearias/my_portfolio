@@ -6,19 +6,19 @@ import PropTypes from 'prop-types';
 function ExpChart({ expChart }) {
 
     // Ensure expChart is not undefined
-    if (!expChart || !expChart.data) {
+    if (!expChart || !Array.isArray(expChart.data) || expChart.data.length === 0) {
         return <p>No data available</p>;
     }
     // Chart Options: Control & configure the chart
-    const chartOptions = ({
+    const chartOptions = {
 
         // Chart Options: Control & configure the chart
         data: expChart.data,
         // Series: Chart series
         series: [{
             type: expChart.graphic_type,
-            xKey: "xKey", // Use string
-            yKey: "yKey", // Use string
+            xKey: Object.keys(expChart.data[0])[0], // Use the first key in the data object
+            yKey: Object.keys(expChart.data[0])[1], // Use the second key in the data object
             fill: 'rgb(206, 54, 206)' // Set the fill color
         }],
 
@@ -44,7 +44,7 @@ function ExpChart({ expChart }) {
                 }
             }
         ],
-    });
+    };
 
     return (
         <>
