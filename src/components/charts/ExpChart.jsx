@@ -1,26 +1,27 @@
 import '../../styles/exp/_expChart.scss';
 import { AgCharts } from 'ag-charts-react';
-import { useState } from 'react';
 import PropTypes from 'prop-types';
 
 // Chart component
 function ExpChart({ expChart }) {
 
+    // Ensure expChart is not undefined
+    if (!expChart || !expChart.data) {
+        return <p>No data available</p>;
+    }
     // Chart Options: Control & configure the chart
-    const [chartOptions, setChartOptions] = useState({
+    const chartOptions = ({
 
-        // Data: Chart data
+        // Chart Options: Control & configure the chart
         data: expChart.data,
-        // Series: Defines which chart type and data to use
+        // Series: Chart series
         series: [{
             type: expChart.graphic_type,
-            xKey: expChart.data.xKey,
-            yKey: expChart.data.yKey,
-            fill: {
-                background: 'rgb(151, 49, 151)',
-            }, // Change this to your desired color
+            xKey: "xKey", // Use string
+            yKey: "yKey", // Use string
+            fill: 'rgb(206, 54, 206)' // Set the fill color
         }],
-        // Title: Chart title
+
         title: {
             text: expChart.achievement_title,
 
@@ -68,10 +69,7 @@ function ExpChart({ expChart }) {
 }
 
 ExpChart.propTypes = {
-    setChartOptions: PropTypes.func,
-    chartOptions: PropTypes.object,
-    expChart: PropTypes.array,
-    expJson: PropTypes.object
+    expChart: PropTypes.object.isRequired
 };
 
 export default ExpChart;

@@ -126,7 +126,7 @@ function Experience({ exp }) {
 
                                         </div>
                                     </div>
-                                    <ExpChart expChart={expJson}
+                                    <ExpChart expChart={expJson[0]}
                                     />
                                 </div>
                             </article>

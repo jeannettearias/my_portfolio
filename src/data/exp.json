@@ -20,23 +20,23 @@
         "data": [
             {
                 "xKey": "Q4-2024",
-                "yKey": "10"
+                "yKey": 10
             },
             {
                 "xKey": "Q1-2025",
-                "yKey": "10"
+                "yKey": 10
             },
             {
                 "xKey": "Q2-2025",
-                "yKey": "10"
+                "yKey": 10
             },
             {
                 "xKey": "Q3-2025",
-                "yKey": "10"
+                "yKey": 10
             },
             {
                 "xKey": "Q4-2025",
-                "yKey": "10"
+                "yKey": 10
             }
         ],
         "image": "images/icons/calendar_icon.svg"
@@ -63,8 +63,12 @@
         "graphic_type": "bubble",
         "data": [
             {
-                "xKey": "1% project schedule variance",
-                "yKey": "99% projects delivery"
+                "xKey": "1%",
+                "yKey": "project schedule variance"
+            },
+            {
+                "xKey": "99%",
+                "yKey": "projects delivery"
             }
         ],
         "image": "images/icons/html5.svg"
@@ -93,23 +97,23 @@
         "data": [
             {
                 "xKey": "Q4-2024",
-                "yKey": "10"
+                "yKey": 10
             },
             {
                 "xKey": "Q1-2025",
-                "yKey": "10"
+                "yKey": 10
             },
             {
                 "xKey": "Q2-2025",
-                "yKey": "10"
+                "yKey": 10
             },
             {
                 "xKey": "Q3-2025",
-                "yKey": "10"
+                "yKey": 10
             },
             {
                 "xKey": "Q4-2025",
-                "yKey": "10"
+                "yKey": 10
             }
         ],
         "image": "images/icons/laptop-code-solid.svg"
@@ -136,23 +140,23 @@
         "data": [
             {
                 "xKey": "Q4-2024",
-                "yKey": "10"
+                "yKey": 10
             },
             {
                 "xKey": "Q1-2025",
-                "yKey": "10"
+                "yKey": 10
             },
             {
                 "xKey": "Q2-2025",
-                "yKey": "10"
+                "yKey": 10
             },
             {
                 "xKey": "Q3-2025",
-                "yKey": "10"
+                "yKey": 10
             },
             {
                 "xKey": "Q4-2025",
-                "yKey": "10"
+                "yKey": 10
             }
         ],
         "image": "images/icons/flame_image.svg"
@@ -180,23 +184,23 @@
         "data": [
             {
                 "xKey": "Q4-2024",
-                "yKey": "10"
+                "yKey": 10
             },
             {
                 "xKey": "Q1-2025",
-                "yKey": "10"
+                "yKey": 10
             },
             {
                 "xKey": "Q2-2025",
-                "yKey": "10"
+                "yKey": 10
             },
             {
                 "xKey": "Q3-2025",
-                "yKey": "10"
+                "yKey": 10
             },
             {
                 "xKey": "Q4-2025",
-                "yKey": "10"
+                "yKey": 10
             }
         ],
         "image": "images/icons/thumbs_UP_icon.svg"
