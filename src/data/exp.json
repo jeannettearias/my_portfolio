@@ -20,23 +20,23 @@
         "data": [
             {
                 "xKey": "Q4-2024",
-                "yKey": 10
+                "yKey": 120
             },
             {
                 "xKey": "Q1-2025",
-                "yKey": 10
+                "yKey": 200
             },
             {
                 "xKey": "Q2-2025",
-                "yKey": 10
+                "yKey": 40
             },
             {
                 "xKey": "Q3-2025",
-                "yKey": 10
+                "yKey": 0
             },
             {
                 "xKey": "Q4-2025",
-                "yKey": 10
+                "yKey": 0
             }
         ],
         "image": "images/icons/calendar_icon.svg"
@@ -64,11 +64,13 @@
         "data": [
             {
                 "xKey": "project schedule variance",
-                "yKey": "1%"
+                "yKey": 12,
+                "sizeyKey": 20
             },
             {
-                "xKey": "projects delivery",
-                "yKey": "99%"
+                "xKey": "project delivery",
+                "yKey": 88,
+                "sizeyKey": 80
             }
         ],
         "image": "images/icons/html5.svg"
@@ -96,24 +98,24 @@
         "graphic_type": "bar",
         "data": [
             {
-                "xKey": "Q4-2024",
+                "xKey": "Q3-2022",
                 "yKey": 10
             },
             {
-                "xKey": "Q1-2025",
+                "xKey": "Q4-2022",
+                "yKey": 30
+            },
+            {
+                "xKey": "Q1-2023",
+                "yKey": 40
+            },
+            {
+                "xKey": "Q2-2023",
                 "yKey": 10
             },
             {
-                "xKey": "Q2-2025",
-                "yKey": 10
-            },
-            {
-                "xKey": "Q3-2025",
-                "yKey": 10
-            },
-            {
-                "xKey": "Q4-2025",
-                "yKey": 10
+                "xKey": "Q3-2023",
+                "yKey": 60
             }
         ],
         "image": "images/icons/laptop-code-solid.svg"
@@ -139,24 +141,24 @@
         "graphic_type": "bar",
         "data": [
             {
-                "xKey": "Q4-2024",
-                "yKey": 10
+                "xKey": "Q3-2021",
+                "yKey": 70
             },
             {
-                "xKey": "Q1-2025",
-                "yKey": 10
+                "xKey": "Q4-2021",
+                "yKey": 60
             },
             {
-                "xKey": "Q2-2025",
-                "yKey": 10
+                "xKey": "Q1-2022",
+                "yKey": 120
             },
             {
-                "xKey": "Q3-2025",
-                "yKey": 10
+                "xKey": "Q2-2022",
+                "yKey": 220
             },
             {
-                "xKey": "Q4-2025",
-                "yKey": 10
+                "xKey": "Q3-2022",
+                "yKey": 200
             }
         ],
         "image": "images/icons/flame_image.svg"
@@ -180,27 +182,17 @@
         ],
         "achievement_title": "Cycle time & Throughput",
         "goal_description": "Throughput Time Period / Number of completed items​",
-        "graphic_type": "bar",
+        "graphic_type": "bubble",
         "data": [
             {
-                "xKey": "Q4-2024",
-                "yKey": 10
+                "xKey": "project schedule variance",
+                "yKey": 8,
+                "sizeyKey": 20
             },
             {
-                "xKey": "Q1-2025",
-                "yKey": 10
-            },
-            {
-                "xKey": "Q2-2025",
-                "yKey": 10
-            },
-            {
-                "xKey": "Q3-2025",
-                "yKey": 10
-            },
-            {
-                "xKey": "Q4-2025",
-                "yKey": 10
+                "xKey": "projects delivery",
+                "yKey": 92,
+                "sizeyKey": 80
             }
         ],
         "image": "images/icons/thumbs_UP_icon.svg"

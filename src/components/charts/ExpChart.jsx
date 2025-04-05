@@ -9,28 +9,51 @@ function ExpChart({ expChart }) {
     if (!expChart || !Array.isArray(expChart.data) || expChart.data.length === 0) {
         return <p>No data available</p>;
     }
+
+    // Normalize the data format based on chart type
+    const normalizeData = expChart.data.map((item) => {
+        return expChart.graphic_type === "bubble"
+            ? {
+                x: item.xKey,
+                y: parseFloat(item.yKey), // convert "88%" → 88
+                size: item.sizeyKey
+            }
+            : {
+                x: item.xKey,
+                y: item.yKey
+            };
+    });
+
     // Chart Options: Control & configure the chart
     const chartOptions = {
-
-        // Chart Options: Control & configure the chart
-        data: expChart.data,
-        // Series: Chart series
-        series: [{
-            type: expChart.graphic_type,
-            xKey: Object.keys(expChart.data[0])[0], // Use the first key in the data object
-            yKey: Object.keys(expChart.data[0])[1], // Use the second key in the data object
-            fill: 'rgb(206, 54, 206)' // Set the fill color
-        }],
+        data: normalizeData,
+        series: [
+            expChart.graphic_type === 'bubble'
+                ? {
+                    type: 'bubble',
+                    xKey: 'x',
+                    yKey: 'y',
+                    sizeKey: 'size',
+                    fill: 'rgb(113, 19, 113)',
+                    stroke: '#7d3c98',
+                    fillOpacity: 0.7,
+                    strokeWidth: 1,
+                }
+                : {
+                    type: 'bar',
+                    xKey: 'x',
+                    yKey: 'y',
+                    fill: 'rgb(113, 19, 113)'
+                }
+        ],
 
         title: {
-            text: expChart.achievement_title,
-
+            text: expChart.achievement_title
         },
-        // Legend: Chart legend
+
         legend: {
             enabled: false
         },
-        // Axes: Configure chart axes
         axes: [
             {
                 type: 'category',
@@ -38,13 +61,19 @@ function ExpChart({ expChart }) {
             },
             {
                 type: 'number',
-                position: 'left',
-                tick: {
-                    interval: 10 // Set the interval to display more ticks
-                }
+                position: 'left'
             }
         ],
+        tooltip: {
+            enabled: true,
+            renderer: ({ datum }) => ({
+                content: expChart.graphic_type === 'bubble'
+                    ? `${datum.x}: ${datum.y}% (size: ${datum.size})`
+                    : `${datum.x}: ${datum.y}`
+            })
+        }
     };
+
 
     return (
         <>
@@ -52,6 +81,7 @@ function ExpChart({ expChart }) {
                 <div className='Chart__header'>
                 </div>
                 <div className='Chart__content'>
+
                     <AgCharts options={chartOptions}
 
                         className='Chart__container'
