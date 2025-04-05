@@ -38,13 +38,25 @@ function ExpChart({ expChart }) {
                     stroke: '#7d3c98',
                     fillOpacity: 0.7,
                     strokeWidth: 1,
+                    tooltip: {
+                        renderer: ({ datum }) => ({
+                            content: `${datum.xKey}: ${datum.yKey}`
+                        })
+                    }
                 }
                 : {
                     type: 'bar',
                     xKey: 'x',
                     yKey: 'y',
-                    fill: 'rgb(113, 19, 113)'
+                    fill: 'rgb(113, 19, 113)',
+                    tooltip: {
+                        renderer: ({ datum }) => ({
+                            content: `${datum.xKey}: ${datum.yKey}`
+                        })
+                    }
+
                 }
+
         ],
 
         title: {
@@ -64,14 +76,7 @@ function ExpChart({ expChart }) {
                 position: 'left'
             }
         ],
-        tooltip: {
-            enabled: true,
-            renderer: ({ datum }) => ({
-                content: expChart.graphic_type === 'bubble'
-                    ? `${datum.x}: ${datum.y}% (size: ${datum.size})`
-                    : `${datum.x}: ${datum.y}`
-            })
-        }
+
     };
 
 
