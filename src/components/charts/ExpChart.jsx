@@ -16,7 +16,7 @@ function ExpChart({ expChart }) {
             ? {
                 x: item.xKey,
                 y: parseFloat(item.yKey), // convert "88%" → 88
-                size: item.sizeyKey
+                size: parseFloat(item.sizeyKey)
             }
             : {
                 x: item.xKey,
@@ -34,7 +34,7 @@ function ExpChart({ expChart }) {
                     xKey: 'x',
                     yKey: 'y',
                     sizeKey: 'size',
-                    fill: 'rgb(113, 19, 113)',
+                    fill: 'rgb(29, 195, 232)',
                     stroke: '#7d3c98',
                     fillOpacity: 0.7,
                     strokeWidth: 1,
@@ -54,14 +54,9 @@ function ExpChart({ expChart }) {
                             content: `${datum.xKey}: ${datum.yKey}`
                         })
                     }
-
                 }
-
         ],
 
-        title: {
-            text: expChart.achievement_title
-        },
 
         legend: {
             enabled: false
@@ -76,17 +71,16 @@ function ExpChart({ expChart }) {
                 position: 'left'
             }
         ],
-
     };
-
 
     return (
         <>
             <div className='Chart'>
+
                 <div className='Chart__header'>
+                    <h2 className='Chart__title'>{expChart.achievement_title}</h2> {/* Displaying the achievement title */}
                 </div>
                 <div className='Chart__content'>
-
                     <AgCharts options={chartOptions}
 
                         className='Chart__container'

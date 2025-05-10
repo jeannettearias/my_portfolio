@@ -38,6 +38,8 @@
 }
 
 .Chart__title {
+  display: flex;
+  align-items: center;
   color: var(--color-neutral-100, #fff);
   font: var(--font-Body-B-2);
 

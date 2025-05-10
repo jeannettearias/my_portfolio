@@ -7,7 +7,7 @@
         "role": "Product Owner",
         "employment_type": "Full-time",
         "time": "Currently",
-        "description": "Working at OpenBank by Entelgy. ",
+        "description": "Working at OpenBank by Entelgy. Requirements analysis, both at product and technical level to document the flows in Confluence to then build the backlog of the next releases. Managed a product road-map that identified customer needs and aligned with the company’s overall business strategy. Collaborated with stakeholders to define product requirements and prioritize features. Led a team of developers to ensure product features are delivered on time and meet quality standards.",
         "skills": [
             "Jira",
             "Confluence",
@@ -63,14 +63,14 @@
         "graphic_type": "bubble",
         "data": [
             {
-                "xKey": "project schedule variance",
+                "xKey": "schedule variance",
                 "yKey": 12,
-                "sizeyKey": 20
+                "sizeyKey": 120
             },
             {
                 "xKey": "project delivery",
                 "yKey": 88,
-                "sizeyKey": 80
+                "sizeyKey": 280
             }
         ],
         "image": "images/icons/html5.svg"
