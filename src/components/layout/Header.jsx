@@ -22,11 +22,11 @@ function Header() {
                         </li>
                         <li className="menu__item">
                             <Link to="/experience"
-                                className="menu__link">About me</Link>
+                                className="menu__link">My experience</Link>
                         </li>
                         <li className="menu__item">
                             <Link to="/projects"
-                                className="menu__link"> Projects </Link>
+                                className="menu__link">Dev Projects</Link>
                         </li>
                     </ul>
                 </nav>

@@ -4,6 +4,17 @@ import ExpChart from '../charts/ExpChart';
 
 function Experience({ exp }) {
 
+    //seniority calculation
+    const dateDifferenceInYears = (dateInitial, dateFinal) => {
+        if (!dateInitial || !dateFinal) return 0;
+        return Math.max(
+            dateFinal.getFullYear() - dateInitial.getFullYear() -
+            (dateFinal.getMonth() < dateInitial.getMonth() ||
+                (dateFinal.getMonth() === dateInitial.getMonth() && dateFinal.getDate() < dateInitial.getDate()) ? -1 : 0),
+            0
+        );
+    };
+
     return (
         <>
             <section className='hero__section'>
@@ -43,7 +54,11 @@ function Experience({ exp }) {
                                 <img className='divider'
                                     src="images/Divider.png" />
                                 <div className='dates'>
-                                    <time className='date'>{expJson.time}</time>
+                                    <div className='experience__years'>
+                                        {dateDifferenceInYears(new Date(expJson.start_date), expJson.end_date === 'Currently' ? new Date() : new Date(expJson.end_date))}
+                                    </div>
+
+                                    <time className='date'>{expJson.start_date} - {expJson.end_date}</time>
                                     <legend className='location'>{expJson.location}</legend>
                                 </div>
                             </div>
@@ -145,7 +160,9 @@ Experience.propTypes = {
             Company: PropTypes.string.isRequired,
             Role: PropTypes.string.isRequired,
             Employment_type: PropTypes.string,
-            Time: PropTypes.string.isRequired,
+            dateDifferenceInYears: PropTypes.func,
+            start_date: PropTypes.string.isRequired,
+            end_date: PropTypes.string.isRequired,
             Description: PropTypes.oneOfType([
                 PropTypes.string,
                 PropTypes.arrayOf(PropTypes.string)

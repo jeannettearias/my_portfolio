@@ -6,8 +6,9 @@
         "location_type": "Remote",
         "role": "Product Owner",
         "employment_type": "Full-time",
-        "time": "Currently",
-        "description": "Working at OpenBank by Entelgy. Requirements analysis, both at product and technical level to document the flows in Confluence to then build the backlog of the next releases. Managed a product road-map that identified customer needs and aligned with the company’s overall business strategy. Collaborated with stakeholders to define product requirements and prioritize features. Led a team of developers to ensure product features are delivered on time and meet quality standards.",
+        "start_date": "April 2024",
+        "end_date": "May 2025",
+        "description": "I currently work at OpenBank, as product owner providing services for Entelgy. Requirements analysis, both at product and technical level to document the flows in Confluence to then build the backlog of the next releases. Managed a product road-map that identified customer needs and aligned with the company’s overall business strategy. Collaborated with stakeholders to define product requirements and prioritize features. Led a team of developers to ensure product features are delivered on time and meet quality standards.",
         "skills": [
             "Jira",
             "Confluence",
@@ -48,8 +49,9 @@
         "location_type": "Hybrid",
         "role": "Product Owner",
         "employment_type": "Full-time",
-        "time": "Sep 2023 - Mar 2024",
-        "description": "Currently working at Alten as a Product Owner with Scrum Framework. Analyze and understand the business requirements for further refinement with the business analyst and development team. Roadmapping and high-level estimation linked with the prioritized milestones. Prioritization at Epic and Features level, and items in the Team Product backlog. Process modeling in the analysis stage to get the target process (MODELIO). Backlog items breakdown in close collaboration with the Business Analyst. Product and Technical Backlog refinement to understand the intention and priority of the US. Promoting and attending Scrum ceremonies.",
+        "start_date": "Sept 2023",
+        "end_date": "Mar 2024",
+        "description": "At Alten I worked as a Product Owner with Scrum Framework. Analyze and understand the business requirements for further refinement with the business analyst and development team. Roadmapping and high-level estimation linked with the prioritized milestones. Prioritization at Epic and Features level, and items in the Team Product backlog. Process modeling in the analysis stage to get the target process (MODELIO). Backlog items breakdown in close collaboration with the Business Analyst. Product and Technical Backlog refinement to understand the intention and priority of the US. Promoting and attending Scrum ceremonies.",
         "skills": [
             "Modelio",
             "Scrum",
@@ -82,7 +84,8 @@
         "location_type": "Hybrid",
         "role": "Product Owner",
         "employment_type": "Full-time",
-        "time": "Sep 2022 - Aug 2023",
+        "start_date": "Sept 2022",
+        "end_date": "Aug 2023",
         "description": "At Citi, I worked as a Product Owner in the Product team under the SAFe (Scaled Agile Framework) guidelines for stream value organization and Scrum for team orientation. Transversal tasks before Scrum team assignment included analyzing and understanding the requirements received to involve all impacted tracks required in the scope, coordinating walkthroughs to get the L0 estimations and plan, closely working with Regional PMs and Business stakeholders to plan every ART (Agile Release Train), and building Jira and Confluence dashboards.",
         "skills": [
             "Design Thinking",
@@ -127,7 +130,8 @@
         "location_type": "Remote",
         "role": "Scrum master",
         "employment_type": "Full-time",
-        "time": "Sep 2021 - Aug 2022",
+        "start_date": "Sept 2021",
+        "end_date": "Aug 2022",
         "description": "As a Scrum Master at BCI Bank through 2Brains, I managed deliveries according to project milestones and releases integrated with the Jira project. My responsibilities included periodic roadmap tracking in Jira (Epics and their tickets), risk and dependency management, periodic reporting based on performance metrics, and facilitating Scrum ceremonies, tutoring, and coaching. I also applied techniques and tools to improve team performance, handled impediment removal management, and aligned with other teams to continue progress without dependencies.",
         "skills": [
             "Product Management",
@@ -170,7 +174,8 @@
         "location_type": "Hybrid",
         "role": "Project Manager",
         "employment_type": "Full-time",
-        "time": "Jun 2015 - Aug 2021",
+        "start_date": "Jun 2015",
+        "end_date": "Aug 2021",
         "description": "At Falabella, I was responsible for iteration and testing management, as well as agile coaching at the program and project level, primarily for eCommerce and marketplace initiatives.\n\nIteration Manager:\n• Managed delivery (Sprint goals) according to the planned milestone.\n• Planned and executed showcases (PI System at a program level) where teams demonstrated progress based on product value.\n• Facilitated Sync PO sessions to mitigate dependencies and risks.\n\nAgile Coaching:\n• Coached multiple delivery teams to become self-organizing and improve their agility and performance.\n• Facilitated Scrum Ceremonies, mentoring Scrum Masters.\n• Collected and analyzed retrospective feedback, applying techniques like the happiness radar.\n• Planned and facilitated scaled activities including PI System, PI Planning, and Scrum of Scrums.\n• Served as a servant leader, assisting teams with impediment resolution.\n• Administered Agile tools (Jira & Confluence) to enhance process transparency.\n\nTesting Management:\n• Designed and implemented testing strategies (smoke, E2E, integration, etc.).\n• Managed test progress, risks, and execution performance.\n• Oversaw defect management in Jira and provided test maturity reports.\n\nProject Management:\n• Oversaw project financials, including budgeting, forecasting, and burn rate tracking.\n• Handled planning, resource allocation, and milestone execution.\n• Supported TCO creation for marketplace projects, optimizing scope and budget.\n• Led project closure and activation processes.",
         "skills": [
             "SCRUM",
