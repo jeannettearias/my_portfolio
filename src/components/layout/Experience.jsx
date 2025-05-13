@@ -14,7 +14,6 @@ function Experience({ exp }) {
             0
         );
     };
-
     return (
         <>
             <section className='hero__section'>
@@ -55,7 +54,14 @@ function Experience({ exp }) {
                                     src="images/Divider.png" />
                                 <div className='dates'>
                                     <div className='experience__years'>
-                                        {dateDifferenceInYears(new Date(expJson.start_date), expJson.end_date === 'Currently' ? new Date() : new Date(expJson.end_date))}
+                                        {
+                                            expJson.start_date
+                                                ? `${dateDifferenceInYears(
+                                                    new Date(expJson.start_date),
+                                                    expJson.end_date === 'Currently' ? new Date() : new Date(expJson.end_date)
+                                                )} years`
+                                                : 'N/A'
+                                        }
                                     </div>
 
                                     <time className='date'>{expJson.start_date} - {expJson.end_date}</time>
@@ -149,7 +155,6 @@ function Experience({ exp }) {
                     </article>
                 ))}
             </section>
-
         </>
     );
 }
