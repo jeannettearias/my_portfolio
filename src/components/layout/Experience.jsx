@@ -2,8 +2,18 @@ import PropTypes from 'prop-types';
 import '../../styles/layout/_experience.scss';
 import ExpChart from '../charts/ExpChart';
 
-
 function Experience({ exp }) {
+
+    //seniority calculation
+    const dateDifferenceInYears = (dateInitial, dateFinal) => {
+        if (!dateInitial || !dateFinal) return 0;
+        return Math.max(
+            dateFinal.getFullYear() - dateInitial.getFullYear() -
+            (dateFinal.getMonth() < dateInitial.getMonth() ||
+                (dateFinal.getMonth() === dateInitial.getMonth() && dateFinal.getDate() < dateInitial.getDate()) ? -1 : 0),
+            0
+        );
+    };
     return (
         <>
             <section className='hero__section'>
@@ -43,7 +53,18 @@ function Experience({ exp }) {
                                 <img className='divider'
                                     src="images/Divider.png" />
                                 <div className='dates'>
-                                    <time className='date'>{expJson.time}</time>
+                                    <div className='experience__years'>
+                                        {
+                                            expJson.start_date
+                                                ? `${dateDifferenceInYears(
+                                                    new Date(expJson.start_date),
+                                                    expJson.end_date === 'Currently' ? new Date() : new Date(expJson.end_date)
+                                                )} years`
+                                                : 'N/A'
+                                        }
+                                    </div>
+
+                                    <time className='date'>{expJson.start_date} - {expJson.end_date}</time>
                                     <legend className='location'>{expJson.location}</legend>
                                 </div>
                             </div>
@@ -99,15 +120,19 @@ function Experience({ exp }) {
                                                 <img className='user_logo'
                                                     src="images/icons/Button/User.svg" />
                                             </button>
-                                            <p className='text__card1' >{expJson.role}</p>
+                                            <div className='alignment'>
+                                                <legend className='text__card1' >{expJson.role}</legend>
+                                            </div>
+
                                         </div>
                                         <div className='card2'>
                                             <button className='Button-primary'>
                                                 <img className='user_logo'
                                                     src="images/icons/Button/House.svg" />
                                             </button>
-                                            <legend className='text__card2'>{expJson.location_type}</legend>
-
+                                            <div className='alignment'>
+                                                <legend className='text__card2'>{expJson.location_type}</legend>
+                                            </div>
 
                                         </div>
                                         <div className="card3">
@@ -115,14 +140,15 @@ function Experience({ exp }) {
                                                 <img className='user_logo'
                                                     src="images/icons/Button/Clock.svg" />
                                             </button>
-                                            <p className='text__card3'>{expJson.employment_type}</p>
+                                            <div className='alignment'>
+                                                <legend className='text__card3'>{expJson.employment_type}</legend>
+                                            </div>
+
 
                                         </div>
                                     </div>
-
-                                    <ExpChart
+                                    <ExpChart expChart={expJson}
                                     />
-
                                 </div>
                             </article>
                         </div>
@@ -139,7 +165,9 @@ Experience.propTypes = {
             Company: PropTypes.string.isRequired,
             Role: PropTypes.string.isRequired,
             Employment_type: PropTypes.string,
-            Time: PropTypes.string.isRequired,
+            dateDifferenceInYears: PropTypes.func,
+            start_date: PropTypes.string.isRequired,
+            end_date: PropTypes.string.isRequired,
             Description: PropTypes.oneOfType([
                 PropTypes.string,
                 PropTypes.arrayOf(PropTypes.string)

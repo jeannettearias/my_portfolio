@@ -146,6 +146,10 @@
   /* Global Tokens/Headings/H-1 */
   font: var(--font-headings-H-2);
   color: var(--color-neutral-100);
+
+  @media (max-width: 680px) {
+    font: var(--font-headings-H-3);
+  }
 }
 
 .experience__link__btn__box {
