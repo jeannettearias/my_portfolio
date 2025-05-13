@@ -1,45 +1,66 @@
 import '../../styles/exp/_expChart.scss';
 import { AgCharts } from 'ag-charts-react';
-import { useState } from 'react';
+import PropTypes from 'prop-types';
 
+// Chart component
+function ExpChart({ expChart }) {
 
-function ExpChart() {
+    // Ensure expChart is not undefined
+    if (!expChart || !Array.isArray(expChart.data) || expChart.data.length === 0) {
+        return <p>No data available</p>;
+    }
+
+    // Normalize the data format based on chart type
+    const normalizeData = expChart.data.map((item) => {
+        return expChart.graphic_type === "bubble"
+            ? {
+                x: item.xKey,
+                y: parseFloat(item.yKey), // convert "88%" → 88
+                size: parseFloat(item.sizeyKey)
+            }
+            : {
+                x: item.xKey,
+                y: item.yKey
+            };
+    });
+
     // Chart Options: Control & configure the chart
-    const [chartOptions, setChartOptions] = useState({
-        // Data: Data to be displayed in the chart
-        data: [
-            { month: "04-2024", value: 10 },
-            { month: "05-2024", value: 20 },
-            { month: "06-2024", value: 30 },
-            { month: "07-2024", value: 40 },
-            { month: "08-2024", value: 50 },
-            { month: "09-2024", value: 10 },
-            { month: "10-2024", value: 70 },
-            { month: "11-2024", value: 80 },
-            { month: "12-2024", value: 90 },
-            { month: "01-2025", value: 10 },
-            { month: "02-2025", value: 110 },
-            { month: "03-2025", value: 20 },
-
+    const chartOptions = {
+        data: normalizeData,
+        series: [
+            expChart.graphic_type === 'bubble'
+                ? {
+                    type: 'bubble',
+                    xKey: 'x',
+                    yKey: 'y',
+                    sizeKey: 'size',
+                    fill: 'rgb(29, 195, 232)',
+                    stroke: '#7d3c98',
+                    fillOpacity: 0.7,
+                    strokeWidth: 1,
+                    tooltip: {
+                        renderer: ({ datum }) => ({
+                            content: `${datum.xKey}: ${datum.yKey}`
+                        })
+                    }
+                }
+                : {
+                    type: 'bar',
+                    xKey: 'x',
+                    yKey: 'y',
+                    fill: 'rgb(113, 19, 113)',
+                    tooltip: {
+                        renderer: ({ datum }) => ({
+                            content: `${datum.xKey}: ${datum.yKey}`
+                        })
+                    }
+                }
         ],
-        // Series: Defines which chart type and data to use
-        series: [{
-            type: 'bar',
-            xKey: 'month',
-            yKey: 'value',
-            fill: {
-                background: 'rgb(151, 49, 151)',
-            }, // Change this to your desired color
-        }],
-        // Title: Chart title
-        title: {
-            text: 'Roadmap predictivity, and throughput'
-        },
-        // Legend: Chart legend
+
+
         legend: {
             enabled: false
         },
-        // Axes: Configure chart axes
         axes: [
             {
                 type: 'category',
@@ -47,23 +68,21 @@ function ExpChart() {
             },
             {
                 type: 'number',
-                position: 'left',
-                tick: {
-                    interval: 10 // Set the interval to display more ticks
-
-                }
+                position: 'left'
             }
         ],
-    });
+    };
 
     return (
         <>
             <div className='Chart'>
+
                 <div className='Chart__header'>
-                    <h2 className='Chart__title'>Roadmap Impact</h2>
+                    <h2 className='Chart__title'>{expChart.achievement_title}</h2> {/* Displaying the achievement title */}
                 </div>
                 <div className='Chart__content'>
                     <AgCharts options={chartOptions}
+
                         className='Chart__container'
                     />
                     <div className='time__line'>
@@ -74,9 +93,12 @@ function ExpChart() {
                 </div>
             </div>
         </>
+
     );
 }
 
-
+ExpChart.propTypes = {
+    expChart: PropTypes.object.isRequired
+};
 
 export default ExpChart;
