@@ -70,6 +70,7 @@
   font-weight: 900;
   line-height: normal;
 
+  font: var(--font-headings-H-1);
   color: var(--color-neutral-100, #fff);
 }
 
@@ -259,7 +260,7 @@
 
 .right__experience {
   display: flex;
-  padding: 28px;
+
   flex-direction: column;
   gap: 28px;
   flex: 1 0 0;
