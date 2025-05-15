@@ -4,10 +4,21 @@ import PropTypes from 'prop-types';
 
 // Chart component
 function ExpChart({ expChart }) {
+    // Show image if data is missing or chart is disabled
+    if (
+        !expChart ||
+        !Array.isArray(expChart.data) ||
+        expChart.data.length === 0 ||
+        expChart.graphic_flag !== true
+    ) {
+        return (
+            <img
+                className="project-image"
+                src={import.meta.env.BASE_URL + expChart.project_picture}
+                alt=""
+            />
+        );
 
-    // Ensure expChart is not undefined
-    if (!expChart || !Array.isArray(expChart.data) || expChart.data.length === 0) {
-        return <p>No data available</p>;
     }
 
     // Normalize the data format based on chart type
@@ -24,6 +35,7 @@ function ExpChart({ expChart }) {
             };
     });
 
+
     // Chart Options: Control & configure the chart
     const chartOptions = {
         data: normalizeData,
@@ -34,7 +46,7 @@ function ExpChart({ expChart }) {
                     xKey: 'x',
                     yKey: 'y',
                     sizeKey: 'size',
-                    fill: 'rgb(29, 195, 232)',
+                    fill: 'rgba(17, 141, 56, 0.71)',
                     stroke: '#7d3c98',
                     fillOpacity: 0.7,
                     strokeWidth: 1,

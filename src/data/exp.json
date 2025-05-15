@@ -12,8 +12,9 @@
         "skills": [
             "Jira",
             "Confluence",
-            "SAFe",
-            "Scrum"
+            "Scrum",
+            "high-level estimation",
+            "Roadmapping"
         ],
         "achievement_title": "Cycle time & Throughput",
         "goal_description": "Throughput Time Period / Number of completed items​",
@@ -30,16 +31,10 @@
             {
                 "xKey": "Q2-2025",
                 "yKey": 40
-            },
-            {
-                "xKey": "Q3-2025",
-                "yKey": 0
-            },
-            {
-                "xKey": "Q4-2025",
-                "yKey": 0
             }
         ],
+        "project_picture": "N/A",
+        "graphic_flag": true,
         "image": "images/icons/calendar_icon.svg"
     },
     {
@@ -65,16 +60,16 @@
         "graphic_type": "bubble",
         "data": [
             {
-                "xKey": "schedule variance",
-                "yKey": 12,
-                "sizeyKey": 120
+                "xKey": "Q1-2024",
+                "yKey": 150
             },
             {
-                "xKey": "project delivery",
-                "yKey": 88,
-                "sizeyKey": 280
+                "xKey": "Q2-2024",
+                "yKey": 180
             }
         ],
+        "project_picture": "/images/modelio-screenshot1.png",
+        "graphic_flag": false,
         "image": "images/icons/html5.svg"
     },
     {
@@ -121,6 +116,8 @@
                 "yKey": 60
             }
         ],
+        "project_picture": "N/A",
+        "graphic_flag": true,
         "image": "images/icons/laptop-code-solid.svg"
     },
     {
@@ -165,6 +162,8 @@
                 "yKey": 200
             }
         ],
+        "project_picture": "N/A",
+        "graphic_flag": true,
         "image": "images/icons/flame_image.svg"
     },
     {
@@ -200,6 +199,8 @@
                 "sizeyKey": 80
             }
         ],
+        "project_picture": "N/A",
+        "graphic_flag": true,
         "image": "images/icons/thumbs_UP_icon.svg"
     }
 ]
