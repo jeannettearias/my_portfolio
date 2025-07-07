@@ -10,6 +10,7 @@ function Home({ skills, achievements, activeAchievements }) {
         ev.preventDefault();
         window.open(ev.target.href, '_blank', 'noopener,noreferrer')
     }
+
     return (
         <>
             <section className='section01'>

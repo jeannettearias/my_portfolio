@@ -63,7 +63,6 @@ function Experience({ exp }) {
                                                 : 'N/A'
                                         }
                                     </div>
-
                                     <time className='date'>{expJson.start_date} - {expJson.end_date}</time>
                                     <legend className='location'>{expJson.location}</legend>
                                 </div>
