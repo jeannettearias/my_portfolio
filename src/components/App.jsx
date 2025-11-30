@@ -110,7 +110,6 @@ function App() {
     setActiveAchievements(filteredAchievements);
   }, []);
 
-
   // HTML
   return (
     <div className="layout">
